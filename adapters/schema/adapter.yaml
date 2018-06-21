@@ -1,0 +1,13 @@
+name: schema
+title: schema.org
+description: Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.
+infoUrl: https://schema.org/
+maintainer: Kendraio
+supportUrl: https://www.kendra.io
+uploads: false
+
+rootNodeTypes: []
+nodeTypes:
+  - Person
+  - ImageObject
+linkTypes: []

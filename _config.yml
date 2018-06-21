@@ -1,0 +1,5 @@
+exclude:  [ "adapters", "README.md" ]
+data_dir: adapters
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"

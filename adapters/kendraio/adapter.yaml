@@ -1,0 +1,13 @@
+name: kendraio
+title: Kendraio
+description: An adapter for Kendraio specific features
+infoUrl: https://www.kendra.io/
+maintainer: Kendraio
+supportUrl: https://www.kendra.io
+uploads: false
+
+rootNodeTypes: []
+nodeTypes: []
+linkTypes:
+  - InclusionRelationship
+

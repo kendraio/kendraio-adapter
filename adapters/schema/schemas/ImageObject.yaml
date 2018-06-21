@@ -1,0 +1,46 @@
+# A subset of schema.org ImageObject
+# http://schema.org/ImageObject
+
+context: http://schema.org
+type: ImageObject
+label: Image
+
+# icon names as defined by https://material.io/tools/icons/
+icon: photo_camera
+
+labelField: contentUrl
+
+fields:
+  -
+    name: contentUrl
+    label: Image URL
+    type: string
+    widget: imageTagger
+    required: true
+    widthField: width
+    heightField: height
+  -
+    name: name
+    label: Filename
+    type: string
+    widget: textfield
+  -
+    name: description
+    label: Description
+    widget: textarea
+  -
+    name: url
+    label: Source URL
+    type: string
+    widget: textfield
+    required: true
+  -
+    name: width
+    label: Width
+    type: integer
+    widget: hidden
+  -
+    name: height
+    label: Height
+    type: integer
+    widget: hidden

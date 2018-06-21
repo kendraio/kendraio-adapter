@@ -1,0 +1,30 @@
+# Defines the relationship between an ImageObject and Person
+
+context: https://kendra.io/schema-v1
+type: InclusionRelationship
+label: Tag
+
+# icon names as defined by https://material.io/tools/icons/
+icon: label
+
+sourceNodeTypes:
+  - ImageObject
+targetNodeTypes:
+  - Person
+
+fields:
+  -
+    name: visibility
+    label: Visibility
+    type: string
+    widget: select
+    options:
+      - Public
+      - Private
+      - Custom
+  -
+    name: boundingBox
+    label: Region
+    # "region" field type contains minX, minY, maxX, maxY values
+    type: region
+    widget: none
