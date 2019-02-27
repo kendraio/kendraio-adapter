@@ -35,8 +35,8 @@ https://help.github.com/articles/fork-a-repo
 From the forked repo you should create a sub-folder and a file under the `tree/master/adapters` folder. The folder name must follow the "machine name" format using only lowercase alphanumeric characters and the middle dash character (`-`). 
 Within the folder create a file called `adapter.yaml`. See the examples within this repo for details. For example, [this adapter file](https://github.com/kendraio/kendraio-adapter/blob/master/adapters/schema/adapter.yaml) for [Schema.org](http://schema.org). The minimum required information to start with is:
 
-    name: must match the sub-folder name
-    title: Service name as shown in user interfaces and listings
+    name: must match the sub-folder name (lower case, no spaces)
+    title: Service name as shown in user interfaces and listings (mixed case, spaces permitted)
     description: A brief description of the service
     infoUrl: A link to find more information about the service
     maintainer: Name of the organisation responsible for maintaining the Adapter
