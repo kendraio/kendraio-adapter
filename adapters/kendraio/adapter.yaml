@@ -6,8 +6,13 @@ maintainer: Kendraio
 supportUrl: https://www.kendra.io
 uploads: false
 
+actions:
+  - title: Flow chart example
+    path: extra/kendraio/flow-chart.txt
+  - title: Sequence diagram
+    path: extra/kendraio/sequence.txt
+
 rootNodeTypes: []
 nodeTypes: []
 linkTypes:
   - InclusionRelationship
-
