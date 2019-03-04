@@ -7,6 +7,8 @@ supportUrl: https://www.kendra.io
 uploads: false
 
 actions:
+  - title: Claim Workflow States
+    path: extra/kendraio/flow-chart.txt
   - title: Rights Claim
     path: extra/kendraio/sequence.txt
 
