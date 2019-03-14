@@ -4,3 +4,4 @@ Draft--send-->WaitingOn
 WaitingOn--returned-->Todo
 Todo--amended-->WaitingOn
 WaitingOn--accepted-->Completed
+WaitingOn--withdraw-->Withdrawn
