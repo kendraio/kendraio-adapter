@@ -1,0 +1,8 @@
+name: bloomen
+title: Bloomen
+description: Integration with the Bloomen project
+infoUrl: http://bloomen.io/
+maintainer: Kendraio
+supportUrl: http://kendra.io
+uploads: true
+swagger: extras/bloomen/api-docs.json
