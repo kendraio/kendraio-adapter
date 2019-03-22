@@ -1,6 +1,12 @@
 sequenceDiagram
-    participant John
-    participant Alice
-    Alice->>John: Hello John, how are you?
-    John-->>Alice: Great!
-
+claimant->>claim: create claim
+activate claim
+claimant->>claim: add corroborators
+claim->>CMO: send claim and corroborators
+CMO->>corroborator: notify corroborator
+corroborator->>CMO: validate/reject corroboration request
+CMO->>CMO: collect and verify evidence
+CMO->>claim: validate/reject claim
+claim->>claimant: process complete
+deactivate claim
+claimant->>claimant: finalise claim process
