@@ -11,6 +11,8 @@ actions:
     path: extra/kendraio/flow-chart.txt
   - title: Rights Claim
     path: extra/kendraio/sequence.txt
+  - title: Claim object states
+    path: extra/kendraio/claim-process-states.txt
 
 rootNodeTypes: []
 nodeTypes: []
