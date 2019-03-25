@@ -1,0 +1,8 @@
+graph TD
+Draft--add party-->Draft
+Draft--make change-->Draft
+Draft--party signs agreement-->id1
+id1{have all parties signed?}
+id1--all parties signed-->Published
+id1--some parties still to sign-->Draft
+Published--make change-->Draft
