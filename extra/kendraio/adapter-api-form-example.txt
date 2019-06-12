@@ -1,0 +1,12 @@
+sequenceDiagram
+APP->>FormService: form_id
+FormService->>AdapterRepo: get form config
+AdapterRepo->>FormService: JSONSchema and UISchema
+FormService->>APP: return Form
+APP->>APIService: call API
+APIService->>AdapterRepo: get API config
+AdapterRepo->>APIService: API config
+APIService->>YouTubeAPI: get Data
+YouTubeAPI->>APIService: return data
+APIService->>APP: return data model
+APP->>APP: generate form (Form+Data)
