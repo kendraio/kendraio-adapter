@@ -13,6 +13,8 @@ actions:
     path: extra/kendraio/sequence.txt
   - title: Claim object states
     path: extra/kendraio/claim-process-states.txt
+  - title: Adapter API example
+    path: extra/adapter-api-form-example.txt
 
 rootNodeTypes: []
 nodeTypes: []
