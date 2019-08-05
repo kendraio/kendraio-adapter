@@ -1,0 +1,10 @@
+name: ppl-ipn
+title: PPL IPN
+description: Verification of International Performer Number (IPN) for PPL members
+infoUrl: https://www.ppluk.com/membership/more-information/ipn/
+maintainer: Kendraio
+supportUrl: https://www.kendra.io
+uploads: false
+actions:
+  - title: PPL IPN Process
+    path: extra/ppl/ipn.txt

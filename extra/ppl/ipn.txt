@@ -1,0 +1,9 @@
+sequenceDiagram
+APP->>PPL: redirect to myPPL portal
+PPL->>Proxy: GET: retrieve token
+Proxy->>PPL: return token
+PPL->>APP: login page
+APP->>PPL: user login
+PPL->>Proxy: POST: IPN(s)
+Proxy->>PPL: return callback URL
+PPL->>APP: redirect back to app
