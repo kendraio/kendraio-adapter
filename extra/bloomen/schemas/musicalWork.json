@@ -96,16 +96,21 @@
       "type": "object",
       "properties": {
         "rightsHolder": {
+          "title": "Rights holder",
           "$ref": "#/definitions/rightsholder"
         },
         "rightsHolderOriginalPublisher": {
-          "name": {
-            "title": "Name",
-            "type": "string"
-          },
-          "IPINameNumber": {
-            "title": "IPI Name Number",
-            "$ref": "#/definitions/IPINameNumber"
+          "title": "Rights holder original publisher",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Name",
+              "type": "string"
+            },
+            "IPINameNumber": {
+              "title": "IPI Name Number",
+              "$ref": "#/definitions/IPINameNumber"
+            }
           }
         },
         "rightsHolderProprietaryId": {
@@ -144,21 +149,24 @@
       }
     },
     "split": {
-      "affiliationSociety": {
-        "title": "Affiliation society",
-        "$ref": "#/definitions/affiliationSociety"
-      },
-      "ownershipSplit": {
-        "title": "Ownership split",
-        "type": "number",
-        "minimum": 0,
-        "maximum": 100
-      },
-      "collectionSplit": {
-        "title": "Collection split",
-        "type": "number",
-        "minimum": 0,
-        "maximum": 100
+      "type": "object",
+      "properties": {
+        "affiliationSociety": {
+          "title": "Affiliation society",
+          "$ref": "#/definitions/affiliationSociety"
+        },
+        "ownershipSplit": {
+          "title": "Ownership split",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "collectionSplit": {
+          "title": "Collection split",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
       }
     },
     "rightsholder": {
