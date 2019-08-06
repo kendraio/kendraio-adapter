@@ -79,81 +79,87 @@
   },
   "definitions": {
     "release": {
-      "title": {
-        "title": "Title",
-        "type": "string"
-      },
-      "artist": {
-        "title": "Artist",
-        "type": "string"
-      },
-      "ICPN": {
-        "title": "ICPN",
-        "type": "string",
-        "pattern": "^[0-9]{13}$"
-      },
-      "numberOfTracks": {
-        "title": "Number of tracks",
-        "type": "integer"
-      },
-      "label": {
-        "title": "Label",
-        "type": "string"
-      },
-      "duration": {
-        "title": "Duration",
-        "type": "integer"
-      },
-      "isCompilation": {
-        "title": "Is compilation?",
-        "type": "boolean"
+      "type": "object",
+      "properties": {
+        "_title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "artist": {
+          "title": "Artist",
+          "type": "string"
+        },
+        "ICPN": {
+          "title": "ICPN",
+          "type": "string",
+          "pattern": "^[0-9]{13}$"
+        },
+        "numberOfTracks": {
+          "title": "Number of tracks",
+          "type": "integer"
+        },
+        "label": {
+          "title": "Label",
+          "type": "string"
+        },
+        "duration": {
+          "title": "Duration",
+          "type": "integer"
+        },
+        "isCompilation": {
+          "title": "Is compilation?",
+          "type": "boolean"
+        }
       }
     },
     "right": {
-      "rightsHolder": {
-        "title": "Rightsholder",
-        "type": "string"
-      },
-      "rightsHolderProprietaryId": {
-        "title": "Rightsholder proprietary ID",
-        "type": "string"
-      },
-      "rightsOwner": {
-        "title": "Rights owner",
-        "type": "string"
-      },
-      "rightsOwnerProprietaryId":{
-        "title": "Rights owner proprietary ID",
-        "type": "string"
-      },
-      "territories": {
-        "title": "Territories",
-        "type": "array",
-        "items": {
-          "$ref": "#/definitions/rightsTerritories"
-        }
-      },
-      "startDate": {
-        "title": "Start date",
-        "type": "string",
-        "format": "date"
-      },
-      "endDate": {
-        "title": "End date",
-        "type": "string",
-        "format": "date"
-      },
-      "split": {
-        "title": "Split",
-        "type": "number",
-        "minimum": 0,
-        "maximum": 100
-      },
-      "useTypes": {
-        "title": "Use types",
-        "type": "array",
-        "items": {
-          "$ref": "#/definitions/useTypes"
+      "type": "object",
+      "properties": {
+        "rightsHolder": {
+          "title": "Rightsholder",
+          "type": "string"
+        },
+        "rightsHolderProprietaryId": {
+          "title": "Rightsholder proprietary ID",
+          "type": "string"
+        },
+        "rightsOwner": {
+          "title": "Rights owner",
+          "type": "string"
+        },
+        "rightsOwnerProprietaryId":{
+          "title": "Rights owner proprietary ID",
+          "type": "string"
+        },
+        "territories": {
+          "title": "Territories",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/territory"
+          }
+        },
+        "startDate": {
+          "title": "Start date",
+          "type": "string",
+          "format": "date"
+        },
+        "endDate": {
+          "title": "End date",
+          "type": "string",
+          "format": "date"
+        },
+        "split": {
+          "title": "Split",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "useTypes": {
+          "title": "Use types",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/useTypes"
+          }
         }
       }
     },
@@ -185,7 +191,7 @@
         "RingbackTones"
       ]
     },
-    "territories": {
+    "territory": {
       "type": "string",
       "enum": [
         "AF",
