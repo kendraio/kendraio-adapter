@@ -92,7 +92,7 @@
         "ICPN": {
           "title": "ICPN",
           "type": "string",
-          "pattern": "^[0-9]{13}$"
+          "pattern": "^[0-9]{0,13}$"
         },
         "numberOfTracks": {
           "title": "Number of tracks",
@@ -165,7 +165,7 @@
     },
     "ISRC": {
       "type": "string",
-      "pattern": "^[A-Z0-9]{2}-[A-Z0-9]{3}-[0-9]{2}-[0-9]{5}$"
+      "pattern": "^[A-Z0-9]{2}-?[A-Z0-9]{3}-?[0-9]{2}-?[0-9]{5}$"
     },
     "useTypes": {
       "type": "string",
