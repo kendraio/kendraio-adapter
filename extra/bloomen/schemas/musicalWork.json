@@ -18,27 +18,27 @@
         "$ref": "#/definitions/creator"
       }
     },
-    "alternativeTitles": [{
+    "alternativeTitles": {
       "type": "array",
       "title": "Alternative titles",
       "items": {
         "type": "string"
       }
-    }],
-    "associatedPerformers": [{
+    },
+    "associatedPerformers": {
       "type": "array",
       "title": "Associated performers",
       "items": {
         "type": "string"
       }
-    }],
-    "associatedISRCs": [{
+    },
+    "associatedISRCs": {
       "type": "array",
       "title": "Associated ISRCs",
       "items": {
         "$ref": "#/definitions/ISRC"
       }
-    }],
+    },
     "rights": {
       "type": "array",
       "title": "Rights",
@@ -605,7 +605,6 @@
         "AMPAL",
         "APG-JAPAN",
         "APSAV",
-        "ATN",
         "AUTORARTE",
         "BURAFO",
         "CAL",
