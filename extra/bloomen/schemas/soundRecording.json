@@ -81,7 +81,7 @@
     "release": {
       "type": "object",
       "properties": {
-        "_title": {
+        "title": {
           "title": "Title",
           "type": "string"
         },
