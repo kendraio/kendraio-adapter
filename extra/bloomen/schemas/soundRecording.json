@@ -1,6 +1,6 @@
 {
   "title": "Bloomen SoundRecording",
-  "description": "Representation of a MusicalWork for the Bloomen Project",
+  "description": "Representation of a SoundRecording for the Bloomen Project",
   "type": "object",
   "properties": {
     "ISRC": {
