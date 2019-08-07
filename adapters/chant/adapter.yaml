@@ -1,0 +1,14 @@
+name: chant
+title: Chant
+description: An adapter for Chant specific features
+infoUrl: https://chant.world/
+maintainer: Kendraio
+supportUrl: https://www.kendra.io
+uploads: true
+
+actions:
+  - title: Add/Edit Gig
+    path: extra/chant/workflow/edit-gig.txt
+  - title: Upload Chant
+    path: extra/chant/workflow/upload-chant.txt
+

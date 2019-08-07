@@ -1,0 +1,3 @@
+sequenceDiagram
+user->>chant: edit gig
+chant->>user: confirmation
