@@ -5,4 +5,11 @@ infoUrl: http://bloomen.io/
 maintainer: Kendraio
 supportUrl: http://kendra.io
 uploads: true
-swagger: extras/bloomen/api-docs.json
+swagger: extra/bloomen/api-docs.json
+forms:
+  musicalWork:
+    jsonSchema: extra/bloomen/schemas/musicalWork.json
+    uiSchema: extra/bloomen/schemas/musicalWork-ui.json
+  soundRecording:
+    jsonSchema: extra/bloomen/schemas/soundRecording.json
+    uiSchema: extra/bloomen/schemas/soundRecording-ui.json
