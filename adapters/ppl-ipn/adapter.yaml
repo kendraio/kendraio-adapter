@@ -7,4 +7,8 @@ supportUrl: https://www.kendra.io
 uploads: false
 actions:
   - title: PPL IPN Process
-    path: extra/ppl/ipn.txt
+    path: extra/ppl-ipn/ipn.txt
+forms:
+  ipn:
+    jsonSchema: extra/ppl-ipn/schemas/ipn-jsonSchema.json
+    uiSchema: extra/ppl-ipn/schemas/ipn-uiSchema.json
