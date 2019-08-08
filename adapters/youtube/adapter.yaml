@@ -5,3 +5,7 @@ infoUrl: https://www.youtube.com/
 maintainer: Kendraio
 supportUrl: http://kendra.io
 uploads: true
+forms:
+  basic:
+    jsonSchema: extra/youtube/schemas/youtube-edit-video-basic.json
+    uiSchema: extra/youtube/schemas/youtube-edit-video-basic-ui.json
