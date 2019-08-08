@@ -2,10 +2,10 @@
   "rights": {
     "items": {
       "startDate": {
-        "ui:type": "datepicker"
+        "ui:widget": "datepicker"
       },
       "endDate": {
-        "ui:type": "datepicker"
+        "ui:widget": "datepicker"
       }
     }
   }
