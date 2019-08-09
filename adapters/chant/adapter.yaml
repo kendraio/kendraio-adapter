@@ -9,10 +9,10 @@ uploads: true
 forms:
   gig:
     jsonSchema: extra/chant/schemas/gig.json
-    uiSchema: extra/chant/schemas/null-ui.json
+    uiSchema: extra/chant/schemas/gig-ui.json
   chant:
     jsonSchema: extra/chant/schemas/chant.json
-    uiSchema: extra/chant/schemas/null-ui.json
+    uiSchema: extra/chant/schemas/chant-ui.json
 
 actions:
   - title: Add/Edit Gig
