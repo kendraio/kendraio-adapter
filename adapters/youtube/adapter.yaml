@@ -9,3 +9,6 @@ forms:
   basic:
     jsonSchema: extra/youtube/schemas/youtube-edit-video-basic.json
     uiSchema: extra/youtube/schemas/youtube-edit-video-basic-ui.json
+  advanced:
+    jsonSchema: extra/youtube/schemas/youtube-edit-video-advanced.schema.json
+    uiSchema: extra/youtube/schemas/youtube-edit-video-advanced.ui.json

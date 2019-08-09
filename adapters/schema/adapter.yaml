@@ -6,8 +6,18 @@ maintainer: Kendraio
 supportUrl: https://www.kendra.io
 uploads: false
 
+forms:
+  addImage:
+    jsonSchema: extra/schema.org/schemas/imageObject.json
+    uiSchema: extra/schema.org/schemas/addImage-ui.json
+  editImage:
+    jsonSchema: extra/schema.org/schemas/imageObject.json
+    uiSchema: extra/schema.org/schemas/editImage-ui.json
+
+# LEGACY SCHEMA DEFINITIONS
 rootNodeTypes: []
 nodeTypes:
   - Person
   - ImageObject
 linkTypes: []
+

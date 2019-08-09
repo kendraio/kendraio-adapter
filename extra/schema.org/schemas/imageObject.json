@@ -1,0 +1,33 @@
+{
+  "title": "ImageObject",
+  "description": "ImageObject from Schema.org",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Image name"
+    },
+    "contentUrl": {
+      "title": "Content URL",
+      "type": "string",
+      "format": "uri"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "sourceUrl": {
+      "title": "Source URL",
+      "type": "string",
+      "format": "uri"
+    },
+    "width": {
+      "title": "Width",
+      "type": "integer"
+    },
+    "height": {
+      "title": "Height",
+      "type": "integer"
+    }
+  }
+}
