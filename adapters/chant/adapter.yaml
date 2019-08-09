@@ -6,6 +6,14 @@ maintainer: Kendraio
 supportUrl: https://www.kendra.io
 uploads: true
 
+forms:
+  gig:
+    jsonSchema: extra/chant/schemas/gig.json
+    uiSchema: extra/chant/schemas/null-ui.json
+  chant:
+    jsonSchema: extra/chant/schemas/chant.json
+    uiSchema: extra/chant/schemas/null-ui.json
+
 actions:
   - title: Add/Edit Gig
     path: extra/chant/workflow/edit-gig.txt
