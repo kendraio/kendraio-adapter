@@ -1,0 +1,1460 @@
+[
+  {
+    "code": "ACUM",
+    "id": 1,
+    "country": "Israel",
+    "code2": "IL"
+  },
+  {
+    "code": "ADDAF",
+    "id": 2,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "AEPI",
+    "id": 3,
+    "country": "Greece",
+    "code2": "GR"
+  },
+  {
+    "code": "AGADU",
+    "id": 4,
+    "country": "Uruguay",
+    "code2": "UY"
+  },
+  {
+    "code": "AKM",
+    "id": 5,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "BUCUDA",
+    "id": 6,
+    "country": "Central Afr Rep",
+    "code2": "CF"
+  },
+  {
+    "code": "APDAYC",
+    "id": 7,
+    "country": "Peru",
+    "code2": "PE"
+  },
+  {
+    "code": "APRA",
+    "id": 8,
+    "country": "Australia",
+    "code2": "AU"
+  },
+  {
+    "code": "ARTISJUS",
+    "id": 9,
+    "country": "Hungary",
+    "code2": "HU"
+  },
+  {
+    "code": "ASCAP",
+    "id": 10,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "AUSTRO-MECHANA",
+    "id": 11,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "AMCOS",
+    "id": 12,
+    "country": "Australia",
+    "code2": "AU"
+  },
+  {
+    "code": "AWA",
+    "id": 13,
+    "country": "German Dem Rep",
+    "code2": "DE"
+  },
+  {
+    "code": "ARGENTORES",
+    "id": 14,
+    "country": "Argentina",
+    "code2": "AR"
+  },
+  {
+    "code": "APA",
+    "id": 15,
+    "country": "Paraguay",
+    "code2": "PY"
+  },
+  {
+    "code": "BUMDA",
+    "id": 16,
+    "country": "Mali",
+    "code2": "ML"
+  },
+  {
+    "code": "AMRA",
+    "id": 17,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "BGDA",
+    "id": 18,
+    "country": "Guinea",
+    "code2": "GN"
+  },
+  {
+    "code": "BMDA",
+    "id": 19,
+    "country": "Morocco",
+    "code2": "MA"
+  },
+  {
+    "code": "SODRAC",
+    "id": 20,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "BMI",
+    "id": 21,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "MCSN",
+    "id": 22,
+    "country": "Nigeria",
+    "code2": "NG"
+  },
+  {
+    "code": "BUMA",
+    "id": 23,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "BURIDA",
+    "id": 24,
+    "country": "Ivory Coast",
+    "code2": "CI"
+  },
+  {
+    "code": "BSDA",
+    "id": 25,
+    "country": "Senegal",
+    "code2": "SN"
+  },
+  {
+    "code": "CASH",
+    "id": 26,
+    "country": "Hong Kong",
+    "code2": "HK"
+  },
+  {
+    "code": "CAPAC",
+    "id": 27,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "LITA",
+    "id": 28,
+    "country": "Slovakia",
+    "code2": "SK"
+  },
+  {
+    "code": "SCD",
+    "id": 29,
+    "country": "Chile",
+    "code2": "CL"
+  },
+  {
+    "code": "AMAR",
+    "id": 30,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "DILIA",
+    "id": 31,
+    "country": "Czech Republic",
+    "code2": "CZ"
+  },
+  {
+    "code": "FILSCAP",
+    "id": 32,
+    "country": "Philippines",
+    "code2": "PH"
+  },
+  {
+    "code": "OMDA",
+    "id": 33,
+    "country": "Madagascar",
+    "code2": "MG"
+  },
+  {
+    "code": "HARRY FOX AGENCY",
+    "id": 34,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "GEMA",
+    "id": 35,
+    "country": "German Fed Rep",
+    "code2": "DE"
+  },
+  {
+    "code": "IPRS",
+    "id": 36,
+    "country": "India",
+    "code2": "IN"
+  },
+  {
+    "code": "BUBEDRA",
+    "id": 37,
+    "country": "Benin",
+    "code2": "BJ"
+  },
+  {
+    "code": "JASRAC",
+    "id": 38,
+    "country": "Japan",
+    "code2": "JP"
+  },
+  {
+    "code": "MUSICAUTOR",
+    "id": 39,
+    "country": "Bulgaria",
+    "code2": "BG"
+  },
+  {
+    "code": "KODA",
+    "id": 40,
+    "country": "Denmark",
+    "code2": "DK"
+  },
+  {
+    "code": "LITERAR-MECHANA",
+    "id": 41,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "LVG",
+    "id": 42,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "MCSK",
+    "id": 43,
+    "country": "Kenya",
+    "code2": "KE"
+  },
+  {
+    "code": "MCPS",
+    "id": 44,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "BBDA",
+    "id": 45,
+    "country": "Burkina Faso",
+    "code2": "BF"
+  },
+  {
+    "code": "MRS",
+    "id": 46,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "BCDA",
+    "id": 47,
+    "country": "Congo",
+    "code2": "CG"
+  },
+  {
+    "code": "NCB",
+    "id": 48,
+    "country": "Scandinavia",
+    "code2": "2SC"
+  },
+  {
+    "code": "ONDA",
+    "id": 49,
+    "country": "Algeria",
+    "code2": "DZ"
+  },
+  {
+    "code": "OSA",
+    "id": 50,
+    "country": "Czech Republic",
+    "code2": "CZ"
+  },
+  {
+    "code": "PROLITTERIS",
+    "id": 51,
+    "country": "Switzerland",
+    "code2": "CH"
+  },
+  {
+    "code": "PRS",
+    "id": 52,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "PROCAN",
+    "id": 53,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "ALCS",
+    "id": 54,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "SABAM",
+    "id": 55,
+    "country": "Belgium",
+    "code2": "BE"
+  },
+  {
+    "code": "SACD",
+    "id": 56,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SACERAU",
+    "id": 57,
+    "country": "Egypt",
+    "code2": "EG"
+  },
+  {
+    "code": "SACEM",
+    "id": 58,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SACM",
+    "id": 59,
+    "country": "Mexico",
+    "code2": "MX"
+  },
+  {
+    "code": "SACVEN",
+    "id": 60,
+    "country": "Venezuela",
+    "code2": "VE"
+  },
+  {
+    "code": "SADAIC",
+    "id": 61,
+    "country": "Argentina",
+    "code2": "AR"
+  },
+  {
+    "code": "SADEMBRA",
+    "id": 62,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "SAMRO",
+    "id": 63,
+    "country": "South Africa",
+    "code2": "ZA"
+  },
+  {
+    "code": "SOKOJ",
+    "id": 64,
+    "country": "Yugoslavia",
+    "code2": "RS"
+  },
+  {
+    "code": "SAYCE",
+    "id": 65,
+    "country": "Ecuador",
+    "code2": "EC"
+  },
+  {
+    "code": "SBACEM",
+    "id": 66,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "SBAT",
+    "id": 67,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "SPA",
+    "id": 69,
+    "country": "Portugal",
+    "code2": "PT"
+  },
+  {
+    "code": "SOGEM",
+    "id": 70,
+    "country": "Mexico",
+    "code2": "MX"
+  },
+  {
+    "code": "SESAC",
+    "id": 71,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "SGAE",
+    "id": 72,
+    "country": "Spain",
+    "code2": "ES"
+  },
+  {
+    "code": "SCAM",
+    "id": 73,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SIAE",
+    "id": 74,
+    "country": "Italy",
+    "code2": "IT"
+  },
+  {
+    "code": "SUISSIMAGE",
+    "id": 75,
+    "country": "Switzerland",
+    "code2": "CH"
+  },
+  {
+    "code": "ACEMLA",
+    "id": 76,
+    "country": "Puerto Rico",
+    "code2": "PR"
+  },
+  {
+    "code": "STEF",
+    "id": 77,
+    "country": "Iceland",
+    "code2": "IS"
+  },
+  {
+    "code": "STEMRA",
+    "id": 78,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "STIM",
+    "id": 79,
+    "country": "Sweden",
+    "code2": "SE"
+  },
+  {
+    "code": "SUISA",
+    "id": 80,
+    "country": "Switzerland",
+    "code2": "CH"
+  },
+  {
+    "code": "SARRAL",
+    "id": 81,
+    "country": "South Africa",
+    "code2": "ZA"
+  },
+  {
+    "code": "OTPDA",
+    "id": 82,
+    "country": "Tunisia",
+    "code2": "TN"
+  },
+  {
+    "code": "SONECA",
+    "id": 83,
+    "country": "Zaire",
+    "code2": "ZR"
+  },
+  {
+    "code": "SAYCO",
+    "id": 84,
+    "country": "Columbia",
+    "code2": "CO"
+  },
+  {
+    "code": "SOZA",
+    "id": 85,
+    "country": "Slovakia",
+    "code2": "SK"
+  },
+  {
+    "code": "SICAM",
+    "id": 86,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "SPACEMF",
+    "id": 87,
+    "country": "French Polynesia",
+    "code2": "PF"
+  },
+  {
+    "code": "CMRRA",
+    "id": 88,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "TEOSTO",
+    "id": 89,
+    "country": "Finland",
+    "code2": "FI"
+  },
+  {
+    "code": "TONO",
+    "id": 90,
+    "country": "Norway",
+    "code2": "NO"
+  },
+  {
+    "code": "SSA",
+    "id": 91,
+    "country": "Switzerland",
+    "code2": "CH"
+  },
+  {
+    "code": "SOCINADA",
+    "id": 92,
+    "country": "Cameroon Rep",
+    "code2": "CM"
+  },
+  {
+    "code": "UBC",
+    "id": 93,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "RAO",
+    "id": 94,
+    "country": "Russia",
+    "code2": "RU"
+  },
+  {
+    "code": "VG WORT",
+    "id": 95,
+    "country": "German",
+    "code2": "DE"
+  },
+  {
+    "code": "COTT",
+    "id": 96,
+    "country": "Trinidad & Tobago",
+    "code2": "TT"
+  },
+  {
+    "code": "ZAIKS",
+    "id": 97,
+    "country": "Poland",
+    "code2": "PL"
+  },
+  {
+    "code": "ZIMRA",
+    "id": 98,
+    "country": "Zimbabwe",
+    "code2": "ZW"
+  },
+  {
+    "code": "NS",
+    "id": 99,
+    "country": "",
+    "code2": ""
+  },
+  {
+    "code": "SOCAN",
+    "id": 101,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "NASCAM",
+    "id": 102,
+    "country": "Namibia",
+    "code2": "NA"
+  },
+  {
+    "code": "ACDAM",
+    "id": 103,
+    "country": "Cuba",
+    "code2": "CU"
+  },
+  {
+    "code": "MACP",
+    "id": 104,
+    "country": "Malaysia",
+    "code2": "MY"
+  },
+  {
+    "code": "MASA",
+    "id": 105,
+    "country": "Mauritius",
+    "code2": "MU"
+  },
+  {
+    "code": "COMPASS",
+    "id": 106,
+    "country": "Singapore",
+    "code2": "SG"
+  },
+  {
+    "code": "ACAM",
+    "id": 107,
+    "country": "Costa Rica",
+    "code2": "CR"
+  },
+  {
+    "code": "CHA",
+    "id": 108,
+    "country": "Taiwan",
+    "code2": "TW"
+  },
+  {
+    "code": "KCI",
+    "id": 109,
+    "country": "Indonesia",
+    "code2": "ID"
+  },
+  {
+    "code": "LATGA-A",
+    "id": 110,
+    "country": "Lithuania",
+    "code2": "LT"
+  },
+  {
+    "code": "HDS-ZAMP",
+    "id": 111,
+    "country": "Croatia",
+    "code2": "HR"
+  },
+  {
+    "code": "SAZAS",
+    "id": 112,
+    "country": "Slovenia",
+    "code2": "SI"
+  },
+  {
+    "code": "LAA",
+    "id": 113,
+    "country": "Latvia",
+    "code2": "LV"
+  },
+  {
+    "code": "AGAYC",
+    "id": 114,
+    "country": "Guatemala",
+    "code2": "GT"
+  },
+  {
+    "code": "UCMR-ADA",
+    "id": 115,
+    "country": "Romania",
+    "code2": "RO"
+  },
+  {
+    "code": "EAU",
+    "id": 116,
+    "country": "Estonia",
+    "code2": "EE"
+  },
+  {
+    "code": "MESAM",
+    "id": 117,
+    "country": "Turkey",
+    "code2": "TR"
+  },
+  {
+    "code": "KOMCA",
+    "id": 118,
+    "country": "South Korea",
+    "code2": "KR"
+  },
+  {
+    "code": "MCSC",
+    "id": 119,
+    "country": "China",
+    "code2": "CN"
+  },
+  {
+    "code": "LIRA",
+    "id": 120,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "VDFS",
+    "id": 121,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "AKKA/LAA",
+    "id": 122,
+    "country": "Latvia",
+    "code2": "LV"
+  },
+  {
+    "code": "COSGA",
+    "id": 123,
+    "country": "Ghana",
+    "code2": "GH"
+  },
+  {
+    "code": "COSOMA",
+    "id": 124,
+    "country": "Malawi",
+    "code2": "MW"
+  },
+  {
+    "code": "BNDA",
+    "id": 125,
+    "country": "Niger",
+    "code2": "NE"
+  },
+  {
+    "code": "MCT",
+    "id": 126,
+    "country": "Thailand",
+    "code2": "TH"
+  },
+  {
+    "code": "ALBAUTOR",
+    "id": 127,
+    "country": "Albania",
+    "code2": "AL"
+  },
+  {
+    "code": "IMRO",
+    "id": 128,
+    "country": "Ireland",
+    "code2": "IE"
+  },
+  {
+    "code": "SOBODAYCOM",
+    "id": 129,
+    "country": "Bolivia",
+    "code2": "BO"
+  },
+  {
+    "code": "BUTODRA",
+    "id": 130,
+    "country": "Togo",
+    "code2": "TG"
+  },
+  {
+    "code": "SADA",
+    "id": 131,
+    "country": "Greece",
+    "code2": "GR"
+  },
+  {
+    "code": "BILD-KUNST",
+    "id": 132,
+    "country": "German Federal Republic",
+    "code2": "DE"
+  },
+  {
+    "code": "ZAMCOPS",
+    "id": 133,
+    "country": "Zambia",
+    "code2": "ZM"
+  },
+  {
+    "code": "SLPRS",
+    "id": 134,
+    "country": "Sri Lanka",
+    "code2": "LK"
+  },
+  {
+    "code": "SADH",
+    "id": 135,
+    "country": "Greece",
+    "code2": "GR"
+  },
+  {
+    "code": "ZAMP",
+    "id": 136,
+    "country": "Macedonia",
+    "code2": "MK"
+  },
+  {
+    "code": "SOFAM",
+    "id": 137,
+    "country": "Belgium",
+    "code2": "BE"
+  },
+  {
+    "code": "KOPIOSTO",
+    "id": 138,
+    "country": "Finland",
+    "code2": "FI"
+  },
+  {
+    "code": "COPY-DAN BILLEDKUNST",
+    "id": 139,
+    "country": "Denmark",
+    "code2": "DK"
+  },
+  {
+    "code": "UACRR",
+    "id": 140,
+    "country": "Ukraine",
+    "code2": "UA"
+  },
+  {
+    "code": "ATN",
+    "id": 141,
+    "country": "Chile (formerly known as GESATCH)",
+    "code2": "CL"
+  },
+  {
+    "code": "DALRO",
+    "id": 142,
+    "country": "South Africa",
+    "code2": "ZA"
+  },
+  {
+    "code": "TEATERAUTOR",
+    "id": 143,
+    "country": "Bulgaria",
+    "code2": "BG"
+  },
+  {
+    "code": "HAA",
+    "id": 144,
+    "country": "Croatia",
+    "code2": "HR"
+  },
+  {
+    "code": "DPRS",
+    "id": 145,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "SPAC",
+    "id": 146,
+    "country": "Panama",
+    "code2": "PA"
+  },
+  {
+    "code": "FILMAUTOR",
+    "id": 147,
+    "country": "Bulgaria",
+    "code2": "BG"
+  },
+  {
+    "code": "ADAGP",
+    "id": 148,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "ARS",
+    "id": 149,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "BEELDRECHT",
+    "id": 150,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "BONO",
+    "id": 151,
+    "country": "Norway",
+    "code2": "NO"
+  },
+  {
+    "code": "BUS",
+    "id": 152,
+    "country": "Sweden",
+    "code2": "SE"
+  },
+  {
+    "code": "DACS",
+    "id": 153,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "HUNGART",
+    "id": 154,
+    "country": "Hungary",
+    "code2": "HU"
+  },
+  {
+    "code": "SOMAAP",
+    "id": 155,
+    "country": "Mexico",
+    "code2": "MX"
+  },
+  {
+    "code": "VAGA",
+    "id": 156,
+    "country": "USA",
+    "code2": "US"
+  },
+  {
+    "code": "VBK",
+    "id": 157,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "VEGAP",
+    "id": 158,
+    "country": "Spain",
+    "code2": "ES"
+  },
+  {
+    "code": "VISCOPY",
+    "id": 159,
+    "country": "Australia",
+    "code2": "AU"
+  },
+  {
+    "code": "RUPIS",
+    "id": 160,
+    "country": "Belarus",
+    "code2": "BY"
+  },
+  {
+    "code": "MUST",
+    "id": 161,
+    "country": "Taiwan (Province Of China)",
+    "code2": "TW"
+  },
+  {
+    "code": "AMPAL",
+    "id": 162,
+    "country": "Australia",
+    "code2": "AU"
+  },
+  {
+    "code": "APG-JAPAN",
+    "id": 163,
+    "country": "Japan",
+    "code2": "JP"
+  },
+  {
+    "code": "APSAV",
+    "id": 164,
+    "country": "Peru",
+    "code2": "PE"
+  },
+  {
+    "code": "ATN",
+    "id": 165,
+    "country": "Chile",
+    "code2": "CL"
+  },
+  {
+    "code": "AUTORARTE",
+    "id": 166,
+    "country": "Venezuela",
+    "code2": "VE"
+  },
+  {
+    "code": "BURAFO",
+    "id": 167,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "CAL",
+    "id": 168,
+    "country": "Australia",
+    "code2": "AU"
+  },
+  {
+    "code": "COSCAP",
+    "id": 169,
+    "country": "Barbados",
+    "code2": "BB"
+  },
+  {
+    "code": "CPSN",
+    "id": 170,
+    "country": "Nepal",
+    "code2": "NP"
+  },
+  {
+    "code": "CREAIMAGEN",
+    "id": 171,
+    "country": "Chile",
+    "code2": "CL"
+  },
+  {
+    "code": "DGA",
+    "id": 172,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "DIRECTORES",
+    "id": 173,
+    "country": "Mexico",
+    "code2": "MX"
+  },
+  {
+    "code": "FLIM JUS",
+    "id": 174,
+    "country": "Hungary",
+    "code2": "HU"
+  },
+  {
+    "code": "COPYRO",
+    "id": 175,
+    "country": "Romania",
+    "code2": "RO"
+  },
+  {
+    "code": "JACAP",
+    "id": 176,
+    "country": "Jamaica",
+    "code2": "JM"
+  },
+  {
+    "code": "KAZAK",
+    "id": 177,
+    "country": "Kazakhstan",
+    "code2": "KZ"
+  },
+  {
+    "code": "KOSA",
+    "id": 178,
+    "country": "Korea Republic Of",
+    "code2": "KR"
+  },
+  {
+    "code": "KUVASTO",
+    "id": 179,
+    "country": "Finland",
+    "code2": "FI"
+  },
+  {
+    "code": "MUSIKEDITION",
+    "id": 180,
+    "country": "Austria",
+    "code2": "AT"
+  },
+  {
+    "code": "NMPA",
+    "id": 181,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "PAPPRI",
+    "id": 182,
+    "country": "Indonesia",
+    "code2": "ID"
+  },
+  {
+    "code": "SACK",
+    "id": 183,
+    "country": "Korea Republic Of",
+    "code2": "KR"
+  },
+  {
+    "code": "SARTEC",
+    "id": 184,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "SESAM",
+    "id": 185,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SGDL",
+    "id": 186,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SNAC",
+    "id": 187,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SOCIETE DE L’IMAGE",
+    "id": 188,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "SOCINPRO",
+    "id": 189,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "SOPE",
+    "id": 190,
+    "country": "Greece",
+    "code2": "GR"
+  },
+  {
+    "code": "SPACQ",
+    "id": 191,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "SFF",
+    "id": 192,
+    "country": "Sweden",
+    "code2": "SE"
+  },
+  {
+    "code": "THE SOCIETY OF AUTHORS",
+    "id": 193,
+    "country": "United Kingdom",
+    "code2": "GB"
+  },
+  {
+    "code": "UFFICIO LEGALE",
+    "id": 194,
+    "country": "Holy See (Vatican City State)",
+    "code2": "VA"
+  },
+  {
+    "code": "VEVAM",
+    "id": 195,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "WGA",
+    "id": 196,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "WGJ",
+    "id": 197,
+    "country": "Japan",
+    "code2": "JP"
+  },
+  {
+    "code": "ZAMP",
+    "id": 198,
+    "country": "Slovenia",
+    "code2": "SI"
+  },
+  {
+    "code": "ZAPA",
+    "id": 199,
+    "country": "Poland",
+    "code2": "PL"
+  },
+  {
+    "code": "MSG",
+    "id": 200,
+    "country": "Turkey",
+    "code2": "TR"
+  },
+  {
+    "code": "ABRAMUS",
+    "id": 201,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "ASDAC",
+    "id": 202,
+    "country": "Moldova - Republic Of",
+    "code2": "MD"
+  },
+  {
+    "code": "AWGACS",
+    "id": 203,
+    "country": "Australia",
+    "code2": "AU"
+  },
+  {
+    "code": "SAS",
+    "id": 204,
+    "country": "Georgia",
+    "code2": "GE"
+  },
+  {
+    "code": "SODART",
+    "id": 205,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "SUOMEN KIRJAILIJALIITTO",
+    "id": 206,
+    "country": "Finland",
+    "code2": "FI"
+  },
+  {
+    "code": "THE AUTHOR'S REGISTRY INC.",
+    "id": 207,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "SGA",
+    "id": 208,
+    "country": "Guinea-Bissau",
+    "code2": "GW"
+  },
+  {
+    "code": "ARMAUTHOR",
+    "id": 209,
+    "country": "Armenia",
+    "code2": "AM"
+  },
+  {
+    "code": "ACCESS",
+    "id": 210,
+    "country": "Canada (Formerly CANCOPY)",
+    "code2": "CA"
+  },
+  {
+    "code": "CSCS",
+    "id": 212,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "DRCC",
+    "id": 213,
+    "country": "Canada",
+    "code2": "CA"
+  },
+  {
+    "code": "HMS",
+    "id": 214,
+    "country": "Saint Lucia",
+    "code2": "LC"
+  },
+  {
+    "code": "KYRGYZPATENT",
+    "id": 215,
+    "country": "Kyrgyzstan",
+    "code2": "KG"
+  },
+  {
+    "code": "SQN",
+    "id": 216,
+    "country": "Bosnia And Herzegovina",
+    "code2": "BA"
+  },
+  {
+    "code": "ABRAC",
+    "id": 217,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "ANACIM",
+    "id": 218,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "ASSIM",
+    "id": 219,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "ATIDA",
+    "id": 220,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "SABEM",
+    "id": 221,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "FONOPERU",
+    "id": 222,
+    "country": "Peru",
+    "code2": "PE"
+  },
+  {
+    "code": "COSOTA",
+    "id": 223,
+    "country": "Tanzania, United Republic Of",
+    "code2": "TZ"
+  },
+  {
+    "code": "SOMAS",
+    "id": 224,
+    "country": "Mozambique",
+    "code2": "MZ"
+  },
+  {
+    "code": "SAIF",
+    "id": 225,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "AACIMH",
+    "id": 226,
+    "country": "Honduras",
+    "code2": "HN"
+  },
+  {
+    "code": "SGACEDOM",
+    "id": 227,
+    "country": "Dominican Republic",
+    "code2": "DO"
+  },
+  {
+    "code": "ROMS",
+    "id": 228,
+    "country": "Russian Federation",
+    "code2": "RU"
+  },
+  {
+    "code": "ICG",
+    "id": 229,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "ADAVIS",
+    "id": 230,
+    "country": "Cuba",
+    "code2": "CU"
+  },
+  {
+    "code": "AUTVIS",
+    "id": 231,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "GESTOR",
+    "id": 232,
+    "country": "Czech Republic",
+    "code2": "CZ"
+  },
+  {
+    "code": "SACEMLUXEMBOURG",
+    "id": 233,
+    "country": "Luxembourg",
+    "code2": "LU"
+  },
+  {
+    "code": "UCOSO",
+    "id": 234,
+    "country": "Uganda",
+    "code2": "UG"
+  },
+  {
+    "code": "SACENC",
+    "id": 235,
+    "country": "France",
+    "code2": "FR"
+  },
+  {
+    "code": "WID CENTRE",
+    "id": 300,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "GESAC",
+    "id": 301,
+    "country": "Belgium",
+    "code2": "BE"
+  },
+  {
+    "code": "LATINAUTOR",
+    "id": 302,
+    "country": "Uruguay",
+    "code2": "UY"
+  },
+  {
+    "code": "NORD-DOC",
+    "id": 303,
+    "country": "Sweden",
+    "code2": "SE"
+  },
+  {
+    "code": "SONGCODE",
+    "id": 304,
+    "country": "United States",
+    "code2": "US"
+  },
+  {
+    "code": "IMJV",
+    "id": 305,
+    "country": "Netherlands",
+    "code2": "NL"
+  },
+  {
+    "code": "CCL",
+    "id": 306,
+    "country": "Trinidad And Tobago",
+    "code2": "TT"
+  },
+  {
+    "code": "MISASIA",
+    "id": 307,
+    "country": "Singapore",
+    "code2": "SG"
+  },
+  {
+    "code": "ECAD",
+    "id": 308,
+    "country": "Brazil",
+    "code2": "BR"
+  },
+  {
+    "code": "LATINNET",
+    "id": 309,
+    "country": "Spain",
+    "code2": "ES"
+  },
+  {
+    "code": "DIVA",
+    "id": 310,
+    "country": "Hong Kong",
+    "code2": "HK"
+  }
+]
