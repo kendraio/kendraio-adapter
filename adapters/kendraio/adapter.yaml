@@ -10,7 +10,7 @@ database:
   - extra/kendraio/schemas/music_recording.schema.json
 
 forms:
-  musicalWork:
+  edit_music_recording:
     jsonSchema: extra/kendraio/schemas/music_recording.schema.json
     uiSchema: extra/kendraio/schemas/music_recording.ui.json
 
