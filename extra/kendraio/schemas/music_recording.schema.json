@@ -6,34 +6,44 @@
   "name": "kendraio_music-recording",
   "properties": {
     "Name": {
+      "title": "Track name",
       "type": "string"
     },
     "Artist": {
+      "title": "Artist name",
       "type": "string"
     },
     "ISRC": {
+      "title": "ISRC",
       "type": "string"
     },
     "ISWC": {
+      "title": "ISWC",
       "type": "string"
     },
     "Date": {
+      "title": "Date",
       "type": "string",
       "format": "date"
     },
     "Country": {
+      "title": "Country",
       "type": "string"
     },
     "Owner": {
+      "title": "Owner",
       "type": "string"
     },
     "Collective": {
+      "title": "Collective",
       "type": "string"
     },
     "Submitted to": {
+      "title": "Submitted to",
       "type": "string"
     },
     "Status": {
+      "title": "Status",
       "type": "string"
     }
   }
