@@ -1,0 +1,8 @@
+{
+  "Name": {
+    "ui:placeholder": "Recording name"
+  },
+  "Date": {
+    "ui:widget": "datepicker"
+  }
+}

@@ -6,6 +6,14 @@ maintainer: Kendraio
 supportUrl: https://www.kendra.io
 uploads: false
 
+database:
+  - extra/kendraio/schemas/music_recording.schema.json
+
+forms:
+  musicalWork:
+    jsonSchema: extra/kendraio/schemas/music_recording.schema.json
+    uiSchema: extra/kendraio/schemas/music_recording.ui.json
+
 actions:
   - title: Claim Workflow States
     path: extra/kendraio/flow-chart.txt
@@ -15,8 +23,3 @@ actions:
     path: extra/kendraio/claim-process-states.txt
   - title: Adapter API example
     path: extra/kendraio/adapter-api-form-example.txt
-
-rootNodeTypes: []
-nodeTypes: []
-linkTypes:
-  - InclusionRelationship

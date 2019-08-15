@@ -1,0 +1,40 @@
+{
+  "title": "Music Recording",
+  "description": "Kendraio Music Recording data",
+  "type": "object",
+  "version": 0,
+  "name": "kendraio_music-recording",
+  "properties": {
+    "Name": {
+      "type": "string"
+    },
+    "Artist": {
+      "type": "string"
+    },
+    "ISRC": {
+      "type": "string"
+    },
+    "ISWC": {
+      "type": "string"
+    },
+    "Date": {
+      "type": "string",
+      "format": "date"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "Owner": {
+      "type": "string"
+    },
+    "Collective": {
+      "type": "string"
+    },
+    "Submitted to": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "string"
+    }
+  }
+}
