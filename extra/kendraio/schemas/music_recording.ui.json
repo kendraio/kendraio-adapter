@@ -6,6 +6,7 @@
     "ui:widget": "datepicker"
   },
   "Collective": {
+    "ui:placeholder": "Collective",
     "ui:widget": "kselect",
     "ui:valueProp": "code",
     "ui:labelProp": "code",
