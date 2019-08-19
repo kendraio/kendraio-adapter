@@ -1,0 +1,37 @@
+{
+  "title": "Music Work",
+  "description": "Kendraio Music Work data",
+  "type": "object",
+  "version": 0,
+  "name": "kendraio_music-work",
+  "properties": {
+    "Name": {
+      "title": "Work name",
+      "type": "string"
+    },
+    "Arranger": {
+      "title": "Arranger",
+      "type": "string"
+    },
+    "Composer": {
+      "title": "Composer",
+      "type": "string"
+    },
+    "ISWC": {
+      "title": "ISWC",
+      "type": "string"
+    },
+    "Type": {
+      "title": "Type",
+      "type": "string"
+    },
+    "lyricist": {
+      "title": "Lyricist",
+      "type": "string"
+    },
+    "Collective": {
+      "title": "Collective",
+      "type": "string"
+    }
+  }
+}

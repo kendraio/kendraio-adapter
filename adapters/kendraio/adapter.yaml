@@ -8,11 +8,15 @@ uploads: false
 
 database:
   - extra/kendraio/schemas/music_recording.schema.json
+  - extra/kendraio/schemas/music_work.schema.json
 
 forms:
   edit_music_recording:
     jsonSchema: extra/kendraio/schemas/music_recording.schema.json
     uiSchema: extra/kendraio/schemas/music_recording.ui.json
+  edit_music_work:
+    jsonSchema: extra/kendraio/schemas/music_work.schema.json
+    uiSchema: extra/kendraio/schemas/music_work.ui.json
 
 actions:
   - title: Claim Workflow States
