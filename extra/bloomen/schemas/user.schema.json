@@ -9,14 +9,27 @@
       "title": "Username",
       "type": "string"
     },
+    "organisation": {
+      "title": "Organisation",
+      "type": "string"
+    },
+    "createdATUTC": {
+      "title": "Created at",
+      "type": "string",
+      "format": "datetime"
+    },
     "email": {
       "title": "Email",
       "type": "string",
       "format": "email"
     },
+    "id": {
+      "title": "Bloomen ID",
+      "type": "string"
+    },
     "hash": {
       "title": "Hash ID",
-      "format": "string"
+      "type": "string"
     },
     "role": {
       "title": "Role",
@@ -28,6 +41,60 @@
           "publisher",
           "admin"
         ]
+      }
+    },
+    "reputation": {
+      "title": "Reputation",
+      "type": "object",
+      "properties": {
+        "positive": {
+          "title": "Positive",
+          "type": "integer"
+        },
+        "negative": {
+          "title": "Negative",
+          "type": "integer"
+        }
+      }
+    },
+    "kyc": {
+      "title": "KYC",
+      "type": "object",
+      "properties": {
+        "address": {
+          "title": "Address",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Address",
+          "type": "string"
+        },
+        "firstname": {
+          "title": "Address",
+          "type": "string"
+        },
+        "lastname": {
+          "title": "Address",
+          "type": "string"
+        },
+        "id1": {
+          "title": "id1",
+          "type": "string",
+          "format": "uri"
+        },
+        "id2": {
+          "title": "id2",
+          "type": "string",
+          "format": "uri"
+        },
+        "status": {
+          "title": "Status",
+          "type": "integer"
+        },
+        "reviewdBy": {
+          "title": "Reviewed by",
+          "type": "string"
+        }
       }
     }
   }
