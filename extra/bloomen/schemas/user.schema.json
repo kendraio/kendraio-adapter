@@ -22,7 +22,12 @@
       "title": "Role",
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "photographer",
+          "publisher",
+          "admin"
+        ]
       }
     }
   }
