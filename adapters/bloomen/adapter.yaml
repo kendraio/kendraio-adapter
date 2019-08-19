@@ -6,6 +6,11 @@ maintainer: Kendraio
 supportUrl: http://kendra.io
 uploads: true
 swagger: extra/bloomen/api-docs.json
+
+database:
+  - extra/bloomen/schemas/user.schema.json
+  - extra/bloomen/schemas/photo.schema.json
+
 forms:
   musicalWork:
     jsonSchema: extra/bloomen/schemas/musicalWork.json
@@ -13,3 +18,9 @@ forms:
   soundRecording:
     jsonSchema: extra/bloomen/schemas/soundRecording.json
     uiSchema: extra/bloomen/schemas/soundRecording-ui.json
+  user:
+    jsonSchema: extra/bloomen/schemas/user.schema.json
+    uiSchema: extra/bloomen/schemas/user.ui.json
+  photo:
+    jsonSchema: extra/bloomen/schemas/photo.schema.json
+    uiSchema: extra/bloomen/schemas/photo.ui.json

@@ -1,0 +1,28 @@
+{
+  "title": "Bloomen Photo",
+  "description": "Photo metadata from the Bloomen project",
+  "type": "object",
+  "properties": {
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "price": {
+      "title": "Price",
+      "type": "number"
+    },
+    "attribution": {
+      "title": "Attribution",
+      "type": "boolean"
+    },
+    "url": {
+      "title": "URL",
+      "type": "string",
+      "format": "uri"
+    },
+    "rightsRegion": {
+      "title": "Rights region",
+      "format": "string"
+    }
+  }
+}

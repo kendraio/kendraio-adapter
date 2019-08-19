@@ -1,0 +1,27 @@
+{
+  "title": "Bloomen User",
+  "description": "User metadata from the Bloomen project",
+  "type": "object",
+  "properties": {
+    "username": {
+      "title": "Username",
+      "type": "string"
+    },
+    "email": {
+      "title": "Email",
+      "type": "string",
+      "format": "email"
+    },
+    "hash": {
+      "title": "Hash ID",
+      "format": "string"
+    },
+    "role": {
+      "title": "Role",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
