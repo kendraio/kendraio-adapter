@@ -2,6 +2,8 @@
   "title": "Bloomen Photo",
   "description": "Photo metadata from the Bloomen project",
   "type": "object",
+  "version": 0,
+  "name": "bloomen_Photo",
   "properties": {
     "description": {
       "title": "Description",

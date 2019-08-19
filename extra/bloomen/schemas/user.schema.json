@@ -2,6 +2,8 @@
   "title": "Bloomen User",
   "description": "User metadata from the Bloomen project",
   "type": "object",
+  "version": 0,
+  "name": "bloomen_User",
   "properties": {
     "username": {
       "title": "Username",
