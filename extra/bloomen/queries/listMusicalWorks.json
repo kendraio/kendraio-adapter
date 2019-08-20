@@ -1,0 +1,18 @@
+{
+  "title": "Musical Works",
+  "description": "List of musical works registered with the Bloomen project",
+  "dataSource": {
+    "type": "remote",
+    "endpoint": "https://fake-api.now32.now.sh/musicalWorks"
+  },
+  "columnDefs": [
+    {
+      "headerName": "Title",
+      "field": "originalTitle"
+    },
+    {
+      "headerName": "ISWC",
+      "field": "ISWC"
+    }
+  ]
+}

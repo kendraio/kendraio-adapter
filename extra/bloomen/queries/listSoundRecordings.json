@@ -1,0 +1,22 @@
+{
+  "title": "Sound Recordings",
+  "description": "List of sound recordings registered with the Bloomen project",
+  "dataSource": {
+    "type": "remote",
+    "endpoint": "https://fake-api.now32.now.sh/soundRecording"
+  },
+  "columnDefs": [
+    {
+      "headerName": "Title",
+      "field": "title"
+    },
+    {
+      "headerName": "Artist",
+      "field": "mainArtist"
+    },
+    {
+      "headerName": "ISRC",
+      "field": "ISRC"
+    }
+  ]
+}

@@ -24,3 +24,7 @@ forms:
   photo:
     jsonSchema: extra/bloomen/schemas/photo.schema.json
     uiSchema: extra/bloomen/schemas/photo.ui.json
+
+queries:
+  - extra/bloomen/queries/listSoundRecordings.json
+  - extra/bloomen/queries/listMusicalWorks.json
