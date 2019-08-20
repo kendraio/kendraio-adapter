@@ -13,11 +13,11 @@ database:
 
 forms:
   musicalWork:
-    jsonSchema: extra/bloomen/schemas/musicalWork.json
-    uiSchema: extra/bloomen/schemas/musicalWork-ui.json
+    jsonSchema: extra/bloomen/schemas/musicalWork.schema.json
+    uiSchema: extra/bloomen/schemas/musicalWork.ui.json
   soundRecording:
-    jsonSchema: extra/bloomen/schemas/soundRecording.json
-    uiSchema: extra/bloomen/schemas/soundRecording-ui.json
+    jsonSchema: extra/bloomen/schemas/soundRecording.schema.json
+    uiSchema: extra/bloomen/schemas/soundRecording.ui.json
   user:
     jsonSchema: extra/bloomen/schemas/user.schema.json
     uiSchema: extra/bloomen/schemas/user.ui.json
