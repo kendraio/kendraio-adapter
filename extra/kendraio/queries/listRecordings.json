@@ -4,18 +4,21 @@
     "type": "local",
     "schema": "kendraio_music-recording"
   },
-  "columnDefs": [
-    {
-      "headerName": "Title",
-      "field": "Name"
-    },
-    {
-      "headerName": "Artist",
-      "field": "Artist"
-    },
-    {
-      "headerName": "ISRC",
-      "field": "ISRC"
-    }
-  ]
+  "output": {
+    "type": "grid",
+    "columnDefs": [
+      {
+        "headerName": "Title",
+        "field": "Name"
+      },
+      {
+        "headerName": "Artist",
+        "field": "Artist"
+      },
+      {
+        "headerName": "ISRC",
+        "field": "ISRC"
+      }
+    ]
+  }
 }

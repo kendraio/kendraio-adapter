@@ -5,14 +5,17 @@
     "type": "remote",
     "endpoint": "https://fake-api.now32.now.sh/musicalWork"
   },
-  "columnDefs": [
-    {
-      "headerName": "Title",
-      "field": "originalTitle"
-    },
-    {
-      "headerName": "ISWC",
-      "field": "ISWC"
-    }
-  ]
+  "output": {
+    "type": "grid",
+    "columnDefs": [
+      {
+        "headerName": "Title",
+        "field": "originalTitle"
+      },
+      {
+        "headerName": "ISWC",
+        "field": "ISWC"
+      }
+    ]
+  }
 }
