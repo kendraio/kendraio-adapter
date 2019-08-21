@@ -34,3 +34,4 @@ actions:
     path: extra/kendraio/claim-process-states.txt
   - title: Adapter API example
     path: extra/kendraio/adapter-api-form-example.txt
+
