@@ -22,6 +22,9 @@ forms:
     jsonSchema: extra/kendraio/schemas/file.schema.json
     uiSchema: extra/kendraio/schemas/file.ui.json
 
+queries:
+  - extra/kendraio/queries/listRecordings.json
+
 actions:
   - title: Claim Workflow States
     path: extra/kendraio/flow-chart.txt
