@@ -28,3 +28,4 @@ forms:
 queries:
   - extra/bloomen/queries/listSoundRecordings.json
   - extra/bloomen/queries/listMusicalWorks.json
+  - extra/bloomen/queries/chartReleases.json
