@@ -1,12 +1,22 @@
 {
-  "title": "Recordings of Works (chart)",
-  "description": "Chart of how many release per work",
-  "dataSource": {
-    "type": "remote",
-    "endpoint": "https://fake-api.now32.now.sh/musicalWork"
-  },
-  "mapping": "[].{ label: originalTitle, value: length(associatedISRCs) }",
-  "output": {
-    "type": "chart"
-  }
+    "title": "Recordings of Works (chart)",
+    "description": "Chart of how many release per work",
+    "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/musicalWork"
+    },
+    "mapping": "[].{ label: originalTitle, value: length(associatedISRCs) }",
+    "output": {
+        "type": "grid",
+        "columnDefs": [
+            {
+                "headerName": "Title",
+                "field": "label"
+            },
+            {
+                "headerName": "Releases",
+                "field": "value"
+            }
+        ]
+    }
 }
