@@ -8,3 +8,6 @@ uploads: false
 
 configs:
   - extra/teosto/configs/listWorks.json
+  - extra/teosto/configs/authorsWorksByName.json
+  - extra/teosto/configs/authorsWorksFromIPI.json
+  - extra/teosto/configs/getRightsHolderForISWC.json
