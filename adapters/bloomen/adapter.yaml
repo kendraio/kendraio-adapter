@@ -29,3 +29,7 @@ queries:
   - extra/bloomen/queries/listSoundRecordings.json
   - extra/bloomen/queries/listMusicalWorks.json
   - extra/bloomen/queries/chartReleases.json
+
+configs:
+  - extra/bloomen/configs/listSoundRecordings.json
+  -

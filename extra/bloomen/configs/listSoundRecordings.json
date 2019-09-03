@@ -1,0 +1,29 @@
+{
+  "title": "List of Sound Recordings",
+  "blocks": [
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/soundRecording"
+      }
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Title",
+          "field": "title"
+        },
+        {
+          "headerName": "Artist",
+          "field": "mainArtist"
+        },
+        {
+          "headerName": "ISRC",
+          "field": "ISRC"
+        }
+      ]
+    }
+  ]
+}
