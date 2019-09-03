@@ -32,4 +32,5 @@ queries:
 
 configs:
   - extra/bloomen/configs/listSoundRecordings.json
-  -
+  - extra/bloomen/configs/listMusicalWorks.json
+  - extra/bloomen/configs/chartReleases.json
