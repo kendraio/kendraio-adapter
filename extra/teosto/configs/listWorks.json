@@ -1,0 +1,60 @@
+{
+  "title": "List works",
+  "blocks": [
+    {
+      "type": "form",
+      "adapter": "kendraio",
+      "formId": "search-limit"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": {
+          "protocol": "https:",
+          "host": "teosto-cors-proxy-eilgg5e92.now.sh",
+          "pathname": "/dev/rest/work/perTitle/HEART",
+          "query": {
+            "limit": 4
+          },
+          "valueGetters": {
+            "pathname": "join('', ['/dev/rest/work/perTitle/', model.term])",
+            "query": "{limit: model.limit}"
+          }
+        },
+        "authentication": {
+          "type": "basic-auth",
+          "valueGetters": {
+            "username": "user.teosto.username",
+            "password": "user.teosto.password"
+          }
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "result[].{ workkey: workkey, titles: titles[].work_title, performer: performers.name, right_owners: right_owners[].name }"
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Work key",
+          "field": "workkey"
+        },
+        {
+          "headerName": "Titles",
+          "valueGetter": "titles"
+        },
+        {
+          "headerName": "Performer",
+          "valueGetter": "performer"
+        },
+        {
+          "headerName": "Rights owners",
+          "valueGetter": "right_owners"
+        }
+      ]
+    }
+  ]
+}

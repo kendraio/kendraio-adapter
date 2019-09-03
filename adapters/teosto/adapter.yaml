@@ -1,0 +1,10 @@
+name: teosto
+title: Teosto
+description: Teosto is a non-profit performance rights organization that collects royalties on behalf of songwriters and composers in Finland.
+infoUrl: https://www.teosto.fi/
+maintainer: Kendraio
+supportUrl: http://kendra.io
+uploads: false
+
+configs:
+  - extra/teosto/configs/listWorks.json
