@@ -55,10 +55,28 @@
     },
     {
       "type": "mapping",
-      "mapping": "result"
+      "mapping": "result[].{ workkey: workkey, titles: titles[?title_type=='OT'].work_title, performer: performers.name, right_owners: right_owners[].name }"
     },
     {
-      "type": "debug"
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Work key",
+          "field": "workkey"
+        },
+        {
+          "headerName": "Titles",
+          "valueGetter": "titles"
+        },
+        {
+          "headerName": "Performer",
+          "valueGetter": "performer"
+        },
+        {
+          "headerName": "Rights owners",
+          "valueGetter": "right_owners"
+        }
+      ]
     }
   ]
 }
