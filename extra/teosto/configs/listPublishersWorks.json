@@ -1,0 +1,74 @@
+{
+  "title": "List publisher's works",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "List publisher's works",
+        "type": "object",
+        "properties": {
+          "name": {
+            "title": "Publisher",
+            "type": "string",
+            "default": "WARNER CHAPPELL MUSIC FINLAND OY"
+          },
+          "limit": {
+            "title": "How many results to fetch?",
+            "type": "integer",
+            "default": 2
+          }
+        }
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": {
+          "protocol": "https:",
+          "host": "teosto-cors-proxy-eilgg5e92.now.sh",
+          "pathname": "/dev/rest/work/searchPublisher",
+          "query": {
+            "limit": 4
+          },
+          "valueGetters": {
+            "query": "{PUBLISHER: model.name, limit: model.limit}"
+          }
+        },
+        "authentication": {
+          "type": "basic-auth",
+          "valueGetters": {
+            "username": "user.teosto.username",
+            "password": "user.teosto.password"
+          }
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "result[].{ workkey: workkey, titles: titles[?title_type=='OT'].work_title, performer: performers.name, right_owners: right_owners[].name }"
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Work key",
+          "field": "workkey"
+        },
+        {
+          "headerName": "Titles",
+          "valueGetter": "titles"
+        },
+        {
+          "headerName": "Performer",
+          "valueGetter": "performer"
+        },
+        {
+          "headerName": "Rights owners",
+          "valueGetter": "right_owners"
+        }
+      ]
+    }
+  ]
+}
