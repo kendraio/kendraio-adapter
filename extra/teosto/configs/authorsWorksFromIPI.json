@@ -11,7 +11,7 @@
             "title": "How many results to fetch?",
             "type": "integer",
             "default": 2
-          },
+          }
         }
       },
       "uiSchema": {}
