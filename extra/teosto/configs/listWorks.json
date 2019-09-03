@@ -4,7 +4,7 @@
     {
       "type": "form",
       "jsonSchema": {
-        "title": "Search",
+        "title": "Get works per title",
         "type": "object",
         "properties": {
           "limit": {
