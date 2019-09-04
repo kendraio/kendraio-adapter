@@ -4,7 +4,8 @@
     {
       "type": "form",
       "jsonSchema": {
-        "title": "Chart of releases per work"
+        "title": "Chart of releases per work",
+        "type": "object"
       },
       "uiSchema": {}
     },
