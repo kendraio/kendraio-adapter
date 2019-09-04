@@ -25,7 +25,7 @@
       "mapping": "[].{ label: originalTitle, value: length(associatedISRCs) }"
     },
     {
-      "type": "grid",
+      "type": "chart",
       "columnDefs": [
         {
           "headerName": "Title",
