@@ -1,0 +1,37 @@
+{
+  "title": "Imported recordings (Local DB)",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "Recordings (Local DB)",
+        "type": "object"
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "local",
+        "schema": "kendraio_music-recording"
+      }
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Title",
+          "field": "Name"
+        },
+        {
+          "headerName": "Artist",
+          "field": "Artist"
+        },
+        {
+          "headerName": "ISRC",
+          "field": "ISRC"
+        }
+      ]
+    }
+  ]
+}

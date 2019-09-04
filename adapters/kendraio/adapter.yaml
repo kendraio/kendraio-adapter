@@ -35,3 +35,5 @@ actions:
   - title: Adapter API example
     path: extra/kendraio/adapter-api-form-example.txt
 
+configs:
+  - extra/kendraio/configs/listRecordings.json
