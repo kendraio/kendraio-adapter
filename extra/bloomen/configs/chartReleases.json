@@ -1,4 +1,36 @@
 {
-  "title": "Chart of Releases",
-  "blocks": []
+  "title": "Chart of releases per work",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "Chart of releases per work"
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/musicalWork"
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "[].{ label: originalTitle, value: length(associatedISRCs) }"
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Title",
+          "field": "label"
+        },
+        {
+          "headerName": "Releases",
+          "field": "value"
+        }
+      ]
+    }
+  ]
 }
