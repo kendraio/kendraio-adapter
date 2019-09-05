@@ -36,3 +36,4 @@ configs:
   - extra/bloomen/configs/chartReleases.json
   - extra/bloomen/configs/editSoundRecording.json
   - extra/bloomen/configs/messageExample.json
+  - extra/bloomen/configs/templateExample.json
