@@ -12,3 +12,4 @@ configs:
   - extra/teosto/configs/authorsWorksFromIPI.json
   - extra/teosto/configs/getRightsHolderForISWC.json
   - extra/teosto/configs/listPublishersWorks.json
+  - extra/teosto/configs/listWorksSelectionExample.json

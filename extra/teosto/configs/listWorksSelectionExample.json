@@ -1,0 +1,92 @@
+{
+  "title": "List works (with selection)",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "Get works per title",
+        "type": "object",
+        "properties": {
+          "term": {
+            "title": "Search term",
+            "type": "string",
+            "default": "HEART"
+          },
+          "limit": {
+            "title": "Limit",
+            "type": "integer",
+            "default": 2
+          }
+        }
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": {
+          "protocol": "https:",
+          "host": "teosto-cors-proxy-eilgg5e92.now.sh",
+          "pathname": "/dev/rest/work/perTitle/HEART",
+          "query": {
+            "limit": 4
+          },
+          "valueGetters": {
+            "pathname": "join('', ['/dev/rest/work/perTitle/', model.term])",
+            "query": "{limit: model.limit}"
+          }
+        },
+        "authentication": {
+          "type": "basic-auth",
+          "valueGetters": {
+            "username": "user.teosto.username",
+            "password": "user.teosto.password"
+          }
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "result[]"
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Work key",
+          "field": "workkey",
+          "checkboxSelection": true
+        },
+        {
+          "headerName": "Titles",
+          "valueGetter": "titles[?title_type=='OT'].work_title"
+        },
+        {
+          "headerName": "Performer",
+          "valueGetter": "performers.name"
+        },
+        {
+          "headerName": "Rights owners",
+          "valueGetter": "right_owners[].name"
+        }
+      ]
+    },
+    {
+      "type": "mapping",
+      "mapping": "[0]"
+    },
+    {
+      "type": "mapping",
+      "mapping": "{ title: titles[?title_type=='OT'].work_title | [0], selection: @}"
+    },
+    {
+      "type": "message",
+      "title": "Selection item: {{title}}",
+      "message": "Rights owners: {{#each selection.right_owners}}{{name}} ({{type}}){{#unless @last}}, {{/unless}}{{/each}}"
+    },
+    {
+      "type": "debug"
+    }
+  ]
+}
