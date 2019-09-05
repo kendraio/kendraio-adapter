@@ -2,12 +2,7 @@
   "title": "Chart of releases per work",
   "blocks": [
     {
-      "type": "form",
-      "jsonSchema": {
-        "title": "Chart of releases per work",
-        "type": "object"
-      },
-      "uiSchema": {}
+      "type": "init"
     },
     {
       "type": "query",

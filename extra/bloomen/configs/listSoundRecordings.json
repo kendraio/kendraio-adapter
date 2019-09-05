@@ -2,12 +2,7 @@
   "title": "List of Sound Recordings",
   "blocks": [
     {
-      "type": "form",
-      "jsonSchema": {
-        "title": "List sound recordings",
-        "type": "object"
-      },
-      "uiSchema": {}
+      "type": "init"
     },
     {
       "type": "query",

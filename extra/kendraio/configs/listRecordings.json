@@ -2,12 +2,7 @@
   "title": "Imported recordings (Local DB)",
   "blocks": [
     {
-      "type": "form",
-      "jsonSchema": {
-        "title": "Recordings (Local DB)",
-        "type": "object"
-      },
-      "uiSchema": {}
+      "type": "init"
     },
     {
       "type": "query",

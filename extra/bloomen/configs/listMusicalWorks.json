@@ -2,12 +2,7 @@
   "title": "List Musical Works",
   "blocks": [
     {
-      "type": "form",
-      "jsonSchema": {
-        "title": "List musical works",
-        "type": "object"
-      },
-      "uiSchema": {}
+      "type": "init"
     },
     {
       "type": "query",
