@@ -35,3 +35,4 @@ configs:
   - extra/bloomen/configs/listMusicalWorks.json
   - extra/bloomen/configs/chartReleases.json
   - extra/bloomen/configs/editSoundRecording.json
+  - extra/bloomen/configs/messageExample.json
