@@ -1,0 +1,98 @@
+{
+  "title": "Bulk operations example",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "local",
+        "schema": "kendraio_music-recording"
+      }
+    },
+    {
+      "type": "grid",
+      "gridOptions": {
+        "pagination": true,
+        "paginationPageSize": 10,
+        "rowSelection": "multiple"
+      },
+      "columnDefs": [
+        {
+          "width": 50,
+          "resizable": false,
+          "checkboxSelection": true
+        },
+        {
+          "headerName": "Title",
+          "field": "Name"
+        },
+        {
+          "headerName": "Artist",
+          "field": "Artist"
+        },
+        {
+          "headerName": "ISRC",
+          "field": "ISRC"
+        }
+      ]
+    },
+    {
+      "type": "actions",
+      "buttons": [
+        {
+          "label": "Delete",
+          "blocks": [
+            {
+              "type": "dialog",
+              "blocks": [
+                {
+                  "type": "mapping",
+                  "mapping": "{ selected: @ }"
+                },
+                {
+                  "type": "template",
+                  "template": "<p>Are you sure you want to delete the following items?</p><ul>{{#each selected}}<li>{{_id}}</li>{{/each}}</ul>"
+                },
+                {
+                  "type": "form",
+                  "label": "OK",
+                  "jsonSchema": {
+                    "type": "object"
+                  },
+                  "uiSchema": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Export",
+          "blocks": [
+            {
+              "type": "dialog",
+              "blocks": [
+                {
+                  "type": "message",
+                  "message": "CSV Export"
+                },
+                {
+                  "type": "form",
+                  "label": "OK",
+                  "jsonSchema": {
+                    "type": "object"
+                  },
+                  "uiSchema": {}
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "debug"
+    }
+  ]
+}

@@ -37,3 +37,4 @@ actions:
 
 configs:
   - extra/kendraio/configs/listRecordings.json
+  - extra/kendraio/configs/bulkOperationsExample.json
