@@ -37,3 +37,4 @@ configs:
   - extra/bloomen/configs/editSoundRecording.json
   - extra/bloomen/configs/messageExample.json
   - extra/bloomen/configs/templateExample.json
+  - extra/bloomen/configs/dialogExample.json
