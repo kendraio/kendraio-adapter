@@ -2,6 +2,20 @@
   "title": "Bulk operations example",
   "blocks": [
     {
+      "type": "message",
+      "title": "Sound Recordings",
+      "message": "These are the sound recordings available in the local DB."
+    },
+    {
+      "type": "actions",
+      "buttons": [
+        {
+          "label": "Add new",
+          "blocks": []
+        }
+      ]
+    },
+    {
       "type": "init"
     },
     {
