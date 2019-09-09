@@ -38,3 +38,5 @@ configs:
   - extra/bloomen/configs/messageExample.json
   - extra/bloomen/configs/templateExample.json
   - extra/bloomen/configs/dialogExample.json
+  - extra/bloomen/configs/bloomenApiJwt-musicalWorks.json
+  - extra/bloomen/configs/bloomenApiJwt-soundRecordings.json
