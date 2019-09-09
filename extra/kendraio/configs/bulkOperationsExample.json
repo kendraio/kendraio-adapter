@@ -10,7 +10,27 @@
       "buttons": [
         {
           "label": "Add new",
-          "blocks": []
+          "blocks": [
+            {
+              "type": "dialog",
+              "blocks": [
+                {
+                  "type": "form",
+                  "jsonSchema": {
+                    "title": "Add new sound recording",
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "title": "Title"
+                      }
+                    }
+                  },
+                  "uiSchema": {}
+                }
+              ]
+            }
+          ]
         }
       ]
     },
