@@ -3,8 +3,7 @@
   "blocks": [
     {
       "type": "message",
-      "title": "Sound Recordings",
-      "message": "These are the sound recordings available in the local DB."
+      "title": "Sound Recordings"
     },
     {
       "type": "actions",
