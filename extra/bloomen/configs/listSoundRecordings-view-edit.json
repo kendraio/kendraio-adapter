@@ -1,0 +1,86 @@
+{
+  "title": "List of Sound Recordings (view/edit)",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/soundRecording"
+      }
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Title",
+          "field": "title"
+        },
+        {
+          "headerName": "Artist",
+          "field": "mainArtist"
+        },
+        {
+          "headerName": "ISRC",
+          "field": "ISRC"
+        },
+        {
+          "headerName": "Operations",
+          "cellRenderer": "workflowRenderer",
+          "cellRendererParams": {
+            "blocks": [
+              {
+                "type": "actions",
+                "buttons": [
+                  {
+                    "label": "View",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "message",
+                            "message": "Viewing {{title}}"
+                          },
+                          {
+                            "type": "debug"
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "OK",
+                                "blocks": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Edit",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "form",
+                            "adapter": "bloomen",
+                            "formId": "soundRecording"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
