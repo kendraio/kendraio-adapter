@@ -40,3 +40,5 @@ configs:
   - extra/bloomen/configs/dialogExample.json
   - extra/bloomen/configs/bloomenApiJwt-musicalWorks.json
   - extra/bloomen/configs/bloomenApiJwt-soundRecordings.json
+  - extra/bloomen/configs/bloomenApiJwt-exportMusicalWorks.json
+  - extra/bloomen/configs/importMusicalWorks.json
