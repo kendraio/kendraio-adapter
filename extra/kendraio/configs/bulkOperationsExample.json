@@ -81,8 +81,12 @@
               "type": "dialog",
               "blocks": [
                 {
+                  "type": "mapping",
+                  "mapping": "{ selected: data }"
+                },
+                {
                   "type": "template",
-                  "template": "<p>Are you sure you want to delete the following items?</p><ul>{{#each data}}<li>{{_id}}</li>{{/each}}</ul>"
+                  "template": "<p>Are you sure you want to delete the following items?</p><ul>{{#each selected}}<li>{{_id}}</li>{{/each}}</ul>"
                 },
                 {
                   "type": "form",
