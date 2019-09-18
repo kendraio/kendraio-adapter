@@ -13,11 +13,7 @@
     },
     {
       "type": "mapping",
-      "mapping": "result"
-    },
-    {
-      "type": "mapping",
-      "mapping": "[].{ label: originalTitle, value: length(associatedISRCs) }"
+      "mapping": "data[].{ label: originalTitle, value: length(associatedISRCs) }"
     },
     {
       "type": "chart",
