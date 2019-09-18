@@ -20,10 +20,6 @@
       }
     },
     {
-      "type": "mapping",
-      "mapping": "response[]"
-    },
-    {
       "type": "grid",
       "columnDefs": [
         {

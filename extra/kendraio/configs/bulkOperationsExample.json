@@ -82,7 +82,7 @@
               "blocks": [
                 {
                   "type": "mapping",
-                  "mapping": "{ selected: @ }"
+                  "mapping": "{ selected: data }"
                 },
                 {
                   "type": "template",
@@ -106,18 +106,11 @@
             {
               "type": "dialog",
               "blocks": [
-                {
-                  "type": "message",
-                  "message": "CSV Export"
-                },
-                {
-                  "type": "form",
-                  "label": "OK",
-                  "jsonSchema": {
-                    "type": "object"
-                  },
-                  "uiSchema": {}
-                }
+                        {
+                            "type": "csv-export",
+                            "header": true,
+                            "skipEmptyLines": true
+                        }
               ]
             }
           ]
