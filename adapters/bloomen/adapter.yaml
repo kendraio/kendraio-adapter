@@ -40,3 +40,4 @@ configs:
   - extra/bloomen/configs/dialogExample.json
   - extra/bloomen/configs/bloomenApiJwt-musicalWorks.json
   - extra/bloomen/configs/bloomenApiJwt-soundRecordings.json
+  - extra/bloomen/configs/photo-search-example.json
