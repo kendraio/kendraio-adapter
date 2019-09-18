@@ -44,7 +44,7 @@
     },
     {
       "type": "mapping",
-      "mapping": "result[].right_owners[]"
+      "mapping": "data[].right_owners[]"
     },
     {
       "type": "grid",

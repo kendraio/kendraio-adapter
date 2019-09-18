@@ -42,7 +42,7 @@
     },
     {
       "type": "mapping",
-      "mapping": "result[].{ workkey: workkey, titles: titles[?title_type=='OT'].work_title, performer: performers.name, right_owners: right_owners[].name }"
+      "mapping": "data[].{ workkey: workkey, titles: titles[?title_type=='OT'].work_title, performer: performers.name, right_owners: right_owners[].name }"
     },
     {
       "type": "grid",

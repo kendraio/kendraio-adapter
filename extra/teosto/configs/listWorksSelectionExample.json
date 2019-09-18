@@ -48,7 +48,7 @@
     },
     {
       "type": "mapping",
-      "mapping": "result[]"
+      "mapping": "data[]"
     },
     {
       "type": "grid",
