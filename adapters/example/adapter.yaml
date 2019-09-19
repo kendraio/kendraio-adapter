@@ -1,0 +1,10 @@
+name: example
+title: Example
+description: An adapter for examples and demonstrations.
+infoUrl: https://www.example.com/
+maintainer: Kendraio
+supportUrl: https://www.kendra.io
+uploads: false
+
+configs:
+  - extra/example/configs/productChart.json
