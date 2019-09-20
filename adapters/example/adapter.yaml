@@ -9,3 +9,8 @@ uploads: false
 configs:
   - extra/example/configs/productChart.json
   - extra/example/configs/customFormElements.json
+
+forms:
+  customElements:
+    jsonSchema: extra/example/schemas/customElements.schema.json
+    uiSchema: extra/example/schemas/customElements.ui.json
