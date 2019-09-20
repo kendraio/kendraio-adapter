@@ -8,3 +8,4 @@ uploads: false
 
 configs:
   - extra/example/configs/productChart.json
+  - extra/example/configs/customFormElements.json

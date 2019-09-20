@@ -1,0 +1,170 @@
+{
+  "title": "Custom form elements",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "Custom Elements Demo",
+        "description": "This is a demo of all the Custom Element currently available Kendraio App",
+        "type": "object",
+        "required": [
+          "title",
+          "description"
+        ],
+        "properties": {
+          "videoViewer": {
+            "title": "The Video Viewer",
+            "description": "Embeds a YouTube Video on a form",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "description": "",
+            "type": "string"
+          },
+          "money": {
+            "title": "Money",
+            "description": "Uses a mask to aid correct entry of an amount of money",
+            "type": "string"
+          },
+          "percentage": {
+            "title": "Pecentage",
+            "description": "Uses a mask to aid correct entry of a Percentage",
+            "type": "string"
+          },
+          "countries": {
+            "title": "Country List",
+            "description": "Presents a list of Countries(hard coded) and flags ",
+            "type": "string"
+          },
+          "selectMulti": {
+            "title": "Custom Select with Multiselect and Autocomplete",
+            "description": "",
+            "type": "string"
+          },
+          "selectautocomplete": {
+            "title": "Custom Select with Autocomplete (JSon, Local data)",
+            "description": "",
+            "type": "string"
+          },
+          "selectremotedata": {
+            "title": "Custom Select with Autocomplete from remote API",
+            "description": "Data is from https://restcountries.eu/rest/",
+            "type": "string"
+          },
+          "selectaddnew": {
+            "title": "Custom Select allowing new item to be added",
+            "description": "Data is from https://restcountries.eu/rest/",
+            "type": "string"
+          },
+          "textarea": {
+            "type": "string",
+            "title": "Smart Textarea",
+            "minLength": 2,
+            "maxLength": 203,
+            "description": "This is a custom Textarea with additional user feedback"
+          },
+          "thumbnails": {
+            "type": "string",
+            "title": "Thumbnail Viewer",
+            "description": "Allows the display of Thumbnails"
+          },
+          "tags": {
+            "type": "string",
+            "title": "Tags ",
+            "description": "Press enter to add a tag"
+          },
+          "visibility": {
+            "type": "object",
+            "title": "Visibility "
+          },
+          "playlist": {
+            "type": "object",
+            "title": "Playlists"
+          }
+        }
+      },
+      "uiSchema": {
+        "password": {
+          "ui:disabled": false,
+          "ui:placeholder": "This is a custom Password field",
+          "ui:widget": "k-password",
+          "ui:errMessage": {
+            "required": "This is my Required Field error message.",
+            "minLength": "This a custom Min length error message."
+          }
+        },
+        "money": {
+          "ui:widget": "money"
+        },
+        "percentage": {
+          "ui:widget": "percentage"
+        },
+        "textarea": {
+          "ui:disabled": false,
+          "ui:placeholder": "This is a Smart Textarea",
+          "ui:autofocus": true,
+          "ui:widget": "k-textarea",
+          "ui:rows": 8,
+          "ui:cols": 3,
+          "ui:errMessage": {
+            "required": "Excuse me, this field is required!!",
+            "minLength": "Please enter more Characters",
+            "maxLength": "This field cannot except that many Characters. "
+          }
+        },
+        "videoViewer": {
+          "ui:widget": "videoviewer"
+        },
+        "thumbnails": {
+          "ui:widget": "thumbnailviewer"
+        },
+        "countries": {
+          "ui:widget": "countries"
+        },
+        "selectMulti": {
+          "ui:widget": "k-select",
+          "ui:labelProp": "name",
+          "ui:valueProp": "alpha3Code",
+          "ui:isMultiSelect": true,
+          "ui:ref": "testCountries",
+          "ui:refType": "http"
+        },
+        "selectautocomplete": {
+          "ui:widget": "k-select",
+          "ui:labelProp": "name",
+          "ui:valueProp": "alpha3Code",
+          "ui:isMultiSelect": false,
+          "ui:ref": "testCountries",
+          "ui:refType": "json"
+        },
+        "selectremotedata": {
+          "ui:widget": "k-select",
+          "ui:labelProp": "name",
+          "ui:valueProp": "alpha3Code",
+          "ui:isMultiSelect": false,
+          "ui:ref": "testRegion",
+          "ui:refType": "http"
+        },
+        "selectaddnew": {
+          "ui:widget": "k-select",
+          "ui:addTag": true,
+          "ui:labelProp": "name",
+          "ui:valueProp": "alpha3Code",
+          "ui:isMultiSelect": false,
+          "ui:ref": "testRegion",
+          "ui:refType": "http"
+        },
+        "tags": {
+          "ui:widget": "tags"
+        },
+        "visibility": {
+          "ui:widget": "visibility"
+        },
+        "playlist": {
+          "ui:widget": "playlist"
+        }
+      }
+    }
+  ]
+}
