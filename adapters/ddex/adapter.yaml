@@ -1,0 +1,10 @@
+name: ddex
+title: DDEX
+description: Implementation of schemas for DDEX messages
+infoUrl: https://ddex.net/
+maintainer: Kendraio
+supportUrl: https://kendra.io
+uploads: false
+
+configs:
+  - extra/ddex/ern4-import.json
