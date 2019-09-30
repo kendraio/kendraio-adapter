@@ -4,6 +4,7 @@ Hosted via GitHub Pages at
 https://kendraio.github.io/kendraio-adapter/config.json
 
 WIP: Kendraio Adapter Repository
+https://kendraio-adapter.kendraio.now.sh/
 
 
 ## Building
