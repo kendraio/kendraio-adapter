@@ -1,0 +1,50 @@
+{
+  "title": "Import works (Bloomen API)",
+  "blocks": [
+    {
+      "type": "csv-import",
+      "header": true,
+      "skipEmptyLines": true
+    },
+    {
+      "type": "grid",
+      "gridOptions": {
+        "rowSelection": "multiple"
+      },
+      "columnDefs": [
+        {
+          "headerName": "id",
+          "field": "id",
+          "checkboxSelection": true
+        },
+        {
+          "headerName": "title",
+          "field": "title"
+        },
+        {
+          "headerName": "creators",
+          "field": "creators"
+        },
+        {
+          "headerName": "alternativeTitles",
+          "field": "alternativeTitles"
+        },
+        {
+          "headerName": "performers",
+          "field": "performers"
+        },
+        {
+          "headerName": "ISRCs",
+          "field": "isrcs"
+        },
+        {
+          "headerName": "ISWC",
+          "field": "ISWC"
+        }
+      ]
+    },
+    {
+      "type": "debug"
+    }
+  ]
+}

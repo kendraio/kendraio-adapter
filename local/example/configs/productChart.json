@@ -1,0 +1,48 @@
+{
+  "title": "Product Chart",
+  "blocks": [
+    {
+      "type": "actions",
+      "buttons": [
+        {
+          "label": "Generate",
+          "color": "primary",
+          "blocks": [
+            {
+              "type": "init"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faker",
+      "jsonSchema": {
+        "type": "array",
+        "minItems": 20,
+        "items": {
+          "type": "object",
+          "properties": {
+            "label": {
+              "type": "string",
+              "faker": "commerce.productName"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 120
+            }
+          },
+          "required": [
+            "label",
+            "value"
+          ]
+        }
+      }
+    },
+    {
+      "type": "chart",
+      "chartType": "bar"
+    }
+  ]
+}

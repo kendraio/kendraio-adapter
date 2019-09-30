@@ -1,0 +1,8 @@
+{
+  "name": "Main Kendraio Adapter Repository",
+  "adapters": [
+    "local/bloomen",
+    "local/example",
+    "local/kendraio"
+  ]
+}

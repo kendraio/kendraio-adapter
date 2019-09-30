@@ -1,0 +1,24 @@
+{
+  "title": "Message block example",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/soundRecording"
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "result[0]"
+    },
+    {
+      "type": "message",
+      "title": "{{title}}",
+      "message": "by {{mainArtist}} ({{yearOfRecording}})"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "Edit Sound Recording",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "uiSchema": {
+        "id": {
+          "ui:placeholder": "ID"
+        }
+      }
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": {
+          "protocol": "https:",
+          "host": "fake-api.now32.now.sh",
+          "valueGetters": {
+            "pathname": "join('', ['/soundRecording/', model.id])"
+          }
+        }
+      }
+    },
+    {
+      "type": "debug"
+    },
+    {
+      "type": "form",
+      "adapter": "bloomen",
+      "formId": "soundRecording"
+    },
+    {
+      "type": "http",
+      "method": "put",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "fake-api.now32.now.sh",
+        "valueGetters": {
+          "pathname": "join('', ['/soundRecording/', to_string(model.id)])"
+        }
+      }
+    },
+    {
+      "type": "debug"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Custom form elements",
+  "blocks": [
+    {
+      "type": "form",
+      "adapter": "example",
+      "formId": "customElements"
+    }
+  ]
+}

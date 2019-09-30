@@ -1,0 +1,84 @@
+{
+  "title": "Bloomen Photo",
+  "description": "Photo metadata from the Bloomen project",
+  "type": "object",
+  "version": 0,
+  "name": "bloomen_Photo",
+  "properties": {
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "price": {
+      "title": "Price",
+      "type": "number"
+    },
+    "attribution": {
+      "title": "Attribution",
+      "type": "boolean"
+    },
+    "keywords": {
+      "title": "Keywords",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "url": {
+      "title": "URL",
+      "type": "string",
+      "format": "uri"
+    },
+    "rightsRegion": {
+      "title": "Rights region",
+      "format": "string"
+    },
+    "ownerUser": {
+      "title": "Owner (User)",
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "User ID",
+          "type": "string"
+        },
+        "username": {
+          "title": "Username",
+          "type": "string"
+        }
+      }
+    },
+    "owner": {
+      "title": "Owner",
+      "type": "string"
+    },
+    "geo": {
+      "title": "Geolocation",
+      "type": "object",
+      "properties": {
+        "lat": {
+          "title": "lat",
+          "type": "string"
+        },
+        "long": {
+          "title": "long",
+          "type": "string"
+        }
+      }
+    },
+    "createdAtUTC": {
+      "title": "Created at",
+      "type": "string",
+      "format": "datetime"
+    },
+    "rightsTime": {
+      "title": "Rights time",
+      "type": "string",
+      "format": "datetime"
+    },
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "enum": ["photo"]
+    }
+  }
+}

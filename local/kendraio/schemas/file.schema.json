@@ -1,0 +1,41 @@
+{
+  "title": "File",
+  "description": "Kendraio File metadata",
+  "type": "object",
+  "version": 0,
+  "name": "kendraio_file",
+  "properties": {
+    "File": {
+      "title": "File",
+      "type": "string"
+    },
+    "Title": {
+      "title": "Title",
+      "type": "string"
+    },
+    "Created by": {
+      "title": "Created by",
+      "type": "string"
+    },
+    "Created date": {
+      "title": "Created date",
+      "type": "string"
+    },
+    "Uploaded by": {
+      "title": "Uploaded by",
+      "type": "string"
+    },
+    "Uploaded date": {
+      "title": "Uploaded date",
+      "type": "string"
+    },
+    "Type": {
+      "title": "Type",
+      "type": "string"
+    },
+    "type": {
+      "title": "type",
+      "type": "string"
+    }
+  }
+}

@@ -1,4 +1,4 @@
-exclude:  [ "adapters", "README.md" ]
+exclude:  [ "adapters", "README.md", "build.ts" ]
 data_dir: adapters
 webrick:
   headers:

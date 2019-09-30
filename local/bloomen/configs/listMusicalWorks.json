@@ -1,0 +1,28 @@
+{
+  "title": "List Musical Works",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/musicalWork"
+      }
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Title",
+          "field": "originalTitle"
+        },
+        {
+          "headerName": "ISWC",
+          "field": "ISWC"
+        }
+      ]
+    }
+  ]
+}

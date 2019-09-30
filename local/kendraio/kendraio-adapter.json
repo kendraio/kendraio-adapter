@@ -1,0 +1,57 @@
+{
+  "name": "kendraio",
+  "version": "0.1.0",
+  "label": "Kendraio",
+  "description": "An adapter for Kendraio specific features",
+  "infoUrl": "https://kendra.io/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://kendra.io",
+  "database": [
+    {
+      "name": "music_recording",
+      "schema": "schemas/music_recording.schema.json"
+    },
+    {
+      "name": "music_work",
+      "schema": "schemas/music_work.schema.json"
+    },
+    {
+      "name": "file",
+      "schema": "schemas/file.schema.json"
+    }
+  ],
+  "forms": [
+    {
+      "formId": "music_recording",
+      "title": "Music recording",
+      "jsonSchema": "schemas/music_recording.schema.json",
+      "uiSchema": "forms/music_recording.ui.json"
+    },
+    {
+      "formId": "music_work",
+      "title": "Music work",
+      "jsonSchema": "schemas/music_work.schema.json",
+      "uiSchema": "forms/music_work.ui.json"
+    },
+    {
+      "formId": "file",
+      "title": "File",
+      "jsonSchema": "schemas/file.schema.json",
+      "uiSchema": "forms/file.ui.json"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Bulk operations example",
+      "config": "configs/bulkOperationsExample.json"
+    },
+    {
+      "title": "Faker - test data generator",
+      "config": "configs/fakerTest.json"
+    },
+    {
+      "title": "Imported recordings (Local DB)",
+      "config": "configs/listRecordings.json"
+    }
+  ]
+}
