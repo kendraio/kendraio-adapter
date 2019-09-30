@@ -3,6 +3,9 @@
 Hosted via GitHub Pages at
 https://kendraio.github.io/kendraio-adapter/config.json
 
+WIP: Kendraio Adapter Repository
+
+
 ## Building
 The JSON is built when changes are pushed to GitHub, thanks to GitHub pages automatic 
 running of Jekyll on the repo before publishing to GitHub pages.
