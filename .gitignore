@@ -3,3 +3,4 @@ _site
 .DS_Store
 .zip
 node_modules
+public
