@@ -1,0 +1,23 @@
+{
+  "title": "Query and template example",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/musicalWork"
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "result[0]"
+    },
+    {
+      "type": "template",
+      "template": "<h1>{{originalTitle}}</h1><p>This musical work has ISWC {{ISWC}} and {{associatedISRCs.length}} related recordings.</p><p>Performers:</p><ul>{{#each associatedPerformers}}<li>{{this}}</li>{{/each}}</ul><p>Associated ISRCs:</p><ul>{{#each associatedISRCs}}<li>{{this}}</li>{{/each}}</ul>"
+    }
+  ]
+}

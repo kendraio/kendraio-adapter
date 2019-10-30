@@ -1,0 +1,12 @@
+{
+  "name": "m-rin",
+  "label": "Recording Information Notification (RIN)",
+  "description": "This adapter defines the schema and parser for the DDEX M-RIN (Minimum) Recording Information Notification standard.\nThis adapter enables support for import and export of M-RIN data, as well as the core entities for storage of projects, people, recordings, and works.\n",
+  "version": "0.0.0",
+  "infoUrl": "http://www.ddex.net/recording-information-notification-rin",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": []
+}

@@ -1,0 +1,12 @@
+{
+  "name": "resonate",
+  "label": "Resonate",
+  "description": "Resonate Co-operative is a community owned music streaming platform",
+  "version": "0.0.0",
+  "infoUrl": "https://resonate.is/",
+  "maintainer": "Resonate",
+  "supportUrl": "https://kendra.io/",
+  "database": [],
+  "workflow": [],
+  "forms": []
+}

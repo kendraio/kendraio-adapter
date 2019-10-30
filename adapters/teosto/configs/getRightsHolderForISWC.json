@@ -1,0 +1,87 @@
+{
+  "title": "Get rights holders per ISWC",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "Get rights holders per ISWC",
+        "type": "object",
+        "required": [
+          "iswc"
+        ],
+        "properties": {
+          "iswc": {
+            "title": "ISWC",
+            "type": "string",
+            "default": "T-912.457.854-7"
+          }
+        }
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": {
+          "protocol": "https:",
+          "host": "teosto-cors-proxy-eilgg5e92.now.sh",
+          "query": {
+            "limit": 1
+          },
+          "valueGetters": {
+            "pathname": "join('', ['/dev/rest/work/perISWC/', model.iswc])"
+          }
+        },
+        "authentication": {
+          "type": "basic-auth",
+          "valueGetters": {
+            "username": "user.teosto.username",
+            "password": "user.teosto.password"
+          }
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "data[].right_owners[]"
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "IPI Name Number",
+          "field": "ipi_name_nbr"
+        },
+        {
+          "headerName": "Name",
+          "valueGetter": "name"
+        },
+        {
+          "headerName": "First name",
+          "valueGetter": "firstname"
+        },
+        {
+          "headerName": "Local name",
+          "valueGetter": "local_name"
+        },
+        {
+          "headerName": "Local first name",
+          "valueGetter": "local_firstname"
+        },
+        {
+          "headerName": "Type",
+          "valueGetter": "type"
+        },
+        {
+          "headerName": "Performance society",
+          "valueGetter": "performance_society"
+        },
+        {
+          "headerName": "Mechanical society",
+          "valueGetter": "mechanical_society"
+        }
+      ]
+    }
+  ]
+}

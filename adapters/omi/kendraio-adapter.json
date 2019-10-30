@@ -1,0 +1,15 @@
+{
+  "name": "omi",
+  "label": "OMI",
+  "description": "We are a non-profit initiative creating an open-source protocol for the uniform identification of music rights holders and creators.",
+  "version": "0.0.0",
+  "infoUrl": "http://open-music.org/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  }
+}

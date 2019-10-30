@@ -1,0 +1,15 @@
+{
+  "name": "soundcloud",
+  "label": "SoundCloud",
+  "description": "Testing additional adapter",
+  "version": "0.0.0",
+  "infoUrl": "http://soundcloud.com",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,412 @@
+{
+  "title": "DDEX Electronic Release Notification Import",
+  "blocks": [
+    {
+      "type": "file-input",
+      "label": "Load ERN",
+      "accept": [
+        "xml"
+      ]
+    },
+    {
+      "type": "parse-data",
+      "csvOptions": {
+        "header": true,
+        "skipEmptyLines": true
+      },
+      "xmlOptions": {
+        "arrayAccessFormPaths": [
+          "NewReleaseMessage.PartyList.Party",
+          "NewReleaseMessage.ResourceList.SoundRecording",
+          "NewReleaseMessage.ResourceList.Image",
+          "NewReleaseMessage.ReleaseList.Release",
+          "NewReleaseMessage.ReleaseList.TrackRelease",
+          "NewReleaseMessage.DealList.ReleaseDeal"
+        ]
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "data.NewReleaseMessage"
+    },
+    {
+      "type": "multi",
+      "batches": [
+        {
+          "blocks": [
+            {
+              "type": "mapping",
+              "mapping": "data.PartyList.Party"
+            },
+            {
+              "type": "message",
+              "title": "Party List"
+            },
+            {
+              "type": "grid",
+              "columnDefs": [
+                {
+                  "headerName": "Reference",
+                  "field": "PartyReference"
+                },
+                {
+                  "headerName": "Name",
+                  "field": "PartyName.FullName"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "mapping",
+              "mapping": "data.ResourceList.SoundRecording"
+            },
+            {
+              "type": "message",
+              "title": "Sound Recordings"
+            },
+            {
+              "type": "grid",
+              "columnDefs": [
+                {
+                  "headerName": "Reference",
+                  "field": "ResourceReference"
+                },
+                {
+                  "headerName": "Title",
+                  "field": "DisplayTitleText"
+                },
+                {
+                  "headerName": "Duration",
+                  "field": "Duration"
+                },
+                {
+                  "headerName": "Language",
+                  "field": "LanguageOfPerformance"
+                },
+                {
+                  "headerName": "Operations",
+                  "cellRenderer": "workflowRenderer",
+                  "cellRendererParams": {
+                    "blocks": [
+                      {
+                        "type": "actions",
+                        "buttons": [
+                          {
+                            "label": "View",
+                            "blocks": [
+                              {
+                                "type": "dialog",
+                                "blocks": [
+                                  {
+                                    "type": "debug"
+                                  },
+                                  {
+                                    "type": "actions",
+                                    "buttons": [
+                                      {
+                                        "label": "OK",
+                                        "blocks": [
+                                          {
+                                            "type": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "mapping",
+              "mapping": "data.ResourceList.Image"
+            },
+            {
+              "type": "message",
+              "title": "Images"
+            },
+            {
+              "type": "grid",
+              "columnDefs": [
+                {
+                  "headerName": "Reference",
+                  "field": "ResourceReference"
+                },
+                {
+                  "headerName": "Type",
+                  "field": "Type"
+                },
+                {
+                  "headerName": "File",
+                  "field": "TechnicalDetails.File.URI"
+                },
+                {
+                  "headerName": "Operations",
+                  "cellRenderer": "workflowRenderer",
+                  "cellRendererParams": {
+                    "blocks": [
+                      {
+                        "type": "actions",
+                        "buttons": [
+                          {
+                            "label": "View",
+                            "blocks": [
+                              {
+                                "type": "dialog",
+                                "blocks": [
+                                  {
+                                    "type": "debug"
+                                  },
+                                  {
+                                    "type": "actions",
+                                    "buttons": [
+                                      {
+                                        "label": "OK",
+                                        "blocks": [
+                                          {
+                                            "type": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "mapping",
+              "mapping": "data.ReleaseList.Release"
+            },
+            {
+              "type": "message",
+              "title": "Releases"
+            },
+            {
+              "type": "grid",
+              "columnDefs": [
+                {
+                  "headerName": "Reference",
+                  "field": "ReleaseReference"
+                },
+                {
+                  "headerName": "Type",
+                  "field": "ReleaseType"
+                },
+                {
+                  "headerName": "Title",
+                  "field": "DisplayTitleText"
+                },
+                {
+                  "headerName": "Artist",
+                  "valueGetter": "DisplayArtistName[].__text"
+                },
+                {
+                  "headerName": "Duration",
+                  "field": "Duration"
+                },
+                {
+                  "headerName": "Genre",
+                  "field": "Genre.GenreText"
+                },
+                {
+                  "headerName": "Operations",
+                  "cellRenderer": "workflowRenderer",
+                  "cellRendererParams": {
+                    "blocks": [
+                      {
+                        "type": "actions",
+                        "buttons": [
+                          {
+                            "label": "View",
+                            "blocks": [
+                              {
+                                "type": "dialog",
+                                "blocks": [
+                                  {
+                                    "type": "debug"
+                                  },
+                                  {
+                                    "type": "actions",
+                                    "buttons": [
+                                      {
+                                        "label": "OK",
+                                        "blocks": [
+                                          {
+                                            "type": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "mapping",
+              "mapping": "data.ReleaseList.TrackRelease"
+            },
+            {
+              "type": "message",
+              "title": "Tracks"
+            },
+            {
+              "type": "grid",
+              "columnDefs": [
+                {
+                  "headerName": "Reference",
+                  "field": "ReleaseReference"
+                },
+                {
+                  "headerName": "Resource Reference",
+                  "field": "ReleaseResourceReference"
+                },
+                {
+                  "headerName": "Operations",
+                  "cellRenderer": "workflowRenderer",
+                  "cellRendererParams": {
+                    "blocks": [
+                      {
+                        "type": "actions",
+                        "buttons": [
+                          {
+                            "label": "View",
+                            "blocks": [
+                              {
+                                "type": "dialog",
+                                "blocks": [
+                                  {
+                                    "type": "debug"
+                                  },
+                                  {
+                                    "type": "actions",
+                                    "buttons": [
+                                      {
+                                        "label": "OK",
+                                        "blocks": [
+                                          {
+                                            "type": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "blocks": [
+            {
+              "type": "mapping",
+              "mapping": "data.DealList.ReleaseDeal"
+            },
+            {
+              "type": "message",
+              "title": "Deals"
+            },
+            {
+              "type": "grid",
+              "columnDefs": [
+                {
+                  "headerName": "Reference",
+                  "field": "DealReleaseReference"
+                },
+                {
+                  "headerName": "Deal Terms",
+                  "field": "Deal"
+                },
+                {
+                  "headerName": "Operations",
+                  "cellRenderer": "workflowRenderer",
+                  "cellRendererParams": {
+                    "blocks": [
+                      {
+                        "type": "actions",
+                        "buttons": [
+                          {
+                            "label": "View",
+                            "blocks": [
+                              {
+                                "type": "dialog",
+                                "blocks": [
+                                  {
+                                    "type": "debug"
+                                  },
+                                  {
+                                    "type": "actions",
+                                    "buttons": [
+                                      {
+                                        "label": "OK",
+                                        "blocks": [
+                                          {
+                                            "type": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "ern4Import"
+}

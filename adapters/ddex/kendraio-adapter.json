@@ -1,0 +1,17 @@
+{
+  "name": "ddex",
+  "label": "DDEX",
+  "description": "Implementation of schemas for DDEX messages",
+  "version": "0.0.0",
+  "infoUrl": "https://ddex.net/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://kendra.io",
+  "database": [],
+  "workflow": [
+    {
+      "title": "DDEX Electronic Release Notification Import",
+      "config": "configs/ern4-import.json"
+    }
+  ],
+  "forms": []
+}

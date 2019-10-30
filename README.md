@@ -3,6 +3,9 @@
 Kendraio Adapter Repository
 https://kendraio-adapter.kendraio.now.sh/
 
+Legacy configs (previous format): 
+https://kendraio.github.io/kendraio-adapter/config.json
+
 ## Building
 
 The adapter repository is automatically built when changes are pushed into the master branch on GitHub.

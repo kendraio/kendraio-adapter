@@ -1,0 +1,39 @@
+{
+  "title": "Chant",
+  "description": "Metadata for a Chant recording",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Chant ID",
+      "type": "string"
+    },
+    "userId": {
+      "title": "User ID",
+      "type": "string"
+    },
+    "date": {
+      "title": "Date recorded",
+      "type": "string",
+      "format": "date-time"
+    },
+    "file": {
+      "title": "File ID",
+      "type": "string",
+      "format": "uuid"
+    },
+    "gig": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "title": "Gig ID",
+          "description": "ID of related gig",
+          "type": "string"
+        },
+        "name": {
+          "title": "Gig name",
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "Musical works (Dialog view)",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": "https://fake-api.now32.now.sh/musicalWork"
+      }
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "ISWC",
+          "field": "ISWC",
+          "checkboxSelection": true
+        },
+        {
+          "headerName": "Title",
+          "field": "originalTitle"
+        }
+      ]
+    },
+    {
+      "type": "mapping",
+      "mapping": "[0]"
+    },
+    {
+      "type": "button",
+      "label": "View",
+      "blocks": [
+        {
+          "type": "template",
+          "template": "<h1>{{originalTitle}}</h1><p>This musical work has ISWC {{ISWC}} and {{associatedISRCs.length}} related recordings.</p><p>Performers:</p><ul>{{#each associatedPerformers}}<li>{{this}}</li>{{/each}}</ul><p>Associated ISRCs:</p><ul>{{#each associatedISRCs}}<li>{{this}}</li>{{/each}}</ul>"
+        },
+        {
+          "type": "form",
+          "label": "Save",
+          "jsonSchema": {
+            "type": "object"
+          },
+          "uiSchema": {}
+        }
+      ]
+    },
+    {
+      "type": "debug"
+    }
+  ]
+}

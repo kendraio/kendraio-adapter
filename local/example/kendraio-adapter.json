@@ -1,28 +1,27 @@
 {
   "name": "example",
+  "version": "0.0.0",
   "label": "Example",
   "description": "An adapter for examples and demonstrations.",
-  "version": "0.0.0",
   "infoUrl": "https://www.example.com/",
   "maintainer": "Kendraio",
-  "supportUrl": "https://www.kendra.io",
-  "database": [],
-  "workflow": [
-    {
-      "title": "Product Chart",
-      "config": "configs/productChart.json"
-    },
-    {
-      "title": "Custom form elements",
-      "config": "configs/customFormElements.json"
-    }
-  ],
+  "supportUrl": "https://kendra.io",
   "forms": [
     {
       "formId": "customElements",
-      "title": "Custom Elements Demo",
+      "title": "Custom elements demo",
       "jsonSchema": "schemas/customElements.schema.json",
       "uiSchema": "forms/customElements.ui.json"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Custom form elements",
+      "config": "configs/customFormElements.json"
+    },
+    {
+      "title": "Product Chart",
+      "config": "configs/productChart.json"
     }
   ]
 }

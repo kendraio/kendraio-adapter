@@ -1,0 +1,13 @@
+{
+  "Name": {
+    "ui:placeholder": "Work name"
+  },
+  "Collective": {
+    "ui:placeholder": "Collective",
+    "ui:widget": "kselect",
+    "ui:valueProp": "code",
+    "ui:labelProp": "code",
+    "ui:refType": "fetch",
+    "ui:ref": "https://kendraio.github.io/kendraio-adapter/extra/bloomen/affiliationSociety.json"
+  }
+}

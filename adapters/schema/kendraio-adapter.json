@@ -1,0 +1,25 @@
+{
+  "name": "schema",
+  "label": "schema.org",
+  "description": "Schema.org is a collaborative, community activity with a mission to create, maintain, and promote schemas for structured data on the Internet, on web pages, in email messages, and beyond.",
+  "version": "0.0.0",
+  "infoUrl": "https://schema.org/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://www.kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [
+    {
+      "formId": "addImage",
+      "title": "ImageObject",
+      "jsonSchema": "schemas/imageObject.json",
+      "uiSchema": "forms/addImage-ui.json"
+    },
+    {
+      "formId": "editImage",
+      "title": "ImageObject",
+      "jsonSchema": "schemas/imageObject.json",
+      "uiSchema": "forms/editImage-ui.json"
+    }
+  ]
+}

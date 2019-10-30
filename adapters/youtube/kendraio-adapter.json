@@ -1,0 +1,28 @@
+{
+  "name": "youtube",
+  "label": "YouTube",
+  "description": "Enjoy the videos and music you love, upload original content, and share it all with friends, family, and the world on YouTube.",
+  "version": "0.0.0",
+  "infoUrl": "https://www.youtube.com/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [
+    {
+      "formId": "basic",
+      "title": "SIMPLEs - Edit Video",
+      "jsonSchema": "schemas/youtube-edit-video-basic.json",
+      "uiSchema": "forms/youtube-edit-video-basic-ui.json"
+    },
+    {
+      "formId": "advanced",
+      "title": "Edit Video Advanced",
+      "jsonSchema": "schemas/youtube-edit-video-advanced.schema.json",
+      "uiSchema": "forms/youtube-edit-video-advanced.ui.json"
+    }
+  ],
+  "upload": {
+    "enabled": true
+  }
+}

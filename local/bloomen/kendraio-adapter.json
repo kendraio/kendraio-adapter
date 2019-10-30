@@ -1,0 +1,31 @@
+{
+  "name": "bloomen",
+  "version": "0.1.0",
+  "label": "Bloomen",
+  "description": "Integration with the Bloomen project",
+  "infoUrl": "https://bloomen.io/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://kendra.io",
+  "apis": [
+    "swagger/api-docs.json"
+  ],
+  "upload": {
+    "enabled": true
+  },
+  "database": [
+    {
+      "name": "user",
+      "schema": "schemas/user.schema.json"
+    },
+    {
+      "name": "photo",
+      "schema": "schemas/photo.schema.json"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Musical Works (Bloomen API)",
+      "config": "configs/bloomenApiJwt-musicalWorks.json"
+    }
+  ]
+}

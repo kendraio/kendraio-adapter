@@ -1,17 +1,11 @@
 {
   "name": "bloomen",
-  "version": "0.1.0",
   "label": "Bloomen",
   "description": "Integration with the Bloomen project",
-  "infoUrl": "https://bloomen.io/",
+  "version": "0.0.0",
+  "infoUrl": "http://bloomen.io/",
   "maintainer": "Kendraio",
-  "supportUrl": "https://kendra.io",
-  "apis": [
-    "swagger/api-docs.json"
-  ],
-  "upload": {
-    "enabled": true
-  },
+  "supportUrl": "http://kendra.io",
   "database": [
     {
       "name": "user",
@@ -24,8 +18,88 @@
   ],
   "workflow": [
     {
-      "title": "Musical Works (Bloomen API)",
+      "title": "List of Sound Recordings",
+      "config": "configs/listSoundRecordings.json"
+    },
+    {
+      "title": "List Musical Works",
+      "config": "configs/listMusicalWorks.json"
+    },
+    {
+      "title": "Chart of releases per work",
+      "config": "configs/chartReleases.json"
+    },
+    {
+      "title": "Edit Sound Recording",
+      "config": "configs/editSoundRecording.json"
+    },
+    {
+      "title": "Message block example",
+      "config": "configs/messageExample.json"
+    },
+    {
+      "title": "Query and template example",
+      "config": "configs/templateExample.json"
+    },
+    {
+      "title": "Musical works (Dialog view)",
+      "config": "configs/dialogExample.json"
+    },
+    {
+      "title": "List works (Bloomen API)",
       "config": "configs/bloomenApiJwt-musicalWorks.json"
+    },
+    {
+      "title": "List recordings (Bloomen API)",
+      "config": "configs/bloomenApiJwt-soundRecordings.json"
+    },
+    {
+      "title": "Export works CSV (Bloomen API)",
+      "config": "configs/bloomenApiJwt-exportMusicalWorks.json"
+    },
+    {
+      "title": "Photo search (Bloomen API)",
+      "config": "configs/photo-search-example.json"
+    },
+    {
+      "title": "Import works (Bloomen API)",
+      "config": "configs/importMusicalWorks.json"
+    },
+    {
+      "title": "List of Sound Recordings (view/edit)",
+      "config": "configs/listSoundRecordings-view-edit.json"
     }
+  ],
+  "forms": [
+    {
+      "formId": "musicalWork",
+      "title": "Bloomen MusicalWork",
+      "jsonSchema": "schemas/musicalWork.schema.json",
+      "uiSchema": "forms/musicalWork.ui.json"
+    },
+    {
+      "formId": "soundRecording",
+      "title": "Bloomen SoundRecording",
+      "jsonSchema": "schemas/soundRecording.schema.json",
+      "uiSchema": "forms/soundRecording.ui.json"
+    },
+    {
+      "formId": "user",
+      "title": "Bloomen User",
+      "jsonSchema": "schemas/user.schema.json",
+      "uiSchema": "forms/user.ui.json"
+    },
+    {
+      "formId": "photo",
+      "title": "Bloomen Photo",
+      "jsonSchema": "schemas/photo.schema.json",
+      "uiSchema": "forms/photo.ui.json"
+    }
+  ],
+  "upload": {
+    "enabled": true
+  },
+  "apis": [
+    "swagger/api-docs.json"
   ]
 }

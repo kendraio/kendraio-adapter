@@ -1,0 +1,82 @@
+{
+  "title": "Get author's works by name",
+  "blocks": [
+    {
+      "type": "form",
+      "jsonSchema": {
+        "title": "Get author's works by name",
+        "type": "object",
+        "required": [
+          "last_name"
+        ],
+        "properties": {
+          "last_name": {
+            "title": "Last name",
+            "type": "string",
+            "default": "HELISMAA"
+          },
+          "first_name": {
+            "title": "First name",
+            "type": "string",
+            "default": "REINO"
+          },
+          "limit": {
+            "title": "Number of results",
+            "type": "integer",
+            "default": 2
+          }
+        }
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "query",
+      "dataSource": {
+        "type": "remote",
+        "endpoint": {
+          "protocol": "https:",
+          "host": "teosto-cors-proxy-eilgg5e92.now.sh",
+          "pathname": "/dev/rest/work/searchAuthor",
+          "query": {
+            "limit": 4
+          },
+          "valueGetters": {
+            "query": "{limit: model.limit, last_name: model.last_name, first_name: model.first_name}"
+          }
+        },
+        "authentication": {
+          "type": "basic-auth",
+          "valueGetters": {
+            "username": "user.teosto.username",
+            "password": "user.teosto.password"
+          }
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "data[].{ workkey: workkey, titles: titles[?title_type=='OT'].work_title, performer: performers.name, right_owners: right_owners[].name }"
+    },
+    {
+      "type": "grid",
+      "columnDefs": [
+        {
+          "headerName": "Work key",
+          "field": "workkey"
+        },
+        {
+          "headerName": "Titles",
+          "valueGetter": "titles"
+        },
+        {
+          "headerName": "Performer",
+          "valueGetter": "performer"
+        },
+        {
+          "headerName": "Rights owners",
+          "valueGetter": "right_owners"
+        }
+      ]
+    }
+  ]
+}

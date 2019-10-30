@@ -1,0 +1,14 @@
+{
+  "sourceUrl": {
+    "ui:disabled": true
+  },
+  "description": {
+    "ui:widget": "textarea"
+  },
+  "width": {
+    "ui:disabled": true
+  },
+  "height": {
+    "ui:disabled": true
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "apple-music",
+  "label": "Apple Music",
+  "description": "Stream 45 million songs, ad-free on Apple Music. Shop HomePod, AirPods and headphones. And build your entertainment collection with iPod and iTunes.",
+  "version": "0.0.0",
+  "infoUrl": "https://www.apple.com/uk/music/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  }
+}

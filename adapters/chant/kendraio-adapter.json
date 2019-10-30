@@ -1,0 +1,28 @@
+{
+  "name": "chant",
+  "label": "Chant",
+  "description": "An adapter for Chant specific features",
+  "version": "0.0.0",
+  "infoUrl": "https://chant.world/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://www.kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [
+    {
+      "formId": "gig",
+      "title": "Gig",
+      "jsonSchema": "schemas/gig.json",
+      "uiSchema": "forms/gig-ui.json"
+    },
+    {
+      "formId": "chant",
+      "title": "Chant",
+      "jsonSchema": "schemas/chant.json",
+      "uiSchema": "forms/chant-ui.json"
+    }
+  ],
+  "upload": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "teosto",
+  "label": "Teosto",
+  "description": "Teosto is a non-profit performance rights organization that collects royalties on behalf of songwriters and composers in Finland.",
+  "version": "0.0.0",
+  "infoUrl": "https://www.teosto.fi/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [
+    {
+      "title": "List works",
+      "config": "configs/listWorks.json"
+    },
+    {
+      "title": "Get author's works by name",
+      "config": "configs/authorsWorksByName.json"
+    },
+    {
+      "title": "Author's works from IPI",
+      "config": "configs/authorsWorksFromIPI.json"
+    },
+    {
+      "title": "Get rights holders per ISWC",
+      "config": "configs/getRightsHolderForISWC.json"
+    },
+    {
+      "title": "List publisher's works",
+      "config": "configs/listPublishersWorks.json"
+    },
+    {
+      "title": "List works (with selection)",
+      "config": "configs/listWorksSelectionExample.json"
+    }
+  ],
+  "forms": []
+}

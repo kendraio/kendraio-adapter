@@ -1,0 +1,15 @@
+{
+  "name": "dotbc",
+  "label": "dotBC",
+  "description": "dotBC is a new dynamic file format and supporting technology architecture, designed to modernize rights management of media files globally for all participants",
+  "version": "0.0.0",
+  "infoUrl": "https://dotblockchainmusic.com/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  }
+}

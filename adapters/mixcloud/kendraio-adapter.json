@@ -1,0 +1,15 @@
+{
+  "name": "mixcloud",
+  "label": "MixCloud",
+  "description": "Upload your mix, radio show or Podcast to Mixcloud for free",
+  "version": "0.0.0",
+  "infoUrl": "https://www.mixcloud.com/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  }
+}

@@ -1,0 +1,5 @@
+exclude:  [ "adapters", "README.md", "build.ts", "local", "kendraio-adapter-repo.json", "build.ts", "migrate.ts", "package.json", "package-lock.json" ]
+data_dir: prev-adapters
+webrick:
+  headers:
+    Access-Control-Allow-Origin: "*"

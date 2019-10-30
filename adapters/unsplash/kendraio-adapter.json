@@ -1,0 +1,18 @@
+{
+  "name": "unsplash",
+  "label": "Unsplash",
+  "description": "Beautiful high quality free images and photos you can download and use for any project. No attribution required.",
+  "version": "0.0.0",
+  "infoUrl": "https://unsplash.com/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  },
+  "apis": [
+    "swagger/swagger.json"
+  ]
+}

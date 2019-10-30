@@ -1,11 +1,11 @@
 {
   "name": "kendraio",
+  "version": "0.1.0",
   "label": "Kendraio",
   "description": "An adapter for Kendraio specific features",
-  "version": "0.0.0",
-  "infoUrl": "https://www.kendra.io/",
+  "infoUrl": "https://kendra.io/",
   "maintainer": "Kendraio",
-  "supportUrl": "https://www.kendra.io",
+  "supportUrl": "https://kendra.io",
   "database": [
     {
       "name": "music_recording",
@@ -20,11 +20,27 @@
       "schema": "schemas/file.schema.json"
     }
   ],
-  "workflow": [
+  "forms": [
     {
-      "title": "Imported recordings (Local DB)",
-      "config": "configs/listRecordings.json"
+      "formId": "music_recording",
+      "title": "Music recording",
+      "jsonSchema": "schemas/music_recording.schema.json",
+      "uiSchema": "forms/music_recording.ui.json"
     },
+    {
+      "formId": "music_work",
+      "title": "Music work",
+      "jsonSchema": "schemas/music_work.schema.json",
+      "uiSchema": "forms/music_work.ui.json"
+    },
+    {
+      "formId": "file",
+      "title": "File",
+      "jsonSchema": "schemas/file.schema.json",
+      "uiSchema": "forms/file.ui.json"
+    }
+  ],
+  "workflow": [
     {
       "title": "Bulk operations example",
       "config": "configs/bulkOperationsExample.json"
@@ -32,26 +48,10 @@
     {
       "title": "Faker - test data generator",
       "config": "configs/fakerTest.json"
-    }
-  ],
-  "forms": [
-    {
-      "formId": "edit_music_recording",
-      "title": "Music Recording",
-      "jsonSchema": "schemas/music_recording.schema.json",
-      "uiSchema": "forms/music_recording.ui.json"
     },
     {
-      "formId": "edit_music_work",
-      "title": "Music Work",
-      "jsonSchema": "schemas/music_work.schema.json",
-      "uiSchema": "forms/music_work.ui.json"
-    },
-    {
-      "formId": "edit_file",
-      "title": "File",
-      "jsonSchema": "schemas/file.schema.json",
-      "uiSchema": "forms/file.ui.json"
+      "title": "Imported recordings (Local DB)",
+      "config": "configs/listRecordings.json"
     }
   ]
 }

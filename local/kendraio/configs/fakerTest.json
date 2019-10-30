@@ -1,0 +1,60 @@
+{
+  "title": "Faker - test data generator",
+  "blocks": [
+    {
+      "type": "actions",
+      "buttons": [
+        {
+          "label": "Generate",
+          "color": "primary",
+          "blocks": [
+            {
+              "type": "init"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "faker",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "faker": "name.findName"
+          },
+          "company": {
+            "type": "string",
+            "faker": "company.companyName"
+          },
+          "address": {
+            "type": "object",
+            "properties": {
+              "streetAddress": {
+                "type": "string",
+                "faker": "address.streetAddress"
+              },
+              "zipCode": {
+                "type": "string",
+                "faker": "address.zipCode"
+              }
+            },
+            "required": [
+              "streetAddress",
+              "zipCode"
+            ]
+          }
+        },
+        "required": [
+          "name",
+          "address",
+          "company"
+        ]
+      }
+    },
+    {
+      "type": "debug"
+    }
+  ]
+}

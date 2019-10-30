@@ -1,0 +1,5 @@
+{
+  "startDate": {
+    "ui:widget": "datepicker"
+  }
+}

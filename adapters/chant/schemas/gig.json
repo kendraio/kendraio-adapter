@@ -1,0 +1,29 @@
+{
+  "title": "Gig",
+  "description": "What is happening and when?",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Gig ID",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "startDate": {
+      "title": "Start date",
+      "type": "string",
+      "format": "date-time"
+    },
+    "upcoming": {
+      "title": "Upcoming",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

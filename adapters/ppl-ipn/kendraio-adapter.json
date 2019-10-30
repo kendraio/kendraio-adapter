@@ -1,0 +1,19 @@
+{
+  "name": "ppl-ipn",
+  "label": "PPL IPN",
+  "description": "Verification of International Performer Number (IPN) for PPL members",
+  "version": "0.0.0",
+  "infoUrl": "https://www.ppluk.com/membership/more-information/ipn/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://www.kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [
+    {
+      "formId": "ipn",
+      "title": "IPN",
+      "jsonSchema": "schemas/ipn-jsonSchema.json",
+      "uiSchema": "forms/ipn-uiSchema.json"
+    }
+  ]
+}

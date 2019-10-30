@@ -1,0 +1,15 @@
+{
+  "name": "bandcamp",
+  "label": "Bandcamp",
+  "description": "Discover amazing music and directly support the artists who make it.",
+  "version": "0.0.0",
+  "infoUrl": "https://bandcamp.com/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "workflow": [],
+  "forms": [],
+  "upload": {
+    "enabled": true
+  }
+}
