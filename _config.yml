@@ -1,5 +1,0 @@
-exclude:  [ "adapters", "README.md", "build.ts" ]
-data_dir: adapters
-webrick:
-  headers:
-    Access-Control-Allow-Origin: "*"

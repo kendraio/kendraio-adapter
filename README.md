@@ -1,19 +1,19 @@
 # Kendraio Adapter Configs
 
-Hosted via GitHub Pages at
-https://kendraio.github.io/kendraio-adapter/config.json
-
-WIP: Kendraio Adapter Repository
+Kendraio Adapter Repository
 https://kendraio-adapter.kendraio.now.sh/
 
-
 ## Building
-The JSON is built when changes are pushed to GitHub, thanks to GitHub pages automatic 
-running of Jekyll on the repo before publishing to GitHub pages.
 
-In order to build locally for testing, you need to install Jekyll, and then run:
+The adapter repository is automatically built when changes are pushed into the master branch on GitHub.
+To run a local repository (for development purposes) use NPM and the provided build script:
 
-    jekyll s
+    npm install
+    npm run build
+
+The output from the build can be deployed to any hosting provider as static assets, or
+to emulate the Kendraio Repository, the build script can be used with a provider such as 
+[Zeit Now](https://now.sh) to deploy automatically. 
 
 ## What is an Adapter?
 
@@ -27,6 +27,9 @@ If you represent a third-party service that wishes to integrate with the Kendrai
 The Adapter methodology is in its early stages and under active development. For now, the presence of an Adapter within this repo is a starting point towards a more meaningful integration with the Kendraio ecosystem. It will be a place to store configuration related to how a particular service is accessed, the features provided by a service, and the data formats and schemas supported by the service.
 
 ## How to create an Adapter
+
+**NB:** This information relates to the previous iteration of adapter config, and needs updating once the new adapter
+format has been finalised.
 
 ### Step 1: Fork the repo
 

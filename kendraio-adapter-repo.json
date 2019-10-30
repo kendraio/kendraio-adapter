@@ -1,8 +1,26 @@
 {
   "name": "Main Kendraio Adapter Repository",
   "adapters": [
-    "local/bloomen",
-    "local/example",
-    "local/kendraio"
+    "adapters/apple-music",
+    "adapters/bandcamp",
+    "adapters/bloomen",
+    "adapters/chant",
+    "adapters/copyright-hub",
+    "adapters/ddex-ern4",
+    "adapters/ddex-mrin",
+    "adapters/dotbc",
+    "adapters/example",
+    "adapters/kendraio",
+    "adapters/mixcloud",
+    "adapters/omi",
+    "adapters/ppl-ipn",
+    "adapters/resonate",
+    "adapters/schema",
+    "adapters/soundcloud",
+    "adapters/spotify",
+    "adapters/teosto",
+    "adapters/tidal",
+    "adapters/unsplash",
+    "adapters/youtube"
   ]
 }
