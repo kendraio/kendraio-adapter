@@ -53,5 +53,8 @@
       "jsonSchema": "schemas/file.schema.json",
       "uiSchema": "forms/file.ui.json"
     }
+  ],
+  "tags": [
+    "example", "test"
   ]
 }

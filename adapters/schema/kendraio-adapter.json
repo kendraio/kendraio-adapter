@@ -21,5 +21,8 @@
       "jsonSchema": "schemas/imageObject.json",
       "uiSchema": "forms/editImage-ui.json"
     }
+  ],
+  "tags": [
+    "generic", "photos"
   ]
 }

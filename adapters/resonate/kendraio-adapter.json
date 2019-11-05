@@ -8,5 +8,8 @@
   "supportUrl": "https://kendra.io/",
   "database": [],
   "workflow": [],
-  "forms": []
+  "forms": [],
+  "tags": [
+    "music", "retail"
+  ]
 }

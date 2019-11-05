@@ -101,5 +101,8 @@
   },
   "apis": [
     "swagger/api-docs.json"
+  ],
+  "tags": [
+    "music", "b2b", "photos", "webtv"
   ]
 }

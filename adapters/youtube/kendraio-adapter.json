@@ -24,5 +24,8 @@
   ],
   "upload": {
     "enabled": true
-  }
+  },
+  "tags": [
+    "music", "video", "streaming"
+  ]
 }

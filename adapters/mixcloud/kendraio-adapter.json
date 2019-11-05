@@ -11,5 +11,8 @@
   "forms": [],
   "upload": {
     "enabled": true
-  }
+  },
+  "tags": [
+    "music", "streaming"
+  ]
 }

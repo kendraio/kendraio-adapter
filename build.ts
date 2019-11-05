@@ -14,9 +14,9 @@ async function getRepoAdapterList() {
 
 async function getAdapterInfo(location: string): Promise<any> {
   const data = await fs.readFile(`${ location }/kendraio-adapter.json`, 'utf-8');
-  const { name, version, label, description } = JSON.parse(data);
+  const { name, version, label, description, tags } = JSON.parse(data);
   return {
-    name, version, label, description, location
+    name, version, label, description, location, tags
   }
 }
 
@@ -53,6 +53,7 @@ async function run() {
             <th>key</th>
             <th>Description</th>
             <th>Version</th>
+            <th>Tags</th>
             <th>Download</th>
         </tr>
     </thead>
@@ -64,6 +65,7 @@ async function run() {
             <td>{{name}}</td>
             <td>{{description}}</td>
             <td>{{version}}</td>
+            <td>{{ tags.join(', ') }}</td>
             <td><a class="pure-button" href="{{ name }}.zip">Download (Zip)</a></td>
         </tr>
   {{/each}}

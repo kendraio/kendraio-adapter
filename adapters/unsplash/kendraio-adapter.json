@@ -14,5 +14,8 @@
   },
   "apis": [
     "swagger/swagger.json"
+  ],
+  "tags": [
+    "photos"
   ]
 }

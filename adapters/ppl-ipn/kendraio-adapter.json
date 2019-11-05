@@ -15,5 +15,8 @@
       "jsonSchema": "schemas/ipn-jsonSchema.json",
       "uiSchema": "forms/ipn-uiSchema.json"
     }
+  ],
+  "tags": [
+    "music", "b2b"
   ]
 }

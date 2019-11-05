@@ -13,5 +13,8 @@
       "config": "configs/ern4-import.json"
     }
   ],
-  "forms": []
+  "forms": [],
+  "tags": [
+    "music", "b2b"
+  ]
 }

@@ -24,5 +24,8 @@
       "jsonSchema": "schemas/customElements.schema.json",
       "uiSchema": "forms/customElements.ui.json"
     }
+  ],
+  "tags": [
+    "example", "test"
   ]
 }
