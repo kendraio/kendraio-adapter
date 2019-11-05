@@ -7,7 +7,89 @@
   "maintainer": "Kendraio",
   "supportUrl": "https://kendra.io",
   "database": [],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "DDEX",
+    "workflowId": "dashboard"
+  },
+  "services": [
+    {
+      "label": "Import ERN4",
+      "icon": "cloud_upload",
+      "workflowId": "importDdexErn4"
+    },
+    {
+      "label": "Resources",
+      "icon": "file_copy",
+      "workflowId": "resourceList"
+    },
+    {
+      "label": "PartyList",
+      "icon": "file_copy",
+      "workflowId": "partyList"
+    },
+    {
+      "label": "Releases",
+      "icon": "file_copy",
+      "workflowId": "releaseList"
+    }
+  ],
   "workflow": [
+    {
+      "title": "Dashboard",
+      "workflowId": "dashboard",
+      "config": "configs/dashboard.json"
+    },
+    {
+      "title": "Delete party",
+      "workflowId": "deleteParty",
+      "config": "configs/deleteParty.json"
+    },
+    {
+      "title": "Edit party",
+      "workflowId": "editParty",
+      "config": "configs/editParty.json"
+    },
+    {
+      "title": "Party list",
+      "workflowId": "partyList",
+      "config": "configs/partyList.json"
+    },
+    {
+      "title": "Delete release",
+      "workflowId": "deleteRelease",
+      "config": "configs/deleteRelease.json"
+    },
+    {
+      "title": "Edit release",
+      "workflowId": "editRelease",
+      "config": "configs/editRelease.json"
+    },
+    {
+      "title": "Release list",
+      "workflowId": "releaseList",
+      "config": "configs/releaseList.json"
+    },
+    {
+      "title": "Delete resource",
+      "workflowId": "deleteResource",
+      "config": "configs/deleteResource.json"
+    },
+    {
+      "title": "Edit Resource",
+      "workflowId": "editResource",
+      "config": "configs/editResource.json"
+    },
+    {
+      "title": "Resource list",
+      "workflowId": "resourceList",
+      "config": "configs/resourceList.json"
+    },
+    {
+      "title": "Import DDEX ERN v4",
+      "workflowId": "importDdexErn4",
+      "config": "configs/importDdexErn4.json"
+    },
     {
       "title": "DDEX Electronic Release Notification Import",
       "config": "configs/ern4-import.json"

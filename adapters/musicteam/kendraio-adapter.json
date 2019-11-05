@@ -1,0 +1,83 @@
+{
+  "name": "musicteam",
+  "label": "MusicTeam",
+  "description": "Management of collaboration and contribution data for artists",
+  "version": "0.0.0",
+  "infoUrl": "https://musicteam.org/",
+  "maintainer": "Kendraio",
+  "supportUrl": "https://kendra.io",
+  "database": [],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "DDEX",
+    "workflowId": "dashboard"
+  },
+  "services": [
+    {
+      "label": "Import",
+      "icon": "cloud_upload",
+      "workflowId": "import"
+    },
+    {
+      "label": "Contributors",
+      "icon": "file_copy",
+      "workflowId": "contributors"
+    },
+    {
+      "label": "Recordings",
+      "icon": "file_copy",
+      "workflowId": "recordings"
+    },
+    {
+      "label": "Works",
+      "icon": "file_copy",
+      "workflowId": "works"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Dashboard",
+      "workflowId": "dashboard",
+      "config": "configs/dashboard.json"
+    },
+    {
+      "title": "Recordings",
+      "workflowId": "recordings",
+      "config": "configs/recordings.json"
+    },
+    {
+      "title": "Works",
+      "workflowId": "works",
+      "config": "configs/works.json"
+    },
+    {
+      "title": "Contributors",
+      "workflowId": "contributors",
+      "config": "configs/contributors.json"
+    },
+    {
+      "title": "Edit contributor",
+      "workflowId": "editContributor",
+      "config": "configs/editContributor.json"
+    },
+    {
+      "title": "Edit recording",
+      "workflowId": "editRecording",
+      "config": "configs/editRecording.json"
+    },
+    {
+      "title": "Edit work",
+      "workflowId": "editWork",
+      "config": "configs/editWork.json"
+    },
+    {
+      "title": "Import",
+      "workflowId": "import",
+      "config": "configs/import.json"
+    }
+  ],
+  "forms": [],
+  "tags": [
+    "music", "b2b"
+  ]
+}

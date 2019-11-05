@@ -16,57 +16,167 @@
       "schema": "schemas/photo.schema.json"
     }
   ],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "Bloomen",
+    "workflowId": "users"
+  },
+  "services": [
+    {
+      "label": "Register",
+      "icon": "person",
+      "workflowId": "register"
+    },
+    {
+      "label": "Login",
+      "icon": "person",
+      "workflowId": "login"
+    },
+    {
+      "label": "Search",
+      "icon": "search",
+      "workflowID": "search"
+    },
+    {
+      "label": "Import File",
+      "icon": "file_copy",
+      "workflowId": "importFile"
+    },
+    {
+      "label": "Export works",
+      "icon": "cloud_download",
+      "workflowId": "exportWorks"
+    },
+    {
+      "label": "Import works",
+      "icon": "cloud_upload",
+      "workflowId": "importWorks"
+    },
+    {
+      "label": "List works",
+      "icon": "music_note",
+      "workflowId": "listWorks"
+    },
+    {
+      "label": "Users",
+      "icon": "people",
+      "workflowId": "users"
+    }
+  ],
   "workflow": [
     {
+      "title": "Edit user",
+      "workflowId": "editUser",
+      "config": "configs/editUser.json"
+    },
+    {
+      "title": "Edit work",
+      "workflowId": "editWork",
+      "config": "configs/editWork.json"
+    },
+    {
+      "title": "Export works",
+      "workflowId": "exportWorks",
+      "config": "configs/exportWorks.json"
+    },
+    {
+      "title": "Import from file",
+      "workflowId": "importFromFile",
+      "config": "configs/importFromFile.json"
+    },
+    {
+      "title": "Import works",
+      "workflowId": "importWorks",
+      "config": "configs/importWorks.json"
+    },
+    {
+      "title": "List works",
+      "workflowId": "listWorks",
+      "config": "configs/listWorks.json"
+    },
+    {
+      "title": "Login",
+      "workflowId": "login",
+      "config": "configs/login.json"
+    },
+    {
+      "title": "Register",
+      "workflowId": "register",
+      "config": "configs/register.json"
+    },
+    {
+      "title": "Search",
+      "workflowId": "search",
+      "config": "configs/search.json"
+    },
+    {
+      "title": "Users",
+      "workflowId": "users",
+      "config": "configs/users.json"
+    },
+    {
       "title": "List of Sound Recordings",
+      "workflowId": "listSoundRecordings",
       "config": "configs/listSoundRecordings.json"
     },
     {
       "title": "List Musical Works",
+      "workflowId": "listMusicalWorks",
       "config": "configs/listMusicalWorks.json"
     },
     {
       "title": "Chart of releases per work",
-      "config": "configs/chartReleases.json"
+      "config": "configs/chartReleases.json",
+      "workflowId": "chartReleases"
     },
     {
       "title": "Edit Sound Recording",
+      "workflowId": "editSoundRecording",
       "config": "configs/editSoundRecording.json"
     },
     {
       "title": "Message block example",
+      "workflowId": "messageExample",
       "config": "configs/messageExample.json"
     },
     {
       "title": "Query and template example",
+      "workflowId": "templateExample",
       "config": "configs/templateExample.json"
     },
     {
       "title": "Musical works (Dialog view)",
+      "workflowId": "dialogExample",
       "config": "configs/dialogExample.json"
     },
     {
       "title": "List works (Bloomen API)",
+      "workflowId": "bloomenApiJwt-musicalWorks",
       "config": "configs/bloomenApiJwt-musicalWorks.json"
     },
     {
       "title": "List recordings (Bloomen API)",
+      "workflowId": "bloomenApiJwt-soundRecordings",
       "config": "configs/bloomenApiJwt-soundRecordings.json"
     },
     {
+      "workflowId": "bloomenApiJwt-exportMusicalWorks",
       "title": "Export works CSV (Bloomen API)",
       "config": "configs/bloomenApiJwt-exportMusicalWorks.json"
     },
     {
       "title": "Photo search (Bloomen API)",
+      "workflowId": "photo-search-example",
       "config": "configs/photo-search-example.json"
     },
     {
       "title": "Import works (Bloomen API)",
+      "workflowId": "importMusicalWorks",
       "config": "configs/importMusicalWorks.json"
     },
     {
       "title": "List of Sound Recordings (view/edit)",
+      "workflowId": "listSoundRecordings-view-edit",
       "config": "configs/listSoundRecordings-view-edit.json"
     }
   ],
