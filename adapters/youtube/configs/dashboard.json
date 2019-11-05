@@ -1,0 +1,9 @@
+{
+  "title": "YouTube dashboard",
+  "blocks": [
+    {
+      "type": "message",
+      "message": "TODO"
+    }
+  ]
+}

@@ -7,7 +7,18 @@
   "maintainer": "Kendraio",
   "supportUrl": "http://kendra.io",
   "database": [],
-  "workflow": [],
+  "dashboard": {
+    "icon": "attach_money",
+    "label": "Spotify",
+    "workflowId": "dashboard"
+  },
+  "workflow": [
+    {
+      "title": "Spotify dashboard",
+      "workflowId": "dashboard",
+      "config": "configs/dashboard.json"
+    }
+  ],
   "forms": [],
   "upload": {
     "enabled": true

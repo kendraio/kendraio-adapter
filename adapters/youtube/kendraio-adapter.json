@@ -7,7 +7,18 @@
   "maintainer": "Kendraio",
   "supportUrl": "http://kendra.io",
   "database": [],
-  "workflow": [],
+  "dashboard": {
+    "icon": "attach_money",
+    "label": "YouTube",
+    "workflowId": "dashboard"
+  },
+  "workflow": [
+    {
+      "title": "YouTube dashboard",
+      "workflowId": "dashboard",
+      "config": "configs/dashboard.json"
+    }
+  ],
   "forms": [
     {
       "formId": "basic",

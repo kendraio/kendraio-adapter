@@ -1,0 +1,9 @@
+{
+  "title": "Spotify dashboard",
+  "blocks": [
+    {
+      "type": "message",
+      "message": "TODO"
+    }
+  ]
+}
