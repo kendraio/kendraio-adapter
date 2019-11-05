@@ -65,7 +65,7 @@ async function run() {
             <td>{{name}}</td>
             <td>{{description}}</td>
             <td>{{version}}</td>
-            <td>{{ tags.join(', ') }}</td>
+            <td>{{ tags }}</td>
             <td><a class="pure-button" href="{{ name }}.zip">Download (Zip)</a></td>
         </tr>
   {{/each}}
