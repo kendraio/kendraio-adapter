@@ -3,7 +3,7 @@ import * as rimraf from "rimraf";
 import { promisify } from "util";
 
 const rmdir = promisify(rimraf);
-import { get, set, pick } from "lodash";
+import { get, set, pick, flatten } from "lodash";
 import * as archiver from 'archiver';
 import { compile } from 'handlebars';
 
@@ -94,10 +94,14 @@ async function run() {
   adapterList.forEach(({ location, name }) => {
     const data = readFileSync(`${ location }/kendraio-adapter.json`, 'utf-8');
     const attachments =
-      readdirSync(location, { withFileTypes: true })
+      flatten(readdirSync(location, { withFileTypes: true })
         .filter(dirent => dirent.isDirectory())
-        .map(dirname => readdirSync(`${location}/${dirname.name}`).map(subDir => `${dirname.name}/${subDir}`));
-    writeFileSync(`${ __dirname }/public/${name}.json`, JSON.stringify({ ...JSON.parse(data), attachments }));
+        .map(dirname => readdirSync(`${location}/${dirname.name}`).map(subDir => `${dirname.name}/${subDir}`))
+      ).reduce((acc, key) => {
+        acc[key] = JSON.parse(readFileSync(`${location}/${key}`, 'utf-8'));
+        return acc;
+      }, {});
+    writeFileSync(`${ __dirname }/public/${name}.json`, JSON.stringify({ ...JSON.parse(data), attachments }, null, 2));
   });
 }
 
