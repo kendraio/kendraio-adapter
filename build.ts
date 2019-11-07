@@ -1,4 +1,4 @@
-import { promises as fs, createWriteStream } from 'fs';
+import { promises as fs, createWriteStream, readFileSync, readdirSync, writeFileSync } from 'fs';
 import * as rimraf from "rimraf";
 import { promisify } from "util";
 
@@ -66,7 +66,10 @@ async function run() {
             <td>{{description}}</td>
             <td>{{version}}</td>
             <td>{{ tags }}</td>
-            <td><a class="pure-button" href="{{ name }}.zip">Download (Zip)</a></td>
+            <td>
+                <a class="pure-button" style="margin-bottom: 0.5em;" href="{{ name }}.zip">Download (Zip)</a><br>
+                <a class="pure-button" href="{{ name }}.json">Download (JSON)</a>
+            </td>
         </tr>
   {{/each}}
     </tbody>
@@ -86,6 +89,15 @@ async function run() {
     archive.pipe(output);
     archive.directory(location, false);
     archive.finalize();
+  });
+
+  adapterList.forEach(({ location, name }) => {
+    const data = readFileSync(`${ location }/kendraio-adapter.json`, 'utf-8');
+    const attachments =
+      readdirSync(location, { withFileTypes: true })
+        .filter(dirent => dirent.isDirectory())
+        .map(dirname => readdirSync(`${location}/${dirname.name}`).map(subDir => `${dirname.name}/${subDir}`));
+    writeFileSync(`${ __dirname }/public/${name}.json`, JSON.stringify({ ...JSON.parse(data), attachments }));
   });
 }
 
