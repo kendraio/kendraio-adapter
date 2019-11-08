@@ -2,39 +2,77 @@
   "name": "teosto",
   "label": "Teosto",
   "description": "Teosto is a non-profit performance rights organization that collects royalties on behalf of songwriters and composers in Finland.",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "infoUrl": "https://www.teosto.fi/",
   "maintainer": "Kendraio",
   "supportUrl": "http://kendra.io",
   "database": [],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "Teosto",
+    "workflowId": "listWorks"
+  },
+  "services": [
+    {
+      "label": "Works",
+      "icon": "file_copy",
+      "workflowId": "listWorks"
+    },
+    {
+      "label": "Search by name",
+      "icon": "file_copy",
+      "workflowId": "authorsWorksByName"
+    },
+    {
+      "label": "Search by IPI",
+      "icon": "file_copy",
+      "workflowId": "authorsWorksFromIPI"
+    },
+    {
+      "label": "Search by ISWC",
+      "icon": "file_copy",
+      "workflowId": "getRightsHolderForISWC"
+    },
+    {
+      "label": "Search by publisher",
+      "icon": "file_copy",
+      "workflowId": "listPublishersWorks"
+    }
+  ],
   "workflow": [
     {
       "title": "List works",
+      "workflowId": "listWorks",
       "config": "configs/listWorks.json"
     },
     {
       "title": "Get author's works by name",
+      "workflowId": "authorsWorksByName",
       "config": "configs/authorsWorksByName.json"
     },
     {
       "title": "Author's works from IPI",
+      "workflowId": "authorsWorksFromIPI",
       "config": "configs/authorsWorksFromIPI.json"
     },
     {
       "title": "Get rights holders per ISWC",
+      "workflowId": "getRightsHolderForISWC",
       "config": "configs/getRightsHolderForISWC.json"
     },
     {
       "title": "List publisher's works",
+      "workflowId": "listPublishersWorks",
       "config": "configs/listPublishersWorks.json"
     },
     {
       "title": "List works (with selection)",
+      "workflowId": "listWorksSelectionExample",
       "config": "configs/listWorksSelectionExample.json"
     }
   ],
   "forms": [],
   "tags": [
-    "music", "b2b"
+    "music", "b2b", "demo"
   ]
 }

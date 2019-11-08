@@ -213,6 +213,6 @@
     "swagger/api-docs.json"
   ],
   "tags": [
-    "music", "b2b", "photos", "webtv"
+    "music", "b2b", "photos", "webtv", "demo"
   ]
 }
