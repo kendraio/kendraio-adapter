@@ -35,12 +35,12 @@
     {
       "label": "Search",
       "icon": "search",
-      "workflowID": "search"
+      "workflowId": "search"
     },
     {
       "label": "Import File",
       "icon": "file_copy",
-      "workflowId": "importFile"
+      "workflowId": "importFromFile"
     },
     {
       "label": "Export works",
