@@ -23,14 +23,17 @@
   "workflow": [
     {
       "title": "Imported recordings (Local DB)",
+      "workflowId": "listRecordings",
       "config": "configs/listRecordings.json"
     },
     {
       "title": "Bulk operations example",
+      "workflowId": "bulkOperationsExample",
       "config": "configs/bulkOperationsExample.json"
     },
     {
       "title": "Faker - test data generator",
+      "workflowId": "fakerTest",
       "config": "configs/fakerTest.json"
     }
   ],
