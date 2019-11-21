@@ -113,22 +113,34 @@
                                 "color": "warn",
                                 "blocks": [
                                   {
-                                    "type": "http",
-                                    "method": "delete",
-                                    "notify": true,
-                                    "endpoint": {
-                                      "protocol": "https:",
-                                      "host": "bloomen.herokuapp.com",
-                                      "valueGetters": {
-                                        "pathname": "join('', ['/sound/music/', data.id])"
+                                    "type": "context",
+                                    "contextPath": "jwt",
+                                    "contextBlocks": [
+                                      {
+                                        "type": "variable-get",
+                                        "name": "bloomen-jwt"
                                       }
-                                    },
-                                    "authentication": {
-                                      "type": "bearer",
-                                      "valueGetters": {
-                                        "jwt": "user.profile.bloomenAuth"
+                                    ],
+                                    "blocks": [
+                                      {
+                                        "type": "http",
+                                        "method": "delete",
+                                        "notify": true,
+                                        "endpoint": {
+                                          "protocol": "https:",
+                                          "host": "bloomen.herokuapp.com",
+                                          "valueGetters": {
+                                            "pathname": "join('', ['/sound/music/', data.id])"
+                                          }
+                                        },
+                                        "authentication": {
+                                          "type": "bearer",
+                                          "valueGetters": {
+                                            "jwt": "context.jwt"
+                                          }
+                                        }
                                       }
-                                    }
+                                    ]
                                   }
                                 ]
                               },

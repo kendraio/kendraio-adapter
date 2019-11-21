@@ -5,22 +5,34 @@
       "type": "init"
     },
     {
-      "type": "http",
-      "method": "get",
-      "notify": false,
-      "endpoint": {
-        "protocol": "https:",
-        "host": "bloomen.herokuapp.com",
-        "valueGetters": {
-          "pathname": "join('', ['/sound/music/', context.queryParams.id])"
+      "type": "context",
+      "contextPath": "jwt",
+      "contextBlocks": [
+        {
+          "type": "variable-get",
+          "name": "bloomen-jwt"
         }
-      },
-      "authentication": {
-        "type": "bearer",
-        "valueGetters": {
-          "jwt": "user.profile.bloomenAuth"
+      ],
+      "blocks": [
+        {
+          "type": "http",
+          "method": "get",
+          "notify": false,
+          "endpoint": {
+            "protocol": "https:",
+            "host": "bloomen.herokuapp.com",
+            "valueGetters": {
+              "pathname": "join('', ['/sound/music/', context.queryParams.id])"
+            }
+          },
+          "authentication": {
+            "type": "bearer",
+            "valueGetters": {
+              "jwt": "context.jwt"
+            }
+          }
         }
-      }
+      ]
     },
     {
       "type": "form",
