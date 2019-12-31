@@ -16,7 +16,7 @@
     {
       "label": "Sign up",
       "icon": "person",
-      "workflowId": "signUp"
+      "workflowId": "signup"
     },
     {
       "label": "Login",
