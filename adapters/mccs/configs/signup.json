@@ -1,0 +1,47 @@
+{
+  "workflowId": "signup",
+  "title": "Sign up",
+  "adapterName": "mccs",
+  "blocks": [
+    {
+      "type": "form",
+      "label": "Sign up",
+      "jsonSchema": {
+        "required": [
+          "email",
+          "password"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "title": "Email",
+            "type": "string"
+          },
+          "password": {
+            "title": "Password",
+            "type": "string"
+          }
+        }
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "http",
+      "method": "post",
+      "endpoint": "https://virtserver.swaggerhub.com/ic3network/mccs-api/0.1/signup"
+    },
+    {
+      "type": "mapping",
+      "mapping": "data.data.token"
+    },
+    {
+      "type": "debug",
+      "open": 1,
+      "showContext": false
+    },
+    {
+      "type": "variable-set",
+      "name": "authToken"
+    }
+  ]
+}

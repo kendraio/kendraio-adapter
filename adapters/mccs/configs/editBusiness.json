@@ -1,0 +1,116 @@
+{
+  "workflowId": "editBusiness",
+  "title": "Edit business",
+  "adapterName": "mccs",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": "https://virtserver.swaggerhub.com/ic3network/mccs-api/0.1/business"
+    },
+    {
+      "type": "mapping",
+      "mapping": "data.data"
+    },
+    {
+      "type": "form",
+      "label": "Update",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "businessName": {
+            "title": "businessName",
+            "type": "string"
+          },
+          "businessPhone": {
+            "title": "businessPhone",
+            "type": "string"
+          },
+          "incType": {
+            "title": "incType",
+            "type": "string"
+          },
+          "companyNumber": {
+            "title": "companyNumber",
+            "type": "string"
+          },
+          "website": {
+            "title": "website",
+            "type": "string"
+          },
+          "turnover": {
+            "title": "turnover",
+            "type": "integer"
+          },
+          "description": {
+            "title": "description",
+            "type": "string"
+          },
+          "locationAddress": {
+            "title": "locationAddress",
+            "type": "string"
+          },
+          "locationCity": {
+            "title": "locationCity",
+            "type": "string"
+          },
+          "locationRegion": {
+            "title": "locationRegion",
+            "type": "string"
+          },
+          "locationPostCode": {
+            "title": "locationPostCode",
+            "type": "string"
+          },
+          "locationCountry": {
+            "title": "locationCountry",
+            "type": "string"
+          },
+          "offers": {
+            "title": "offers",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "wants": {
+            "title": "wants",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "uiSchema": {
+        "offers": {
+          "ui:widget": "table",
+          "defaultValue": "",
+          "colHeadings": [
+            "Offers"
+          ]
+        },
+        "wants": {
+          "ui:widget": "table",
+          "defaultValue": "",
+          "colHeadings": [
+            "Wants"
+          ]
+        }
+      }
+    },
+    {
+      "type": "http",
+      "method": "patch",
+      "endpoint": "https://virtserver.swaggerhub.com/ic3network/mccs-api/0.1/business"
+    },
+    {
+      "type": "debug",
+      "open": 1,
+      "showContext": false
+    }
+  ]
+}

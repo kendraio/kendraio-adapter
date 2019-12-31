@@ -1,0 +1,63 @@
+{
+  "name": "mccs",
+  "label": "MCCS",
+  "description": "Workflows for sign up, login, edit business, and search businesses.",
+  "version": "0.1.0",
+  "infoUrl": "https://app.swaggerhub.com/apis/ic3network/mccs-api/0.1#/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "MCCS",
+    "workflowId": "login"
+  },
+  "services": [
+    {
+      "label": "Sign up",
+      "icon": "person",
+      "workflowId": "signUp"
+    },
+    {
+      "label": "Login",
+      "icon": "person",
+      "workflowId": "login"
+    },
+    {
+      "label": "Edit",
+      "icon": "file_copy",
+      "workflowId": "editBusiness"
+    },
+    {
+      "label": "Search",
+      "icon": "search",
+      "workflowId": "search"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "Sign up",
+      "workflowId": "signup",
+      "config": "configs/signup.json"
+    },
+    {
+      "title": "Login",
+      "workflowId": "login",
+      "config": "configs/login.json"
+    },
+    {
+      "title": "Edit business",
+      "workflowId": "editBusiness",
+      "config": "configs/editBusiness.json"
+    },
+    {
+      "title": "Search businesses",
+      "workflowId": "search",
+      "config": "configs/search.json"
+    }
+  ],
+  "forms": [],
+  "tags": [
+    "b2b"
+  ]
+}

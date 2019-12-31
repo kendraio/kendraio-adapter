@@ -1,0 +1,128 @@
+{
+  "workflowId": "search",
+  "title": "Search businesses",
+  "adapterName": "mccs",
+  "blocks": [
+    {
+      "type": "form",
+      "label": "Search",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "title": "Page",
+            "type": "integer"
+          },
+          "page_size": {
+            "title": "Page size",
+            "type": "integer"
+          },
+          "category": {
+            "title": "Category",
+            "type": "string"
+          },
+          "favourites_only": {
+            "title": "Favourites only",
+            "type": "boolean",
+            "default": false
+          },
+          "offers": {
+            "title": "Offers",
+            "type": "string"
+          },
+          "wants": {
+            "title": "Wants",
+            "type": "string"
+          },
+          "tagged_since": {
+            "title": "Tagged since",
+            "type": "string",
+            "default": "2019-12-25T12:12:12.001Z"
+          }
+        }
+      },
+      "uiSchema": {}
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "virtserver.swaggerhub.com",
+        "pathname": "/ic3network/mccs-api/0.1/businesses",
+        "valueGetters": {
+          "query": "data"
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "data.data"
+    },
+    {
+      "type": "grid",
+      "gridOptions": {},
+      "columnDefs": [
+        {
+          "headerName": "ID",
+          "field": "id"
+        },
+        {
+          "headerName": "Name",
+          "field": "businessName"
+        },
+        {
+          "headerName": "Phone",
+          "field": "businessPhone"
+        },
+        {
+          "headerName": "Website",
+          "field": "website"
+        },
+        {
+          "headerName": "Location",
+          "valueGetter": "[locationCity, locationCountry]"
+        },
+        {
+          "headerName": "Operations",
+          "cellRenderer": "workflowRenderer",
+          "cellRendererParams": {
+            "blocks": [
+              {
+                "type": "actions",
+                "buttons": [
+                  {
+                    "label": "View",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "debug"
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "OK",
+                                "blocks": [
+                                  {
+                                    "type": "init"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
