@@ -1,66 +1,42 @@
 {
-  "title": "Bloomen API Login",
+  "title": "Login",
   "blocks": [
     {
-      "type": "init"
-    },
-    {
-      "type": "message"
-    },
-    {
-      "type": "actions",
-      "buttons": [
-        {
-          "label": "Publisher",
-          "blocks": [
-            {
-              "type": "http",
-              "method": "get",
-              "endpoint": "https://cors-anywhere.herokuapp.com/https://bloomen.herokuapp.com/api-docs.json"
-            },
-            {
-              "type": "mapping",
-              "skipFirst": true,
-              "mapping": "data.securityDefinitions.JWT.description | split(@, '\n')[].split(@, ' ') | [1][1]"
-            }
-          ]
-        },
-        {
-          "label": "Admin",
-          "blocks": [
-            {
-              "type": "http",
-              "method": "get",
-              "endpoint": "https://cors-anywhere.herokuapp.com/https://bloomen.herokuapp.com/api-docs.json"
-            },
-            {
-              "type": "mapping",
-              "skipFirst": true,
-              "mapping": "data.securityDefinitions.JWT.description | split(@, '\n')[].split(@, ' ') | [1][1]"
-            }
-          ]
-        },
-        {
-          "label": "Photographer",
-          "blocks": [
-            {
-              "type": "http",
-              "method": "get",
-              "endpoint": "https://cors-anywhere.herokuapp.com/https://bloomen.herokuapp.com/api-docs.json"
-            },
-            {
-              "type": "mapping",
-              "skipFirst": true,
-              "mapping": "data.securityDefinitions.JWT.description | split(@, '\n')[].split(@, ' ') | [3][1]"
-            }
-          ]
+      "type": "form",
+      "label": "Login",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "title": "Username"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          }
         }
-      ]
+      },
+      "uiSchema": {
+        "password": {
+          "ui:widget": "password"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "method": "post",
+      "endpoint": "https://bloomen.herokuapp.com/auth/login"
+    },
+    {
+      "type": "mapping",
+      "mapping": "data.token"
     },
     {
       "type": "variable-set",
-      "name": "bloomen-jwt"
+      "name": "bloomenAuth"
     }
   ],
-  "id": "bloomenLogin"
+  "id": "login",
+  "adapterName": "bloomen"
 }
