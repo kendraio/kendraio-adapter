@@ -1,32 +1,167 @@
 {
-  "title": "List of Sound Recordings",
+  "title": "List works",
   "blocks": [
+    {
+      "type": "message",
+      "title": "List of Sound Recordings (Bloomen API)"
+    },
     {
       "type": "init"
     },
     {
-      "type": "query",
-      "dataSource": {
-        "type": "remote",
-        "endpoint": "https://fake-api.now32.now.sh/soundRecording"
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "pathname": "/sound/recordings"
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
       }
     },
     {
       "type": "grid",
+      "gridOptions": {},
       "columnDefs": [
         {
           "headerName": "Title",
           "field": "title"
         },
         {
-          "headerName": "Artist",
-          "field": "mainArtist"
-        },
-        {
           "headerName": "ISRC",
           "field": "ISRC"
+        },
+        {
+          "headerName": "Operations",
+          "cellRenderer": "workflowRenderer",
+          "cellRendererParams": {
+            "blocks": [
+              {
+                "type": "actions",
+                "buttons": [
+                  {
+                    "label": "View",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "debug"
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "OK",
+                                "blocks": [
+                                  {
+                                    "type": "init"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Edit",
+                    "blocks": [
+                      {
+                        "type": "launch",
+                        "adapter": "bloomen",
+                        "workflowId": "editWork",
+                        "context": {
+                          "id": "data.id"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Delete",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "message",
+                            "title": "Are you sure you want to delete {{originalTitle}}?",
+                            "message": "This action cannot be undone."
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "Delete",
+                                "color": "warn",
+                                "blocks": [
+                                  {
+                                    "type": "context",
+                                    "contextPath": "bloomenAuth",
+                                    "contextBlocks": [
+                                      {
+                                        "type": "variable-get",
+                                        "name": "bloomenAuth"
+                                      }
+                                    ],
+                                    "blocks": [
+                                      {
+                                        "type": "http",
+                                        "method": "delete",
+                                        "notify": true,
+                                        "endpoint": {
+                                          "protocol": "https:",
+                                          "host": "bloomen.herokuapp.com",
+                                          "valueGetters": {
+                                            "pathname": "join('', ['/sound/recordings/', data.id])"
+                                          }
+                                        },
+                                        "authentication": {
+                                          "type": "bearer",
+                                          "valueGetters": {
+                                            "jwt": "context.bloomenAuth"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "label": "Cancel",
+                                "blocks": [
+                                  {
+                                    "type": "init"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
         }
       ]
     }
-  ]
+  ],
+  "id": "listWorks",
+  "adapterName": "bloomen"
 }
