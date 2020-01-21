@@ -16,11 +16,11 @@
     },
     {
       "type": "context",
-      "contextPath": "jwt",
+      "contextPath": "bloomenAuth",
       "contextBlocks": [
         {
           "type": "variable-get",
-          "name": "bloomen-jwt"
+          "name": "bloomenAuth"
         }
       ],
       "blocks": [
@@ -36,7 +36,7 @@
           "authentication": {
             "type": "bearer",
             "valueGetters": {
-              "jwt": "context.jwt"
+              "jwt": "context.bloomenAuth"
             }
           }
         }
