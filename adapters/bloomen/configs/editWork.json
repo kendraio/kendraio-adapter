@@ -55,6 +55,11 @@
           "jwt": "context.bloomenAuth"
         }
       }
+    },
+    {
+      "type": "launch",
+      "adapter": "bloomen",
+      "workflowId": "listWorks"
     }
   ],
   "id": "editWork",
