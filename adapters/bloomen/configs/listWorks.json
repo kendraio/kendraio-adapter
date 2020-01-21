@@ -55,12 +55,29 @@
                     "label": "View",
                     "blocks": [
                       {
-                        "type": "launch",
-                        "adapter": "bloomen",
-                        "workflowId": "viewWork",
-                        "context": {
-                          "id": "data.id"
-                        }
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "mapping",
+                            "mapping": "data.omit(@, ['_id', '__v', 'versions'])"
+                          },
+                          {
+                            "type": "debug"
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "OK",
+                                "blocks": [
+                                  {
+                                    "type": "init"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
                       }
                     ]
                   },
@@ -71,6 +88,19 @@
                         "type": "launch",
                         "adapter": "bloomen",
                         "workflowId": "editWork",
+                        "context": {
+                          "id": "data.id"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Versions",
+                    "blocks": [
+                      {
+                        "type": "launch",
+                        "adapter": "bloomen",
+                        "workflowId": "workVersions",
                         "context": {
                           "id": "data.id"
                         }

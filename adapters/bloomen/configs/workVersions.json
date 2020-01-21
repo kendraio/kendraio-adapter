@@ -1,0 +1,120 @@
+{
+  "title": "Musical Work (Versions)",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "notify": false,
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "valueGetters": {
+          "pathname": "join('', ['/sound/music/', context.queryParams.id])"
+        }
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
+      }
+    },
+    {
+      "type": "debug",
+      "open": 0
+    },
+    {
+      "type": "mapping",
+      "mapping": "data.versions || []"
+    },
+    {
+      "type": "grid",
+      "gridOptions": {},
+      "columnDefs": [
+        {
+          "headerName": "Title",
+          "field": "value.originalTitle"
+        },
+        {
+          "headerName": "ISWC",
+          "field": "value.ISWC"
+        },
+        {
+          "headerName": "Modified at",
+          "field": "modifiedAtUTC"
+        },
+        {
+          "headerName": "Operations",
+          "cellRenderer": "workflowRenderer",
+          "cellRendererParams": {
+            "blocks": [
+              {
+                "type": "actions",
+                "buttons": [
+                  {
+                    "label": "View",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "mapping",
+                            "mapping": "data.value.omit(@, ['_id', '__v', 'versions'])"
+                          },
+                          {
+                            "type": "debug"
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "OK",
+                                "blocks": [
+                                  {
+                                    "type": "init"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "type": "actions",
+      "buttons": [
+        {
+          "label": "Cancel",
+          "blocks": [
+            {
+              "type": "launch",
+              "adapter": "bloomen",
+              "workflowId": "listWorks"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "workVersions",
+  "adapterName": "bloomen"
+}

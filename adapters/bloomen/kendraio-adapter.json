@@ -80,6 +80,11 @@
       "config": "configs/viewWork.json"
     },
     {
+      "title": "Musical Work (Versions)",
+      "workflowId": "workVersions",
+      "config": "configs/workVersions.json"
+    },
+    {
       "title": "Export works",
       "workflowId": "exportWorks",
       "config": "configs/exportWorks.json"
