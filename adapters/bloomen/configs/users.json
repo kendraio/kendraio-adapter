@@ -1,5 +1,5 @@
 {
-  "title": "Bloomen Users",
+  "title": "Users",
   "blocks": [
     {
       "type": "message",
@@ -9,31 +9,27 @@
       "type": "init"
     },
     {
-      "type": "context",
-      "contextPath": "jwt",
-      "contextBlocks": [
-        {
-          "type": "variable-get",
-          "name": "bloomen-jwt"
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "pathname": "/users/kyc"
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
         }
-      ],
-      "blocks": [
-        {
-          "type": "http",
-          "method": "get",
-          "endpoint": {
-            "protocol": "https:",
-            "host": "bloomen.herokuapp.com",
-            "pathname": "/users/kyc"
-          },
-          "authentication": {
-            "type": "bearer",
-            "valueGetters": {
-              "jwt": "context.jwt"
-            }
-          }
-        }
-      ]
+      }
     },
     {
       "type": "grid",
@@ -124,5 +120,6 @@
       ]
     }
   ],
-  "id": "listUsers"
+  "id": "users",
+  "adapterName": "bloomen"
 }
