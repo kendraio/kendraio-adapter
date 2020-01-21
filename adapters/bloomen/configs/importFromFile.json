@@ -1,9 +1,16 @@
 {
-  "title": "Import works",
-  "adapterName": "bloomen",
+  "title": "Import from file",
   "blocks": [
     {
       "type": "init"
+    },
+    {
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
     },
     {
       "type": "message",
@@ -13,7 +20,9 @@
     {
       "type": "file-input",
       "label": "Load file",
-      "accept": ["json"]
+      "accept": [
+        "json"
+      ]
     },
     {
       "type": "parse-data"
@@ -50,32 +59,20 @@
               "type": "batch",
               "blocks": [
                 {
-                  "type": "context",
-                  "contextPath": "bloomenAuth",
-                  "contextBlocks": [
-                    {
-                      "type": "variable-get",
-                      "name": "bloomenAuth"
+                  "type": "http",
+                  "skipInit": false,
+                  "method": "post",
+                  "endpoint": {
+                    "protocol": "https:",
+                    "host": "bloomen.herokuapp.com",
+                    "pathname": "/sound/music"
+                  },
+                  "authentication": {
+                    "type": "bearer",
+                    "valueGetters": {
+                      "jwt": "context.bloomenAuth"
                     }
-                  ],
-                  "blocks": [
-                    {
-                      "type": "http",
-                      "skipInit": false,
-                      "method": "post",
-                      "endpoint": {
-                        "protocol": "https:",
-                        "host": "bloomen.herokuapp.com",
-                        "pathname": "/sound/music"
-                      },
-                      "authentication": {
-                        "type": "bearer",
-                        "valueGetters": {
-                          "jwt": "context.bloomenAuth"
-                        }
-                      }
-                    }
-                  ]
+                  }
                 }
               ]
             }
@@ -84,5 +81,6 @@
       ]
     }
   ],
-  "id": "importWorks"
+  "id": "importFromFile",
+  "adapterName": "bloomen"
 }
