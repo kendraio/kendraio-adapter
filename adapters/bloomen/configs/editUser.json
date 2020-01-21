@@ -59,11 +59,6 @@
           "jwt": "context.bloomenAuth"
         }
       }
-    },
-    {
-      "type": "launch",
-      "adapter": "bloomen",
-      "workflowId": "users"
     }
   ],
   "id": "editUser",
