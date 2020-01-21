@@ -1,38 +1,34 @@
 {
-  "title": "Edit Musical Work (Bloomen API)",
+  "title": "Edit work",
   "blocks": [
     {
       "type": "init"
     },
     {
-      "type": "context",
-      "contextPath": "jwt",
-      "contextBlocks": [
-        {
-          "type": "variable-get",
-          "name": "bloomen-jwt"
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "notify": false,
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "valueGetters": {
+          "pathname": "join('', ['/sound/music/', context.queryParams.id])"
         }
-      ],
-      "blocks": [
-        {
-          "type": "http",
-          "method": "get",
-          "notify": false,
-          "endpoint": {
-            "protocol": "https:",
-            "host": "bloomen.herokuapp.com",
-            "valueGetters": {
-              "pathname": "join('', ['/sound/music/', context.queryParams.id])"
-            }
-          },
-          "authentication": {
-            "type": "bearer",
-            "valueGetters": {
-              "jwt": "context.jwt"
-            }
-          }
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
         }
-      ]
+      }
     },
     {
       "type": "form",
@@ -44,6 +40,8 @@
       "type": "http",
       "method": "put",
       "notify": true,
+      "firstChange": true,
+      "skipInit": true,
       "endpoint": {
         "protocol": "https:",
         "host": "bloomen.herokuapp.com",
@@ -54,14 +52,11 @@
       "authentication": {
         "type": "bearer",
         "valueGetters": {
-          "jwt": "user.profile.bloomenAuth"
+          "jwt": "context.bloomenAuth"
         }
       }
-    },
-    {
-      "type": "launch",
-      "adapter": "bloomen",
-      "workflowId": "listWorks"
     }
-  ]
+  ],
+  "id": "editWork",
+  "adapterName": "bloomen"
 }
