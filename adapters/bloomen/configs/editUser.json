@@ -50,7 +50,7 @@
         "protocol": "https:",
         "host": "bloomen.herokuapp.com",
         "valueGetters": {
-          "pathname": "join('', ['/users/', context.queryParams.hash])"
+          "pathname": "join('', ['/users/', context.queryParams.id])"
         }
       },
       "authentication": {
@@ -59,6 +59,11 @@
           "jwt": "context.bloomenAuth"
         }
       }
+    },
+    {
+      "type": "launch",
+      "adapter": "bloomen",
+      "workflowId": "users"
     }
   ],
   "id": "editUser",
