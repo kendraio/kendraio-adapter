@@ -1,0 +1,55 @@
+{
+  "title": "View Musical Work",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "notify": false,
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "valueGetters": {
+          "pathname": "join('', ['/sound/music/', context.queryParams.id])"
+        }
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
+      }
+    },
+    {
+      "type": "debug",
+      "open": 2
+    },
+    {
+      "type": "actions",
+      "buttons": [
+        {
+          "label": "Cancel",
+          "blocks": [
+            {
+              "type": "launch",
+              "adapter": "bloomen",
+              "workflowId": "listWorks"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "viewWork",
+  "adapterName": "bloomen"
+}

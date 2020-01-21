@@ -75,6 +75,11 @@
       "config": "configs/editWork.json"
     },
     {
+      "title": "View Musical Work",
+      "workflowId": "viewWork",
+      "config": "configs/viewWork.json"
+    },
+    {
       "title": "Export works",
       "workflowId": "exportWorks",
       "config": "configs/exportWorks.json"

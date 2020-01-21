@@ -55,25 +55,12 @@
                     "label": "View",
                     "blocks": [
                       {
-                        "type": "dialog",
-                        "blocks": [
-                          {
-                            "type": "debug"
-                          },
-                          {
-                            "type": "actions",
-                            "buttons": [
-                              {
-                                "label": "OK",
-                                "blocks": [
-                                  {
-                                    "type": "init"
-                                  }
-                                ]
-                              }
-                            ]
-                          }
-                        ]
+                        "type": "launch",
+                        "adapter": "bloomen",
+                        "workflowId": "viewWork",
+                        "context": {
+                          "id": "data.id"
+                        }
                       }
                     ]
                   },
