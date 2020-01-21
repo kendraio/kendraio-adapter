@@ -5,34 +5,30 @@
       "type": "init"
     },
     {
-      "type": "context",
-      "contextPath": "jwt",
-      "contextBlocks": [
-        {
-          "type": "variable-get",
-          "name": "bloomen-jwt"
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "notify": false,
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "valueGetters": {
+          "pathname": "join('', ['/users/', context.queryParams.hash, '/kyc'])"
         }
-      ],
-      "blocks": [
-        {
-          "type": "http",
-          "method": "get",
-          "notify": false,
-          "endpoint": {
-            "protocol": "https:",
-            "host": "bloomen.herokuapp.com",
-            "valueGetters": {
-              "pathname": "join('', ['/users/', context.queryParams.hash, '/kyc'])"
-            }
-          },
-          "authentication": {
-            "type": "bearer",
-            "valueGetters": {
-              "jwt": "context.jwt"
-            }
-          }
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
         }
-      ]
+      }
     },
     {
       "type": "form",
@@ -45,39 +41,31 @@
       "mapping": "data.omit(@, ['_id', '__v'])"
     },
     {
-      "type": "context",
-      "contextPath": "jwt",
-      "contextBlocks": [
-        {
-          "type": "variable-get",
-          "name": "bloomen-jwt"
+      "type": "http",
+      "method": "put",
+      "notify": true,
+      "skipInit": true,
+      "firstChange": true,
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "valueGetters": {
+          "pathname": "join('', ['/users/', context.queryParams.hash])"
         }
-      ],
-      "blocks": [
-        {
-          "type": "http",
-          "method": "put",
-          "notify": true,
-          "endpoint": {
-            "protocol": "https:",
-            "host": "bloomen.herokuapp.com",
-            "valueGetters": {
-              "pathname": "join('', ['/users/', context.queryParams.hash])"
-            }
-          },
-          "authentication": {
-            "type": "bearer",
-            "valueGetters": {
-              "jwt": "context.jwt"
-            }
-          }
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
         }
-      ]
+      }
     },
     {
       "type": "launch",
       "adapter": "bloomen",
       "workflowId": "users"
     }
-  ]
+  ],
+  "id": "editUser",
+  "adapterName": "bloomen"
 }
