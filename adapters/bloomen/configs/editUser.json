@@ -50,7 +50,7 @@
         "protocol": "https:",
         "host": "bloomen.herokuapp.com",
         "valueGetters": {
-          "pathname": "join('', ['/users/', context.queryParams.id])"
+          "pathname": "join('', ['/users/', context.queryParams.hash])"
         }
       },
       "authentication": {
