@@ -91,6 +91,40 @@
                         ]
                       }
                     ]
+                  },
+                  {
+                    "label": "Revert",
+                    "blocks": [
+                      {
+                        "type": "mapping",
+                        "mapping": "data.value.omit(@, ['_id', '__v', 'versions'])"
+                      },
+                      {
+                        "type": "http",
+                        "method": "put",
+                        "notify": true,
+                        "firstChange": true,
+                        "skipInit": true,
+                        "endpoint": {
+                          "protocol": "https:",
+                          "host": "bloomen.herokuapp.com",
+                          "valueGetters": {
+                            "pathname": "join('', ['/sound/music/', context.queryParams.id])"
+                          }
+                        },
+                        "authentication": {
+                          "type": "bearer",
+                          "valueGetters": {
+                            "jwt": "context.bloomenAuth"
+                          }
+                        }
+                      },
+                      {
+                        "type": "launch",
+                        "adapter": "bloomen",
+                        "workflowId": "listWorks"
+                      }
+                    ]
                   }
                 ]
               }
