@@ -1,0 +1,20 @@
+{
+  "title": "Select organisation",
+  "blocks": [
+    {
+      "type": "mapping",
+      "mapping": "['digit', 'test', 'another']"
+    },
+    {
+      "type": "mapping",
+      "mapping": "data[].{ value: @, label: @ }"
+    },
+    {
+      "type": "reference",
+      "fieldLabel": "Organisation",
+      "valueField": "value"
+    }
+  ],
+  "id": "selectOrganisation",
+  "adapterName": "bloomen"
+}

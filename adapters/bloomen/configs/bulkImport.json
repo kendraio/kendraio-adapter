@@ -1,0 +1,77 @@
+{
+  "title": "Bulk Import",
+  "blocks": [
+    {
+      "type": "file-input",
+      "label": "Import",
+      "accept": [
+        "csv",
+        "json",
+        "xml"
+      ]
+    },
+    {
+      "type": "parse-data",
+      "csvOptions": {
+        "header": true,
+        "skipEmptyLines": true,
+        "dynamicTyping": false,
+        "transform": false
+      },
+      "xmlOptions": {}
+    },
+    {
+      "type": "mapping",
+      "mapping": "data[:10]"
+    },
+    {
+      "type": "debug",
+      "open": 0,
+      "showContext": false
+    },
+    {
+      "type": "grid",
+      "gridOptions": {
+        "pagination": true,
+        "rowSelection": "multiple"
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "{ items: data }"
+    },
+    {
+      "type": "form",
+      "label": "Import",
+      "jsonSchema": {
+        "properties": {
+          "organisation": {
+            "type": "string",
+            "title": "Organisation"
+          }
+        }
+      },
+      "uiSchema": {
+        "organisation": {
+          "ui:widget": "blocks",
+          "blocksConfig": {
+            "blocks": [
+              {
+                "type": "gosub",
+                "adapterName": "bloomen",
+                "workflowId": "selectOrganisation"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "type": "debug",
+      "open": 1,
+      "showContext": false
+    }
+  ],
+  "id": "bulkImport",
+  "adapterName": "bloomen"
+}

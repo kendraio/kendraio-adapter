@@ -188,6 +188,16 @@
       "title": "List of Sound Recordings (view/edit)",
       "workflowId": "listSoundRecordings-view-edit",
       "config": "configs/listSoundRecordings-view-edit.json"
+    },
+    {
+      "title": "Bulk Import",
+      "workflowId": "bulkImport",
+      "config": "configs/bulkImport.json"
+    },
+    {
+      "title": "Select Organisation",
+      "workflowId": "selectOrganisation",
+      "config": "configs/selectOrganisation.json"
     }
   ],
   "forms": [
