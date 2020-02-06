@@ -15,9 +15,9 @@
   },
   "services": [
     {
-      "label": "Register",
-      "icon": "person",
-      "workflowId": "register"
+      "label": "YouTube",
+      "icon": "live_tv",
+      "workflowId": "youtubeVideo"
     }
   ],
   "workflow": [
@@ -25,6 +25,11 @@
       "title": "BeeFree Dashboard",
       "workflowId": "dashboard",
       "config": "configs/dashboard.json"
+    },
+    {
+      "title": "BeeFree/YouTube",
+      "workflowId": "youtubeVideo",
+      "config": "configs/youtubeVideo.json"
     }
   ],
   "forms": [

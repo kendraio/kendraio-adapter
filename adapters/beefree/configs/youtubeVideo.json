@@ -1,0 +1,12 @@
+{
+  "title": "BeeFree/YouTube Video",
+  "blocks": [
+    {
+      "type": "gosub",
+      "adapterName": "youtube",
+      "workflowId": "bl1JysracnITVNDPkIIo"
+    }
+  ],
+  "id": "youtubeVideo",
+  "adapterName": "beefree"
+}
