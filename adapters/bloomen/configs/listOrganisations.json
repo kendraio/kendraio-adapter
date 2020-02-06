@@ -1,0 +1,124 @@
+{
+  "title": "Organisations",
+  "blocks": [
+    {
+      "type": "message",
+      "title": "Organisations (Bloomen API)"
+    },
+    {
+      "type": "init"
+    },
+    {
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "pathname": "/organisations"
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
+      }
+    },
+    {
+      "type": "grid",
+      "gridOptions": {
+        "pagination": true,
+        "paginationPageSize": 50,
+        "rowSelection": "multiple"
+      },
+      "columnDefs": [
+        {
+          "width": 50,
+          "resizable": false,
+          "checkboxSelection": true
+        },
+        {
+          "headerName": "ID",
+          "field": "_id"
+        },
+        {
+          "headerName": "Name",
+          "field": "name"
+        },
+        {
+          "headerName": "Group",
+          "field": "group"
+        },
+        {
+          "headerName": "Hash",
+          "field": "hash"
+        },
+        {
+          "headerName": "Wallet",
+          "field": "walletAddress"
+        },
+        {
+          "headerName": "Operations",
+          "cellRenderer": "workflowRenderer",
+          "cellRendererParams": {
+            "blocks": [
+              {
+                "type": "actions",
+                "buttons": [
+                  {
+                    "label": "View",
+                    "blocks": [
+                      {
+                        "type": "dialog",
+                        "blocks": [
+                          {
+                            "type": "debug"
+                          },
+                          {
+                            "type": "actions",
+                            "buttons": [
+                              {
+                                "label": "OK",
+                                "blocks": [
+                                  {
+                                    "type": "init"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "label": "Edit",
+                    "blocks": [
+                      {
+                        "type": "launch",
+                        "adapter": "bloomen",
+                        "workflowId": "editOrganisation",
+                        "context": {
+                          "name": "data.name"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "id": "listOrganisations",
+  "adapterName": "bloomen"
+}

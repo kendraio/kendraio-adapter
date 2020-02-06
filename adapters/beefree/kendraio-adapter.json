@@ -1,0 +1,40 @@
+{
+  "name": "beefree",
+  "label": "BeeFree",
+  "description": "Integration with the BeeFree network",
+  "version": "0.1.0",
+  "infoUrl": "https://beefree.me/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [
+  ],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "BeeFree",
+    "workflowId": "dashboard"
+  },
+  "services": [
+    {
+      "label": "Register",
+      "icon": "person",
+      "workflowId": "register"
+    }
+  ],
+  "workflow": [
+    {
+      "title": "BeeFree Dashboard",
+      "workflowId": "dashboard",
+      "config": "configs/dashboard.json"
+    }
+  ],
+  "forms": [
+  ],
+  "upload": {
+    "enabled": true
+  },
+  "apis": [
+  ],
+  "tags": [
+    "p2p", "video"
+  ]
+}

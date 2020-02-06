@@ -1,0 +1,119 @@
+{
+  "title": "Import recordings (Bloomen API)",
+  "blocks": [
+    {
+      "type": "init"
+    },
+    {
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "pathname": "/organisations/groups"
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
+      }
+    },
+    {
+      "type": "mapping",
+      "mapping": "data[].{ value: @, label: @ }"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "groups"
+    },
+    {
+      "type": "mapping",
+      "mapping": "context.groups"
+    },
+    {
+      "type": "reference",
+      "fieldLabel": "Group",
+      "valueField": "value"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "selectedGroup"
+    },
+    {
+      "type": "csv-import",
+      "header": true,
+      "skipEmptyLines": true
+    },
+    {
+      "type": "mapping",
+      "mapping": "data[:10]"
+    },
+    {
+      "type": "grid",
+      "gridOptions": {
+        "pagination": true,
+        "paginationPageSize": 25,
+        "rowSelection": "multiple"
+      },
+      "columnDefs": [
+        {
+          "checkboxSelection": true
+        },
+        {
+          "headerName": "Title",
+          "field": "title"
+        },
+        {
+          "headerName": "Artist",
+          "field": "mainArtist"
+        },
+        {
+          "headerName": "ISRC",
+          "field": "ISRC"
+        }
+      ]
+    },
+    {
+      "type": "mapping",
+      "mapping": "{ data: data[].merge(@, { group: _(&context.selectedGroup) }) }"
+    },
+    {
+      "type": "form",
+      "label": "Import",
+      "jsonSchema": {
+      },
+      "uiSchema": {
+      }
+    },
+    {
+      "type": "debug"
+    },
+    {
+      "type": "http",
+      "skipInit": false,
+      "method": "post",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "pathname": "/sound/bulk"
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
+      }
+    }
+  ],
+  "id": "importRecordings",
+  "adapterName": "bloomen"
+}

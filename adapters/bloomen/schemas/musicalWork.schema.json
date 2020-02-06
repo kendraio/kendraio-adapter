@@ -11,6 +11,10 @@
       "title": "originalTitle",
       "type": "string"
     },
+    "group": {
+      "title": "group",
+      "type": "string"
+    },
     "creators": {
       "title": "creators",
       "type": "array",

@@ -1,0 +1,40 @@
+{
+  "title": "Groups",
+  "blocks": [
+    {
+      "type": "message",
+      "title": "Groups (Bloomen API)"
+    },
+    {
+      "type": "init"
+    },
+    {
+      "type": "variable-get",
+      "name": "bloomenAuth"
+    },
+    {
+      "type": "context-save",
+      "contextKey": "bloomenAuth"
+    },
+    {
+      "type": "http",
+      "method": "get",
+      "endpoint": {
+        "protocol": "https:",
+        "host": "bloomen.herokuapp.com",
+        "pathname": "/organisations/groups"
+      },
+      "authentication": {
+        "type": "bearer",
+        "valueGetters": {
+          "jwt": "context.bloomenAuth"
+        }
+      }
+    },
+    {
+      "type": "debug"
+    }
+  ],
+  "id": "listGroups",
+  "adapterName": "bloomen"
+}

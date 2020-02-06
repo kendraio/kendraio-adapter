@@ -1,0 +1,98 @@
+{
+  "title": "Edit Organisation (Bloomen API)",
+  "blocks": [
+    {
+      "type": "switch",
+      "valueGetter": "contains(['music'], context.queryParams.name)",
+      "default": {
+        "blocks": [
+          {
+            "type": "message",
+            "message": "Restricted"
+          }
+        ]
+      },
+      "cases": [
+        {
+          "value": true,
+          "blocks": [
+
+            {
+              "type": "init"
+            },
+            {
+              "type": "variable-get",
+              "name": "bloomenAuth"
+            },
+            {
+              "type": "context-save",
+              "contextKey": "bloomenAuth"
+            },
+            {
+              "type": "http",
+              "method": "get",
+              "notify": false,
+              "endpoint": {
+                "protocol": "https:",
+                "host": "bloomen.herokuapp.com",
+                "valueGetters": {
+                  "pathname": "join('', ['/organisations/', context.queryParams.name])"
+                }
+              },
+              "authentication": {
+                "type": "bearer",
+                "valueGetters": {
+                  "jwt": "context.bloomenAuth"
+                }
+              }
+            },
+            {
+              "type": "message",
+              "message": "Edit group for {{ context.queryParams.name }}"
+            },
+            {
+              "type": "form",
+              "label": "Save",
+              "jsonSchema": {
+                "type": "object",
+                "properties": {
+                  "group": {
+                    "type": "string",
+                    "title": "Group"
+                  }
+                }
+              },
+              "uiSchema": {}
+            },
+            {
+              "type": "mapping",
+              "mapping": "data.omit(@, ['_id', '__v'])"
+            },
+            {
+              "type": "http",
+              "method": "put",
+              "notify": true,
+              "skipInit": true,
+              "firstChange": true,
+              "endpoint": {
+                "protocol": "https:",
+                "host": "bloomen.herokuapp.com",
+                "valueGetters": {
+                  "pathname": "join('', ['/organisations/', context.queryParams.name])"
+                }
+              },
+              "authentication": {
+                "type": "bearer",
+                "valueGetters": {
+                  "jwt": "context.bloomenAuth"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "id": "editOrganisation",
+  "adapterName": "bloomen"
+}

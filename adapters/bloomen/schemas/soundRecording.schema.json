@@ -11,6 +11,10 @@
       "title": "Main artist",
       "type": "string"
     },
+    "group": {
+      "title": "group",
+      "type": "string"
+    },
     "featuredArtists": {
       "title": "Featured artists",
       "type": "array",
