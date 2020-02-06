@@ -3,6 +3,7 @@
   "adapters": [
     "adapters/apple-music",
     "adapters/bandcamp",
+    "adapters/beefree",
     "adapters/bloomen",
     "adapters/chant",
     "adapters/copyright-hub",
