@@ -1,9 +1,9 @@
 {
-  "title": "Bloomen search",
+  "title": "Search",
   "blocks": [
     {
       "type": "form",
-      "hasSubmit": false,
+      "label": "Search",
       "jsonSchema": {
         "properties": {
           "term": {
@@ -51,7 +51,7 @@
           "blocks": [
             {
               "type": "template",
-              "template": "<p>{{description}}</p><img width=\"200\" src=\"{{url}}\">"
+              "template": "<p>{{data.description}}</p><img width=\"200\" src=\"{{data.url}}\">"
             },
             {
               "type": "debug",
@@ -62,5 +62,7 @@
         }
       ]
     }
-  ]
+  ],
+  "id": "search",
+  "adapterName": "bloomen"
 }

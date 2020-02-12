@@ -23,17 +23,17 @@
   },
   "services": [
     {
-      "label": "Register",
-      "icon": "person",
-      "workflowId": "register"
-    },
-    {
       "label": "Login",
       "icon": "person",
       "workflowId": "login"
     },
     {
-      "label": "Search",
+      "label": "Users",
+      "icon": "people",
+      "workflowId": "users"
+    },
+    {
+      "label": "Content Search",
       "icon": "search",
       "workflowId": "search"
     },
@@ -43,24 +43,19 @@
       "workflowId": "importFromFile"
     },
     {
-      "label": "Export works",
-      "icon": "cloud_download",
-      "workflowId": "exportWorks"
-    },
-    {
-      "label": "Import works",
-      "icon": "cloud_upload",
-      "workflowId": "importWorks"
-    },
-    {
-      "label": "List works",
+      "label": "Musical Works",
       "icon": "music_note",
       "workflowId": "listWorks"
     },
     {
-      "label": "Users",
-      "icon": "people",
-      "workflowId": "users"
+      "label": "Sound Recordings",
+      "icon": "music_note",
+      "workflowId": "listSoundRecordings"
+    },
+    {
+      "label": "Bulk Import",
+      "icon": "music_note",
+      "workflowId": "importRecordings"
     }
   ],
   "workflow": [

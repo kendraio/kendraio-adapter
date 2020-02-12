@@ -2,120 +2,148 @@
   "title": "Users",
   "blocks": [
     {
-      "type": "message",
-      "title": "Users (Bloomen API)"
-    },
-    {
-      "type": "init"
-    },
-    {
-      "type": "variable-get",
-      "name": "bloomenAuth"
-    },
-    {
-      "type": "context-save",
-      "contextKey": "bloomenAuth"
-    },
-    {
-      "type": "http",
-      "method": "get",
-      "endpoint": {
-        "protocol": "https:",
-        "host": "bloomen.herokuapp.com",
-        "pathname": "/users/kyc"
-      },
-      "authentication": {
-        "type": "bearer",
-        "valueGetters": {
-          "jwt": "context.bloomenAuth"
-        }
-      }
-    },
-    {
-      "type": "grid",
-      "gridOptions": {
-        "pagination": true,
-        "paginationPageSize": 10,
-        "rowSelection": "multiple"
-      },
-      "columnDefs": [
+      "type": "multi",
+      "batches": [
         {
-          "width": 50,
-          "resizable": false,
-          "checkboxSelection": true
+          "blocks": [
+            {
+              "type": "actions",
+              "buttons": [
+                {
+                  "label": "Create User",
+                  "blocks": [
+                    {
+                      "type": "launch",
+                      "adapter": "bloomen",
+                      "workflowId": "register"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
-          "headerName": "ID",
-          "field": "id"
-        },
-        {
-          "headerName": "Username",
-          "field": "username"
-        },
-        {
-          "headerName": "Roles",
-          "field": "role"
-        },
-        {
-          "headerName": "First name",
-          "field": "kyc.firstname"
-        },
-        {
-          "headerName": "Last name",
-          "field": "kyc.lastname"
-        },
-        {
-          "headerName": "Operations",
-          "cellRenderer": "workflowRenderer",
-          "cellRendererParams": {
-            "blocks": [
-              {
-                "type": "actions",
-                "buttons": [
-                  {
-                    "label": "View",
+          "blocks": [
+            {
+              "type": "message",
+              "title": "Users (Bloomen API)"
+            },
+            {
+              "type": "init"
+            },
+            {
+              "type": "variable-get",
+              "name": "bloomenAuth"
+            },
+            {
+              "type": "context-save",
+              "contextKey": "bloomenAuth"
+            },
+            {
+              "type": "http",
+              "method": "get",
+              "endpoint": {
+                "protocol": "https:",
+                "host": "bloomen.herokuapp.com",
+                "pathname": "/users/all"
+              },
+              "authentication": {
+                "type": "bearer",
+                "valueGetters": {
+                  "jwt": "context.bloomenAuth"
+                }
+              }
+            },
+            {
+              "type": "grid",
+              "gridOptions": {
+                "pagination": true,
+                "paginationPageSize": 10,
+                "rowSelection": "multiple"
+              },
+              "columnDefs": [
+                {
+                  "width": 50,
+                  "resizable": false,
+                  "checkboxSelection": true
+                },
+                {
+                  "headerName": "ID",
+                  "field": "id"
+                },
+                {
+                  "headerName": "Username",
+                  "field": "username"
+                },
+                {
+                  "headerName": "Roles",
+                  "field": "role"
+                },
+                {
+                  "headerName": "First name",
+                  "field": "kyc.firstname"
+                },
+                {
+                  "headerName": "Last name",
+                  "field": "kyc.lastname"
+                },
+                {
+                  "headerName": "Operations",
+                  "cellRenderer": "workflowRenderer",
+                  "cellRendererParams": {
                     "blocks": [
                       {
-                        "type": "dialog",
-                        "blocks": [
+                        "type": "actions",
+                        "buttons": [
                           {
-                            "type": "debug"
-                          },
-                          {
-                            "type": "actions",
-                            "buttons": [
+                            "label": "View",
+                            "blocks": [
                               {
-                                "label": "OK",
+                                "type": "dialog",
                                 "blocks": [
                                   {
-                                    "type": "init"
+                                    "type": "debug"
+                                  },
+                                  {
+                                    "type": "actions",
+                                    "buttons": [
+                                      {
+                                        "label": "OK",
+                                        "blocks": [
+                                          {
+                                            "type": "init"
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   }
                                 ]
+                              }
+                            ]
+                          },
+                          {
+                            "label": "Edit",
+                            "blocks": [
+                              {
+                                "type": "launch",
+                                "adapter": "bloomen",
+                                "workflowId": "editUser",
+                                "context": {
+                                  "id": "data.id",
+                                  "hash": "data.hash"
+                                }
                               }
                             ]
                           }
                         ]
                       }
                     ]
-                  },
-                  {
-                    "label": "Edit",
-                    "blocks": [
-                      {
-                        "type": "launch",
-                        "adapter": "bloomen",
-                        "workflowId": "editUser",
-                        "context": {
-                          "id": "data.id",
-                          "hash": "data.hash"
-                        }
-                      }
-                    ]
                   }
-                ]
-              }
-            ]
-          }
+                }
+              ]
+            }
+          ]
         }
       ]
     }
