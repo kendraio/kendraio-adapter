@@ -33,7 +33,10 @@
     },
     {
       "type": "grid",
-      "gridOptions": {},
+      "gridOptions": {
+        "pagination": true,
+        "paginationPageSize": 10
+      },
       "columnDefs": [
         {
           "headerName": "Title",
