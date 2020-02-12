@@ -180,6 +180,11 @@
       "config": "configs/importMusicalWorks.json"
     },
     {
+      "title": "Import recordings (Bloomen API)",
+      "workflowId": "importRecordings",
+      "config": "configs/importRecordings.json"
+    },
+    {
       "title": "List of Sound Recordings (view/edit)",
       "workflowId": "listSoundRecordings-view-edit",
       "config": "configs/listSoundRecordings-view-edit.json"
