@@ -1,0 +1,32 @@
+{
+  "name": "culturebanked",
+  "label": "CultureBanked",
+  "description": "Integration with the CultureBanked project",
+  "version": "0.1.0",
+  "infoUrl": "http://kendra.io/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "database": [
+  ],
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "CultureBanked",
+    "workflowId": "dashboard"
+  },
+  "services": [
+  ],
+  "workflow": [
+    {
+      "title": "Dashboard",
+      "workflowId": "dashboard",
+      "config": "configs/dashboard.json"
+    }
+  ],
+  "upload": {
+    "enabled": true
+  },
+  "apis": [
+  ],
+  "tags": [
+  ]
+}
