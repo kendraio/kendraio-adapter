@@ -15,6 +15,7 @@
     "adapters/example",
     "adapters/kendraio",
     "adapters/mixcloud",
+    "adapters/musicteam",
     "adapters/omi",
     "adapters/ppl-ipn",
     "adapters/resonate",
