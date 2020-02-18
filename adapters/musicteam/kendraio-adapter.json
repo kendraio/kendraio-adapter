@@ -9,7 +9,7 @@
   "database": [],
   "dashboard": {
     "icon": "brightness_5",
-    "label": "DDEX",
+    "label": "MusicTeam",
     "workflowId": "dashboard"
   },
   "services": [
