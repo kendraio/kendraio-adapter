@@ -54,10 +54,6 @@
       "skipEmptyLines": true
     },
     {
-      "type": "mapping",
-      "mapping": "data[:10]"
-    },
-    {
       "type": "grid",
       "gridOptions": {
         "pagination": true,
@@ -66,6 +62,7 @@
       },
       "columnDefs": [
         {
+          "headerCheckboxSelection": true,
           "checkboxSelection": true
         },
         {
@@ -95,7 +92,8 @@
       }
     },
     {
-      "type": "debug"
+      "type": "debug",
+      "open": 0
     },
     {
       "type": "http",
