@@ -41,31 +41,6 @@
   ],
   "workflow": [
     {
-      "title": "List works",
-      "workflowId": "listWorks",
-      "config": "configs/listWorks.json"
-    },
-    {
-      "title": "Get author's works by name",
-      "workflowId": "authorsWorksByName",
-      "config": "configs/authorsWorksByName.json"
-    },
-    {
-      "title": "Author's works from IPI",
-      "workflowId": "authorsWorksFromIPI",
-      "config": "configs/authorsWorksFromIPI.json"
-    },
-    {
-      "title": "Get rights holders per ISWC",
-      "workflowId": "getRightsHolderForISWC",
-      "config": "configs/getRightsHolderForISWC.json"
-    },
-    {
-      "title": "List publisher's works",
-      "workflowId": "listPublishersWorks",
-      "config": "configs/listPublishersWorks.json"
-    },
-    {
       "title": "List works (with selection)",
       "workflowId": "listWorksSelectionExample",
       "config": "configs/listWorksSelectionExample.json"
