@@ -9,9 +9,14 @@
   "dashboard": {
     "icon": "brightness_5",
     "label": "Bandsintown",
-    "workflowId": "listEvents"
+    "workflowId": "connect"
   },
   "services": [
+    {
+      "icon": "brightness_1",
+      "label": "Connect",
+      "workflowId": "connect"
+    },
     {
       "label": "Events",
       "icon": "brightness_1",
@@ -34,6 +39,8 @@
     }
   ],
   "tags": [
-    "music", "b2b", "demo"
+    "music",
+    "b2b",
+    "demo"
   ]
 }
