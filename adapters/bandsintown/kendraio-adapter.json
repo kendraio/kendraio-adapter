@@ -1,0 +1,39 @@
+{
+  "name": "bandsintown",
+  "label": "Bandsintown",
+  "description": "Bandsintown Adapter",
+  "version": "0.1.0",
+  "infoUrl": "https://artists.bandsintown.com/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "Bandsintown",
+    "workflowId": "listEvents"
+  },
+  "services": [
+    {
+      "label": "Events",
+      "icon": "brightness_1",
+      "workflowId": "listEvents"
+    },
+    {
+      "label": "Add Event",
+      "icon": "brightness_1",
+      "workflowId": "addEvent"
+    },
+    {
+      "label": "Add Event (with Venue)",
+      "icon": "brightness_1",
+      "workflowId": "addEventWithVenue"
+    },
+    {
+      "label": "Add Streaming Event",
+      "icon": "brightness_1",
+      "workflowId": "addStreamingEvent"
+    }
+  ],
+  "tags": [
+    "music", "b2b", "demo"
+  ]
+}
