@@ -13,6 +13,7 @@
     "adapters/mccs",
     "adapters/dotbc",
     "adapters/example",
+    "adapters/gigs",
     "adapters/kendraio",
     "adapters/mixcloud",
     "adapters/musicteam",

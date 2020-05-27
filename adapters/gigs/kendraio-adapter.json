@@ -1,0 +1,34 @@
+{
+  "name": "gigs",
+  "label": "Gigs",
+  "description": "A Demo Adapter For Managing Gigs",
+  "version": "0.1.0",
+  "infoUrl": "http://kendra.io/",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "Gigs",
+    "workflowId": "gigList"
+  },
+  "services": [
+    {
+      "label": "Gigs",
+      "icon": "brightness_1",
+      "workflowId": "gigList"
+    },
+    {
+      "label": "Artists",
+      "icon": "brightness_1",
+      "workflowId": "artistList"
+    },
+    {
+      "label": "Venues",
+      "icon": "brightness_1",
+      "workflowId": "venueList"
+    }
+  ],
+  "tags": [
+    "music", "b2b", "demo"
+  ]
+}
