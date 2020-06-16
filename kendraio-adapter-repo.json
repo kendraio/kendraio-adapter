@@ -27,6 +27,7 @@
     "adapters/teosto",
     "adapters/tidal",
     "adapters/unsplash",
+    "adapters/valueflows",
     "adapters/youtube"
   ]
 }

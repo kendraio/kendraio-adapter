@@ -1,0 +1,30 @@
+{
+  "name": "valueflows",
+  "label": "ValueFlows",
+  "description": "ValueFlows Adapter",
+  "version": "0.1.0",
+  "infoUrl": "https://drive.google.com/drive/u/0/folders/10MaEeXA85C-3vvcvQgvLZ5yslRGO7d8g",
+  "maintainer": "Kendraio",
+  "supportUrl": "http://kendra.io",
+  "dashboard": {
+    "icon": "brightness_5",
+    "label": "ValueFlows",
+    "workflowId": "connect"
+  },
+  "services": [
+    {
+      "icon": "brightness_1",
+      "label": "Connect",
+      "workflowId": "connect"
+    },
+    {
+      "label": "Translation",
+      "icon": "brightness_1",
+      "workflowId": "chooseNode"
+    }
+  ],
+  "tags": [
+    "b2b",
+    "demo"
+  ]
+}
