@@ -21,6 +21,11 @@
       "label": "Translation",
       "icon": "brightness_1",
       "workflowId": "chooseNode"
+    },
+    {
+      "label": "Plans",
+      "icon": "brightness_1",
+      "workflowId": "listPlans"
     }
   ],
   "tags": [
