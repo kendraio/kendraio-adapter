@@ -1,0 +1,484 @@
+{
+  "version": 2,
+  "tables": [
+    {
+      "table": {
+        "schema": "public",
+        "name": "albums"
+      },
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "id",
+              "name"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name",
+              "created_at",
+              "updated_at",
+              "id"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "artists"
+      },
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "id",
+              "name"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name",
+              "created_at",
+              "updated_at",
+              "id"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "contributions"
+      },
+      "object_relationships": [
+        {
+          "name": "party",
+          "using": {
+            "foreign_key_constraint_on": "party_uuid"
+          }
+        },
+        {
+          "name": "track",
+          "using": {
+            "foreign_key_constraint_on": "track_uuid"
+          }
+        }
+      ],
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "backing_vocals",
+              "id",
+              "instrument",
+              "musician",
+              "party_uuid",
+              "rightsholder_percent",
+              "role",
+              "track_uuid"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "backing_vocals",
+              "created_at",
+              "id",
+              "instrument",
+              "musician",
+              "party_uuid",
+              "rightsholder_percent",
+              "role",
+              "track_uuid",
+              "updated_at"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "backing_vocals",
+              "instrument",
+              "musician",
+              "party_uuid",
+              "rightsholder_percent",
+              "role",
+              "track_uuid"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "labels"
+      },
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "id",
+              "name"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name",
+              "created_at",
+              "updated_at",
+              "id"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "licensors"
+      },
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "id",
+              "name"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name",
+              "created_at",
+              "updated_at",
+              "id"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "name"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "parties"
+      },
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "first_name",
+              "id",
+              "last_name"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "first_name",
+              "last_name",
+              "created_at",
+              "updated_at",
+              "id"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "first_name",
+              "last_name"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "tracks"
+      },
+      "object_relationships": [
+        {
+          "name": "album",
+          "using": {
+            "foreign_key_constraint_on": "album_uuid"
+          }
+        },
+        {
+          "name": "distributing_label",
+          "using": {
+            "foreign_key_constraint_on": "distributing_label_uuid"
+          }
+        },
+        {
+          "name": "licensor",
+          "using": {
+            "foreign_key_constraint_on": "licensor_uuid"
+          }
+        },
+        {
+          "name": "track_artist",
+          "using": {
+            "foreign_key_constraint_on": "track_artist_uuid"
+          }
+        }
+      ],
+      "array_relationships": [
+        {
+          "name": "contributions",
+          "using": {
+            "foreign_key_constraint_on": {
+              "column": "track_uuid",
+              "table": {
+                "schema": "public",
+                "name": "contributions"
+              }
+            }
+          }
+        }
+      ],
+      "insert_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "check": {},
+            "columns": [
+              "album_uuid",
+              "distributing_label_uuid",
+              "duration",
+              "id",
+              "initial_release_date",
+              "isrc",
+              "licensor_uuid",
+              "release_country",
+              "track_artist_uuid",
+              "track_title",
+              "upc"
+            ],
+            "backend_only": false
+          }
+        }
+      ],
+      "select_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "initial_release_date",
+              "duration",
+              "isrc",
+              "release_country",
+              "track_title",
+              "upc",
+              "created_at",
+              "updated_at",
+              "album_uuid",
+              "distributing_label_uuid",
+              "id",
+              "licensor_uuid",
+              "track_artist_uuid"
+            ],
+            "filter": {}
+          }
+        }
+      ],
+      "update_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "columns": [
+              "album_uuid",
+              "distributing_label_uuid",
+              "duration",
+              "initial_release_date",
+              "isrc",
+              "licensor_uuid",
+              "release_country",
+              "track_artist_uuid",
+              "track_title",
+              "upc"
+            ],
+            "filter": {},
+            "check": null
+          }
+        }
+      ],
+      "delete_permissions": [
+        {
+          "role": "user",
+          "permission": {
+            "filter": {}
+          }
+        }
+      ]
+    },
+    {
+      "table": {
+        "schema": "public",
+        "name": "users"
+      }
+    }
+  ]
+}
