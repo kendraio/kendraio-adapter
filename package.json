@@ -22,7 +22,7 @@
     "@types/rimraf": "^2.0.2",
     "@types/yaml": "^1.2.0",
     "archiver": "^3.1.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "lodash": "^4.17.15",
     "rimraf": "^3.0.0",
     "ts-node": "^8.4.1",
